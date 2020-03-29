@@ -4,8 +4,7 @@ if (typeof console == "undefined") {
 
 }
 
-
-
+let result={} //kee siang variable defined
 
 
 L.Control.OSMGeocoder = L.Control.extend({
@@ -34,15 +33,25 @@ L.Control.OSMGeocoder = L.Control.extend({
 
             }
 
+            
+           result =results[0] //kee siang variable added
+            
             var bbox = results[0].boundingbox,
-
-                first = new L.LatLng(bbox[0], bbox[2]),
+            
+                first =new L.LatLng(bbox[0], bbox[2]),
+                
 
                 second = new L.LatLng(bbox[1], bbox[3]),
 
                 bounds = new L.LatLngBounds([first, second]);
+                
+    
+            
 
             this._map.fitBounds(bounds);
+
+            L.marker([result.lat,result.lon]).addTo(mymap) // my marker added
+            
 
         }
 

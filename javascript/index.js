@@ -24,13 +24,36 @@ $(function(){
             // console.log(townDimension.top(10)[0].resale_price)
             
             //CREATE HTML PAGE
+            // Create html content for Street Name via select option type
+            let streetNameGroup=streetNameDimension.group()
+            console.table(streetNameGroup.all())
+            console.log(streetNameGroup.all()[0])
+            console.log(streetNameGroup.all()[0].key)
 
+            let labelStreet= document.createElement('label')
+            labelStreet.innerText='Input Street Name: '
+            document.querySelector('#input-street').appendChild(labelStreet)
+
+            let selectStreet=document.createElement('select')
+            document.querySelector('#input-street').appendChild(selectStreet)
+
+            for( let i in streetNameGroup.all()) {
+                let optionStreet=document.createElement('option')
+                optionStreet.innerText=streetNameGroup.all()[i].key
+                optionStreet.value=streetNameGroup.all()[i].key
+                document.querySelector('#input-street select').appendChild(optionStreet)
+            }
+
+
+
+
+
+            // Create HTML content for Room Type via select option type
             let flatTypeGroup = flatTypeDimension.group()
             console.log(flatTypeGroup)
             console.table(flatTypeGroup.all())
             console.log(flatTypeGroup.all()[0].key)
 
-            // Create HTML page for Room Type via select option type
             let labelRoomType= document.createElement('label')
             labelRoomType.innerText='Input room type: '
             document.querySelector('#roomType').appendChild(labelRoomType)

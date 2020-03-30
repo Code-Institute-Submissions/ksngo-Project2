@@ -1,4 +1,5 @@
 
+document.querySelector('#testing').addEventListener('click', getValueTown)
 
 
 function getValueTown () {
@@ -8,10 +9,12 @@ function getValueTown () {
     let selectedTown =[]
 
     for (i=0; i<townCheckBoxes.length;i++){
-        if (townCheckBoxes[i].checked) {
+        if (townCheckBoxes[i].checked == false) {
             selectedTown.push(townCheckBoxes[i].value)
         }
     }
+
+    console.log(selectedTown)
 
     return selectedTown
 

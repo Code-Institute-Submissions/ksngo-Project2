@@ -1,4 +1,4 @@
-document.querySelector('#testing').addEventListener('click', getValueResalePrice)
+
 
 function getValueYears () {
 

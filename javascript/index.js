@@ -65,10 +65,30 @@ $(function(){
 
             
 
-
+            $('#buttonTopPrice').click(markTopResalesPrice)
             
+            function markTopResalesPrice () {
 
-            $('#buttonTopPrice').click(topPriceFn)
+                
+                
+                if (getValueTown () != [] ) {
+                    let selectedTown = getValueTown()
+            
+                    for (i=0;i<selectedTown.length;i++) {
+            
+                        townDimension.filter(function(town){
+                            return town !== selectedTown[i] 
+                        })
+            
+            
+                    }
+            
+                    console.table(townDimension.top(50))
+                    console.table(priceDimension.top(20))
+                }
+            }
+
+            // $('#buttonTopPrice').click(topPriceFn)
 
             function topPriceFn() {
                 

@@ -50,7 +50,7 @@ L.Control.OSMGeocoder = L.Control.extend({
 
             this._map.fitBounds(bounds);
 
-            L.marker([result.lat,result.lon]).addTo(mymap) // my marker added
+            L.marker([result.lat,result.lon]).addTo(mymap) // keesiang marker added
             
 
         }

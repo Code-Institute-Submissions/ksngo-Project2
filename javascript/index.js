@@ -22,6 +22,35 @@ $(function(){
         
             // console.table(townDimension.top(20))
             // console.log(townDimension.top(10)[0].resale_price)
+            
+            //CREATE HTML PAGE
+
+            let flatTypeGroup = flatTypeDimension.group()
+            console.log(flatTypeGroup)
+            console.table(flatTypeGroup.all())
+            console.log(flatTypeGroup.all()[0].key)
+
+            // Create HTML page for Room Type via select option type
+            let labelRoomType= document.createElement('label')
+            labelRoomType.innerText='Input room type: '
+            document.querySelector('#roomType').appendChild(labelRoomType)
+            
+            let selectRoomType=document.createElement('select')
+            document.querySelector('#roomType').appendChild(selectRoomType)
+
+            for( let i in flatTypeGroup.all()) {
+                let optionRoomType=document.createElement('option')
+                optionRoomType.innerText=flatTypeGroup.all()[i].key
+                optionRoomType.value=flatTypeGroup.all()[i].key
+                document.querySelector('#roomType select').appendChild(optionRoomType)
+            }
+
+            
+
+
+            
+
+
 
             $('#buttonTopPrice').click(topPriceFn)
 

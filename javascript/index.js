@@ -26,9 +26,9 @@ $(function(){
             //CREATE HTML PAGE
             // Create html content for Street Name via select option type
             let streetNameGroup=streetNameDimension.group()
-            console.table(streetNameGroup.all())
-            console.log(streetNameGroup.all()[0])
-            console.log(streetNameGroup.all()[0].key)
+            // console.table(streetNameGroup.all())
+            // console.log(streetNameGroup.all()[0])
+            // console.log(streetNameGroup.all()[0].key)
 
             let labelStreet= document.createElement('label')
             labelStreet.innerText='Input Street Name: '
@@ -45,36 +45,28 @@ $(function(){
             }
 
 
-
-
-
             // Create HTML content for Room Type via select option type
-            let flatTypeGroup = flatTypeDimension.group()
-            console.log(flatTypeGroup)
-            console.table(flatTypeGroup.all())
-            console.log(flatTypeGroup.all()[0].key)
+            // let flatTypeGroup = flatTypeDimension.group()
 
-            let labelRoomType= document.createElement('label')
-            labelRoomType.innerText='Input room type: '
-            document.querySelector('#roomType').appendChild(labelRoomType)
+            // let labelRoomType= document.createElement('label')
+            // labelRoomType.innerText='Input room type: '
+            // document.querySelector('#roomType').appendChild(labelRoomType)
             
-            let selectRoomType=document.createElement('select')
-            selectRoomType.multiple='multiple'
-            document.querySelector('#roomType').appendChild(selectRoomType)
+            // let selectRoomType=document.createElement('select')
+            // selectRoomType.multiple='multiple'
+            // document.querySelector('#roomType').appendChild(selectRoomType)
 
-            for( let i in flatTypeGroup.all()) {
-                let optionRoomType=document.createElement('option')
-                optionRoomType.innerText=flatTypeGroup.all()[i].key
-                optionRoomType.value=flatTypeGroup.all()[i].key
-                document.querySelector('#roomType select').appendChild(optionRoomType)
-            }
+            // for( let i in flatTypeGroup.all()) {
+            //     let optionRoomType=document.createElement('option')
+            //     optionRoomType.innerText=flatTypeGroup.all()[i].key
+            //     optionRoomType.value=flatTypeGroup.all()[i].key
+            //     document.querySelector('#roomType select').appendChild(optionRoomType)
+            // }
 
             
 
 
             
-
-
 
             $('#buttonTopPrice').click(topPriceFn)
 

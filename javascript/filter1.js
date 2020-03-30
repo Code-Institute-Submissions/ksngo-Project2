@@ -9,12 +9,11 @@ function getValueTown () {
     let selectedTown =[]
 
     for (i=0; i<townCheckBoxes.length;i++){
-        if (townCheckBoxes[i].checked == false) {
+        if (townCheckBoxes[i].checked) {
             selectedTown.push(townCheckBoxes[i].value)
         }
     }
 
-    console.log(selectedTown)
 
     return selectedTown
 

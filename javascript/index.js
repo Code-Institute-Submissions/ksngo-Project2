@@ -36,6 +36,7 @@ $(function(){
             document.querySelector('#roomType').appendChild(labelRoomType)
             
             let selectRoomType=document.createElement('select')
+            selectRoomType.multiple='multiple'
             document.querySelector('#roomType').appendChild(selectRoomType)
 
             for( let i in flatTypeGroup.all()) {

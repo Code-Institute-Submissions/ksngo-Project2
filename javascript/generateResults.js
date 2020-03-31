@@ -1,16 +1,24 @@
 
 function markTopResalesPrice() {
 
+    //******(A)revert back to orignal data size with filterAll*****
     townDimension.filterAll()
     streetNameDimension.filterAll()
     priceDimension.filterAll()
     monthDimension.filterAll()
+    flatTypeDimension.filterAll()
 
+
+    //*****(B)get users input *****
     let selectedTown = getValueTown()
     let selectedStreet = getValueStreet()
     let selectedMonth = getValueYears()
-    console.log(selectedMonth)
+    let selectedRoom = getValueRoomType ()
+    console.log(selectedRoom)
 
+    //*****(C)Begin filtering data *****
+
+    //***** (C1)filter data by town or streetname**********
     if (selectedTown.length>0) {
         console.log('hi iam in one')
         //Credit to prtksxna's solution in stackoverflow for filtering multiple discrete values in crossfilter.
@@ -34,9 +42,15 @@ function markTopResalesPrice() {
     // console.log(date)
     // console.log(date.getFullYear())
 
-
+    //********(C2)filter data by year/month***********
+    if (selectedMonth.length>1) {
     monthDimension.filter(d=> selectedMonth.indexOf(d) >-1 )
 
+    // console.table(priceDimension.top(10))
+    // console.table(priceDimension.bottom(50))
+    }
+    //**********(C3)filter data by room type********** 
+    flatTypeDimension.filter(d=> selectedRoom.indexOf(d) >-1)
     
     console.table(priceDimension.top(10))
     console.table(priceDimension.bottom(50))

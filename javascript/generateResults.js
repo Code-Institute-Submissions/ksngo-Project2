@@ -8,6 +8,7 @@ function markTopResalesPrice() {
     monthDimension.filterAll()
     flatTypeDimension.filterAll()
     storeyRangeDimension.filterAll()
+    floorAreaSqmDimension.filterAll()
 
 
     //*****(B)get users input *****
@@ -16,7 +17,8 @@ function markTopResalesPrice() {
     let selectedMonth = getValueYears()
     let selectedRoom = getValueRoomType ()
     let selectedStorey = getValueStoreyRange ()
-    console.log(selectedRoom)
+    let selectedArea = getValueFloorArea ()
+    console.log(selectedArea)
 
     //*****(C)Begin filtering data *****
 
@@ -64,11 +66,18 @@ function markTopResalesPrice() {
     if (selectedStorey.length>1){
         storeyRangeDimension.filter(d=> selectedStorey.indexOf(d) >-1)
         
+        // console.table(priceDimension.top(10))
+        // console.table(priceDimension.bottom(50))
+    }
+
+    //*************(C5)filter by floor area ************
+
+    if (selectedArea.length>1){
+        floorAreaSqmDimension.filter(d=> selectedArea.indexOf(d) >-1)
+        
         console.table(priceDimension.top(10))
         console.table(priceDimension.bottom(50))
     }
-
-
 
 
 

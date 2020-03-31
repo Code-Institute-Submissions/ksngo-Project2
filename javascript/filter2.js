@@ -1,4 +1,4 @@
-document.querySelector('#testing').addEventListener('click', getValueStoreyRange)
+document.querySelector('#testing').addEventListener('click', getValueFloorArea)
 
 //**********function getValueYears() **************
 function getValueYears () {
@@ -89,13 +89,19 @@ function getValueStoreyRange () {
     return selectedStoreyRange
 }
 
+//**********function getValueFloorArea() **************
 function getValueFloorArea () {
 
     let selectedMinFloorArea=document.querySelector('#min-floor-area').value
     let selectedMaxFloorArea=document.querySelector('#max-floor-area').value
-    
-    return selectedMinFloorArea, selectedMaxFloorArea
-    
+    let selectedFloorAreaArray=[]
+
+    for (i= parseInt(selectedMinFloorArea) ; i<=parseInt(selectedMaxFloorArea) ; i++) {
+        selectedFloorAreaArray.push(i.toString())
+    }
+
+    // console.log(selectedFloorAreaArray)
+    return selectedFloorAreaArray
 }
 
 function getValueFlatModel () {

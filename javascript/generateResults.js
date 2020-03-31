@@ -7,6 +7,7 @@ function markTopResalesPrice() {
     priceDimension.filterAll()
     monthDimension.filterAll()
     flatTypeDimension.filterAll()
+    storeyRangeDimension.filterAll()
 
 
     //*****(B)get users input *****
@@ -14,6 +15,7 @@ function markTopResalesPrice() {
     let selectedStreet = getValueStreet()
     let selectedMonth = getValueYears()
     let selectedRoom = getValueRoomType ()
+    let selectedStorey = getValueStoreyRange ()
     console.log(selectedRoom)
 
     //*****(C)Begin filtering data *****
@@ -31,29 +33,42 @@ function markTopResalesPrice() {
 
         // console.table(priceDimension.top(10))
 
-    } else {
+        } else {
 
         console.log('hi iam in two')
         streetNameDimension.filter(d => d == selectedStreet)
         // console.table(priceDimension.top(10))
 
-    }
+        }
     // let date = new Date("2017-01")
     // console.log(date)
     // console.log(date.getFullYear())
 
     //********(C2)filter data by year/month***********
     if (selectedMonth.length>1) {
-    monthDimension.filter(d=> selectedMonth.indexOf(d) >-1 )
+        monthDimension.filter(d=> selectedMonth.indexOf(d) >-1 )
 
     // console.table(priceDimension.top(10))
     // console.table(priceDimension.bottom(50))
     }
     //**********(C3)filter data by room type********** 
-    flatTypeDimension.filter(d=> selectedRoom.indexOf(d) >-1)
+    if (selectedRoom.length>1){
+        flatTypeDimension.filter(d=> selectedRoom.indexOf(d) >-1)
     
-    console.table(priceDimension.top(10))
-    console.table(priceDimension.bottom(50))
+    // console.table(priceDimension.top(10))
+    // console.table(priceDimension.bottom(50))
+    }
+
+    //**********(C4)filter by storey range ***********
+
+    if (selectedStorey.length>1){
+        storeyRangeDimension.filter(d=> selectedStorey.indexOf(d) >-1)
+        
+        console.table(priceDimension.top(10))
+        console.table(priceDimension.bottom(50))
+    }
+
+
 
 
 

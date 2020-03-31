@@ -1,5 +1,5 @@
 
-document.querySelector('#testing').addEventListener('click', getValueTown)
+
 
 
 function getValueTown () {

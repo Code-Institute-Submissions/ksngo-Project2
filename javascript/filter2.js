@@ -1,5 +1,6 @@
+document.querySelector('#testing').addEventListener('click', getValueStoreyRange)
 
-
+//**********function getValueYears() **************
 function getValueYears () {
 
     let selectedMinYears = document.querySelector('#min-year').value
@@ -49,6 +50,7 @@ function getValueYears () {
     
 }
 
+//**********function getValueRoomType() **************
 function getValueRoomType () {
 
     let roomTypeElements=document.getElementsByName('room-type')
@@ -63,17 +65,27 @@ function getValueRoomType () {
     return selectedRoomType
 }
 
+//**********function getValueStoreyRange() **************
 function getValueStoreyRange () {
-
+    
     let storeyRangeElements=document.getElementsByName('storey-range')
     let selectedStoreyRange=[]
-
-    for (i=0; i<storeyRangeElements.length;i++) {
-
-        if(storeyRangeElements[i].checked)
-        selectedStoreyRange.push(storeyRangeElements[i].value)
-    }
     
+    for (i=0; i<storeyRangeElements.length;i++) {
+        
+        if(storeyRangeElements[i].checked) {
+            if(storeyRangeElements[i].value=="22 TO 30") {
+                selectedStoreyRange.push("22 TO 24", "25 TO 27","28 TO 30")
+            } else if (storeyRangeElements[i].value=="31 TO 39") {
+                selectedStoreyRange.push("31 TO 33", "34 TO 36","37 TO 39")
+            } else if (storeyRangeElements[i].value=="40 TO 51") {
+                selectedStoreyRange.push("40 TO 42", "43 TO 45","46 TO 48","49 TO 51")
+            } else {
+            selectedStoreyRange.push(storeyRangeElements[i].value)
+            }
+        }
+    }
+    // console.log(selectedStoreyRange)
     return selectedStoreyRange
 }
 

@@ -4,10 +4,12 @@ function markTopResalesPrice() {
     townDimension.filterAll()
     streetNameDimension.filterAll()
     priceDimension.filterAll()
+    monthDimension.filterAll()
 
     let selectedTown = getValueTown()
     let selectedStreet = getValueStreet()
-    console.log(selectedTown.length)
+    let selectedMonth = getValueYears()
+    console.log(selectedMonth)
 
     if (selectedTown.length>0) {
         console.log('hi iam in one')
@@ -19,15 +21,27 @@ function markTopResalesPrice() {
             
         })
 
-        console.table(priceDimension.top(10))
+        // console.table(priceDimension.top(10))
 
     } else {
 
         console.log('hi iam in two')
         streetNameDimension.filter(d => d == selectedStreet)
-        console.table(priceDimension.top(10))
+        // console.table(priceDimension.top(10))
 
     }
+    // let date = new Date("2017-01")
+    // console.log(date)
+    // console.log(date.getFullYear())
+
+
+    monthDimension.filter(d=> selectedMonth.indexOf(d) >-1 )
+
+    
+    console.table(priceDimension.top(10))
+    console.table(priceDimension.bottom(50))
+
+
 
 
 

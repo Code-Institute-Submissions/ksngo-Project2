@@ -6,6 +6,7 @@ let monthDimension={}
 let flatTypeDimension={}
 let storeyRangeDimension={}
 let floorAreaSqmDimension={}
+let flatModelDimension={}
 
 
 
@@ -27,7 +28,7 @@ $(function () {
             streetNameDimension = cf.dimension(jsonData => jsonData.street_name)
             storeyRangeDimension = cf.dimension(jsonData => jsonData.storey_range)
             floorAreaSqmDimension = cf.dimension(jsonData => jsonData.floor_area_sqm)
-            let flatModelDimension = cf.dimension(jsonData => jsonData.flat_model)
+            flatModelDimension = cf.dimension(jsonData => jsonData.flat_model)
             // remaining lease pending 61 years 04 months
             priceDimension = cf.dimension(jsonData => jsonData.resale_price) // select town as price
 

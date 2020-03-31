@@ -1,12 +1,13 @@
 
 let townDimension={}
-let priceDimension={}
 let streetNameDimension={}
 let monthDimension={}
 let flatTypeDimension={}
 let storeyRangeDimension={}
 let floorAreaSqmDimension={}
 let flatModelDimension={}
+// let remainingLeaseDimension={}
+let priceDimension={}
 
 
 
@@ -15,21 +16,26 @@ $(function () {
     axios.get('data/resale-flat-prices-based-on-registration-date-from-jan-2017-onwards.csv').then(function (response) {
 
 
-        csv().fromString(response.data).then(function (jsonData) {
+        csv({
+
+            colParser: {
+                'resale_price':'number'
+            }
+
+        }).fromString(response.data).then(function (jsonData) {
 
             // console.table(jsonData)
 
             let cf = crossfilter(jsonData)  //apply crossfilter to jsonData
 
             townDimension = cf.dimension(jsonData => jsonData.town) //select town as dimension
-            // month pending 2017-01
             monthDimension=cf.dimension(jsonData => jsonData.month)
             flatTypeDimension = cf.dimension(jsonData => jsonData.flat_type)
             streetNameDimension = cf.dimension(jsonData => jsonData.street_name)
             storeyRangeDimension = cf.dimension(jsonData => jsonData.storey_range)
             floorAreaSqmDimension = cf.dimension(jsonData => jsonData.floor_area_sqm)
             flatModelDimension = cf.dimension(jsonData => jsonData.flat_model)
-            // remaining lease pending 61 years 04 months
+            // remainingLeaseDimension = cf.dimension(jsonData => jsonData.remaining_lease)
             priceDimension = cf.dimension(jsonData => jsonData.resale_price) // select town as price
 
             

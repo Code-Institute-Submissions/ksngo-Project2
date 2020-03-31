@@ -1,4 +1,11 @@
+document.querySelector('#selectAllTown').addEventListener('change' , function(){
 
+    if(this.checked) {
+        selectAllTown()
+    } else {
+        unselectAllTown ()
+    }
+})
 
 
 
@@ -26,3 +33,23 @@ function getValueStreet () {
     
 }
 
+
+function selectAllTown () {
+
+    let townCheckBoxes = document.getElementsByName('town')
+
+    for (i=0;i<townCheckBoxes.length;i++) {
+        townCheckBoxes[i].checked = true
+    }
+
+}
+
+function unselectAllTown () {
+
+    let townCheckBoxes = document.getElementsByName('town')
+
+    for (i=0;i<townCheckBoxes.length;i++) {
+        townCheckBoxes[i].checked = false
+    }
+
+}

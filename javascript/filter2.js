@@ -104,6 +104,7 @@ function getValueFloorArea () {
     return selectedFloorAreaArray
 }
 
+//**********function getValueFloorModel() **************
 function getValueFlatModel () {
 
     let flatModelElements=document.getElementsByName('flat-model')
@@ -118,28 +119,28 @@ function getValueFlatModel () {
     return selectedFlatModel
 }
 
-function getValueRemainingLease () {
+// function getValueRemainingLease () {
 
-    let selectedMinRemainingLease = document.querySelector('#min-remaining-lease').value
-    let selectedMaxRemainingLease = document.querySelector('#max-remaining-lease').value
+//     let selectedMinRemainingLease = document.querySelector('#min-remaining-lease').value
+//     let selectedMaxRemainingLease = document.querySelector('#max-remaining-lease').value
 
-    console.log(selectedMinRemainingLease)
-    console.log(selectedMaxRemainingLease)
+//     console.log(selectedMinRemainingLease)
+//     console.log(selectedMaxRemainingLease)
 
-    return selectedMinRemainingLease, selectedMaxRemainingLease
+//     return selectedMinRemainingLease, selectedMaxRemainingLease
 
-}
+// }
 
-function getValueResalePrice () {
+// function getValueResalePrice () {
 
-    let selectedMinResalePrice=document.querySelector('#min-resale-price').value
-    let selectedMaxResalePrice=document.querySelector('#max-resale-price').value
+//     let selectedMinResalePrice=document.querySelector('#min-resale-price').value
+//     let selectedMaxResalePrice=document.querySelector('#max-resale-price').value
 
-    console.log(selectedMinResalePrice)
-    console.log(selectedMaxResalePrice)
+//     console.log(selectedMinResalePrice)
+//     console.log(selectedMaxResalePrice)
 
-    return selectedMinResalePrice, selectedMaxResalePrice
-}
+//     return selectedMinResalePrice, selectedMaxResalePrice
+// }
 
 
 

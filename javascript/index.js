@@ -1,4 +1,8 @@
 
+let townDimension={}
+let priceDimension={}
+
+
 $(function () {
 
     axios.get('data/resale-flat-prices-based-on-registration-date-from-jan-2017-onwards.csv').then(function (response) {
@@ -10,7 +14,7 @@ $(function () {
 
             let cf = crossfilter(jsonData)  //apply crossfilter to jsonData
 
-            let townDimension = cf.dimension(jsonData => jsonData.town) //select town as dimension
+            townDimension = cf.dimension(jsonData => jsonData.town) //select town as dimension
             // month pending 2017-01
             let flatTypeDimension = cf.dimension(jsonData => jsonData.flat_type)
             let streetNameDimension = cf.dimension(jsonData => jsonData.street_name)
@@ -18,9 +22,9 @@ $(function () {
             let floorAreaSqmDimension = cf.dimension(jsonData => jsonData.floor_area_sqm)
             let flatModelDimension = cf.dimension(jsonData => jsonData.flat_model)
             // remaining lease pending 61 years 04 months
-            let priceDimension = cf.dimension(jsonData => jsonData.resale_price) // select town as price
+            priceDimension = cf.dimension(jsonData => jsonData.resale_price) // select town as price
 
-            // console.table(townDimension.top(20))
+            // console.log(townDimension)
             // console.log(townDimension.top(10)[0].resale_price)
 
             //CREATE HTML PAGE
@@ -67,42 +71,9 @@ $(function () {
 
             $('#buttonTopPrice').click(markTopResalesPrice)
 
-            function markTopResalesPrice() {
-
-                let selectedTown = getValueTown()
-                console.log(selectedTown)
-
-                // townDimension.filter(function(town){
-
-                //     return town == ('ANG MO KIO' ,'BISHAN')
-                // })
-
-                // for (i = 0; i < selectedTown.length; i++) {
-                //     console.log(selectedTown[i])
-                //     townDimension.filter(function (town) {
-                //         return town == selectedTown[i]
-                //     })
-                // }
-
-                //Credit to prtksxna's solution in stackoverflow for filtering multiple discrete values in crossfilter.
-                //Link is https://stackoverflow.com/questions/11060604/filter-for-multiple-discrete-values-in-crossfilter
-
-                let f = selectedTown
-                console.log(f)
-                // Assuming "dim" is our dimension
-                townDimension.filter(function (town) {
-                    return f.indexOf(town) > -1;
-                });
-
-                
-
-                console.table(townDimension.top(50))
-                console.table(townDimension.bottom(50))
-                console.table(priceDimension.top(50))
-
-
-
-            }
+            
+            
+           
 
             // $('#buttonTopPrice').click(topPriceFn)
 

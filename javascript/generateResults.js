@@ -1,4 +1,26 @@
 
+ function markTopResalesPrice() {
+
+    console.log('hihihihi')
+    let selectedTown = getValueTown()
+    
+    //Credit to prtksxna's solution in stackoverflow for filtering multiple discrete values in crossfilter.
+    //Link is https://stackoverflow.com/questions/11060604/filter-for-multiple-discrete-values-in-crossfilter
+
+    // let f = selectedTown
+    
+    // Assuming "dim" is our dimension
+    townDimension.filter(function (town) {
+        return selectedTown.indexOf(town) > -1;
+    });
+
+    console.table(townDimension.top(50))
+    console.table(townDimension.bottom(50))
+    console.table(priceDimension.top(50))
+    console.table(priceDimension.bottom(50))
+}
+
+
 // $('#buttonTopPrice').click(markTopResalesPrice)
 
 // function markTopResalesPrice () {

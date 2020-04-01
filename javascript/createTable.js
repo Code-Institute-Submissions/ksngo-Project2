@@ -134,6 +134,7 @@ function data50ToTable (x,y) {
         let checkbox = document.createElement('input')
         checkbox.type='checkbox'
         checkbox.id= "checkboxId"+i
+        // checkbox.addEventListener('change' , plotToMap)
         document.querySelector('table').lastElementChild.appendChild(dataElement)
         document.querySelector('table').lastElementChild.lastElementChild.appendChild(checkbox)
 
@@ -178,5 +179,6 @@ function reset() {
     countclicks=0
     document.querySelector('#buttonBottomPrice').disabled=false
     document.querySelector('#buttonTopPrice').disabled=false
+    document.getElementById('resultsSize').innerHTML =""
 
 }

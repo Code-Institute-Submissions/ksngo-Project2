@@ -42,3 +42,7 @@ tr:nth-child(odd) {
     color:red;
 }
 
+#resultsSize {
+    color: red;
+    
+}

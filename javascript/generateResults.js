@@ -6,23 +6,25 @@ let topOrBottomRange
 //***************************Initiate this function when Button for 'Show/Next 50 units highest resale price' is clicked. *********************/
 function resultsForTopPrice() {
 
+    
+
     document.querySelector('#buttonBottomPrice').disabled=true
 
     topOrBottomRange = 'Top'
 
     if (countclicks==0) {
-
     filterDataByInput ()
-    resultsTopPriceArray = priceDimension.top(1000)
+    resultsTopPriceArray = priceDimension.top(Number.POSITIVE_INFINITY)
     console.log(resultsTopPriceArray)
-
     }
     
-    // console.log(priceDimension.top(50)[0])
+    let resultsSize = priceDimension.top(Number.POSITIVE_INFINITY).length
+     document.getElementById('resultsSize').innerHTML = `Number of Results Index returned : ${resultsSize-1}`
 
     createTable(countclicks , topOrBottomRange)
     countclicks++
 
+    
 }
 
 //***************************Initiate this function when Button for 'Show/Next 50 units lowest resale price' is clicked. *********************/
@@ -33,14 +35,13 @@ function resultsForBottomPrice() {
     document.querySelector('#buttonTopPrice').disabled=true
 
     if (countclicks==0) {
-
         filterDataByInput()
-        resultsLowPriceArray = priceDimension.bottom(1000)
+        resultsLowPriceArray = priceDimension.bottom(Number.POSITIVE_INFINITY)
         console.log(resultsLowPriceArray)
     }
     
-    // console.log(priceDimension.bottom(50)[0])
-    // console.log(priceDimension.bottom(50)[1])
+    let resultsSize = priceDimension.bottom(Number.POSITIVE_INFINITY).length
+     document.getElementById('resultsSize').innerHTML = `Number of Results Index returned : ${resultsSize-1}`
 
     createTable(countclicks, topOrBottomRange)
     countclicks++

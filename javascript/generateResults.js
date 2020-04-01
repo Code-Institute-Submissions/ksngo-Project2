@@ -1,5 +1,33 @@
+let resultsTopPriceArray =[]
 
-function markTopResalesPrice() {
+function resultsForTopPrice() {
+
+    filterDataByInput ()
+
+    
+    resultsTopPriceArray = priceDimension.top(1000)
+    console.log(resultsTopPriceArray)
+   
+    // console.log(priceDimension.top(50)[0])
+
+    createTable()
+
+}
+
+
+function resultsForBottomPrice() {
+
+    filterDataByInput()
+
+    console.table(priceDimension.bottom(1000))
+    // console.log(priceDimension.bottom(50)[0])
+    // console.log(priceDimension.bottom(50)[1])
+
+}
+
+
+
+function filterDataByInput ()  {
 
     //******(A)revert back to orignal data size with filterAll*****
     townDimension.filterAll()
@@ -65,13 +93,6 @@ function markTopResalesPrice() {
     if (selectedModel.length > 0) {
         flatModelDimension.filter(d => selectedModel.indexOf(d) > -1)
     }
-    
-    console.table(priceDimension.top(50))
-    console.log(priceDimension.top(50)[0])
-
-    console.table(priceDimension.bottom(50))
-    console.log(priceDimension.bottom(50)[0])
-    console.log(priceDimension.bottom(50)[1])
 
 }
 

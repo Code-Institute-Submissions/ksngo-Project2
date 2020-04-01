@@ -82,7 +82,8 @@ $(function () {
 
 
 
-            $('#buttonTopPrice').click(markTopResalesPrice)
+            $('#buttonTopPrice').click(resultsForTopPrice)
+            $('#buttonBottomPrice').click(resultsForBottomPrice)
 
             
             
@@ -107,8 +108,6 @@ $(function () {
 
 
                 if (userInputTown = 'ANG MO KIO') {
-
-
 
                     L.marker([1.369115, 103.845436]).addTo(mymap).bindPopup('<p>AMK</p>')
 

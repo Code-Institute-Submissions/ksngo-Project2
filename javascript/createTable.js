@@ -1,13 +1,14 @@
 
-
-function createTable (x) {
+//******************function to clear <table> in HTML, create header for table and add 50 data to table. ****************/
+function createTable (x,y) {
 
         resetTable()
         createHeader()
-        data50ToTable(x)
+        data50ToTable(x,y)
     
 }
 
+//*******************function to create header for table *******************/
 function createHeader () {
 
     let headerStarter = ['Index','Year-month','Town','Flat Type','Block','Street Name','Storey','Floor area','Flat Model','Remaining Lease','Resale Price','Show on Map' ]
@@ -22,68 +23,119 @@ function createHeader () {
 }
 
 
-
-function data50ToTable (x) {
+//******************function to create 50 data table onto HTML **************************/
+function data50ToTable (x,y) {
 
     
 
     for (i=(0+x*50);i<(50+x*50);i++) {
 
+        //**************Create <tr> element for each i iteration ******/
         let rowElement = document.createElement('tr')
         document.querySelector('table').appendChild(rowElement)
 
+        //***************Insert index number in table*****************/
         let dataElement = document.createElement('td')
         dataElement.innerHTML = i
         document.querySelector('table').lastElementChild.appendChild(dataElement)
 
+        //***************Insert month in table***********************/
         dataElement = document.createElement('td')
-        dataElement.innerHTML= resultsTopPriceArray[i].month
+            if (y=='Top') { 
+                dataElement.innerHTML= resultsTopPriceArray[i].month
+            } else if (y=='Bottom') {
+                dataElement.innerHTML= resultsLowPriceArray[i].month
+            }
         document.querySelector('table').lastElementChild.appendChild(dataElement)
 
+        //***************Insert town in table***********************/
         dataElement = document.createElement('td')
-        dataElement.innerHTML= resultsTopPriceArray[i].town
+            if (y=='Top') {
+                dataElement.innerHTML= resultsTopPriceArray[i].town
+            } else if (y=='Bottom') {
+                dataElement.innerHTML= resultsLowPriceArray[i].town
+            }
         document.querySelector('table').lastElementChild.appendChild(dataElement)
 
+        //***************Insert flat-type in table***********************/
         dataElement = document.createElement('td')
-        dataElement.innerHTML= resultsTopPriceArray[i].flat_type
+            if (y=='Top') {
+                dataElement.innerHTML= resultsTopPriceArray[i].flat_type
+            } else if (y=='Bottom') {
+                dataElement.innerHTML= resultsLowPriceArray[i].flat_type
+            }
         document.querySelector('table').lastElementChild.appendChild(dataElement)
 
+        //***************Insert block number in table***********************/
         dataElement = document.createElement('td')
-        dataElement.innerHTML= resultsTopPriceArray[i].block
+            if (y=='Top') {
+                dataElement.innerHTML= resultsTopPriceArray[i].block
+            } else if (y=='Bottom') {
+                dataElement.innerHTML= resultsLowPriceArray[i].block
+            }
         document.querySelector('table').lastElementChild.appendChild(dataElement)
 
+        //***************Insert street name in table***********************/
         dataElement = document.createElement('td')
-        dataElement.innerHTML= resultsTopPriceArray[i].street_name
+            if (y=='Top') {
+                dataElement.innerHTML= resultsTopPriceArray[i].street_name
+            } else if (y=='Bottom') {
+                dataElement.innerHTML= resultsLowPriceArray[i].street_name
+            }
         document.querySelector('table').lastElementChild.appendChild(dataElement)
 
+        //***************Insert storey range in table***********************/
         dataElement = document.createElement('td')
-        dataElement.innerHTML= resultsTopPriceArray[i].storey_range
+            if (y=='Top') {
+                dataElement.innerHTML= resultsTopPriceArray[i].storey_range
+            } else if (y=='Bottom') {
+                dataElement.innerHTML= resultsLowPriceArray[i].storey_range
+            }
         document.querySelector('table').lastElementChild.appendChild(dataElement)
 
+        //***************Insert floor area in table***********************/
         dataElement = document.createElement('td')
-        dataElement.innerHTML= resultsTopPriceArray[i].floor_area_sqm
+            if (y=='Top') {
+                dataElement.innerHTML= resultsTopPriceArray[i].floor_area_sqm
+            } else if (y=='Bottom') {
+                dataElement.innerHTML= resultsLowPriceArray[i].floor_area_sqm
+            }
         document.querySelector('table').lastElementChild.appendChild(dataElement)
 
+        //***************Insert flat model in table***********************/
         dataElement = document.createElement('td')
-        dataElement.innerHTML= resultsTopPriceArray[i].flat_model
+            if (y=='Top') {
+                dataElement.innerHTML= resultsTopPriceArray[i].flat_model
+            } else if (y=='Bottom') {
+                dataElement.innerHTML= resultsLowPriceArray[i].flat_model
+            }
+        document.querySelector('table').lastElementChild.appendChild(dataElement)
+        
+        //***************Insert remaining lease in table***********************/
+        dataElement = document.createElement('td')
+            if (y=='Top') {
+                dataElement.innerHTML= resultsTopPriceArray[i].remaining_lease
+            } else if (y=='Bottom') {
+                dataElement.innerHTML= resultsLowPriceArray[i].remaining_lease
+            }
         document.querySelector('table').lastElementChild.appendChild(dataElement)
 
+        //***************Insert resale price in table***********************/
         dataElement = document.createElement('td')
-        dataElement.innerHTML= resultsTopPriceArray[i].remaining_lease
+            if (y=='Top') {
+                dataElement.innerHTML= resultsTopPriceArray[i].resale_price
+            } else if (y=='Bottom') {
+                dataElement.innerHTML= resultsLowPriceArray[i].resale_price
+            }
         document.querySelector('table').lastElementChild.appendChild(dataElement)
 
-        dataElement = document.createElement('td')
-        dataElement.innerHTML= resultsTopPriceArray[i].resale_price
-        document.querySelector('table').lastElementChild.appendChild(dataElement)
-
+        //***************Insert checkbox in table***********************/
         dataElement = document.createElement('td')
         let checkbox = document.createElement('input')
         checkbox.type='checkbox'
         checkbox.id= "checkboxId"+i
         document.querySelector('table').lastElementChild.appendChild(dataElement)
         document.querySelector('table').lastElementChild.lastElementChild.appendChild(checkbox)
-
-    
 
 
 
@@ -94,6 +146,17 @@ function data50ToTable (x) {
 
 } 
 
+
+
+
+
+
+
+
+
+
+
+//********************function to remove table and initiate an empty table again**********************/
 
 function resetTable() {
 
@@ -108,9 +171,12 @@ function resetTable() {
 
 }
 
+//***********************function to will reset countclicks to 0 when user click on Reset Button  ****************************/
 function reset() {
 
     resetTable()
     countclicks=0
+    document.querySelector('#buttonBottomPrice').disabled=false
+    document.querySelector('#buttonTopPrice').disabled=false
 
 }

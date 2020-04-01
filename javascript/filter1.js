@@ -1,3 +1,5 @@
+
+//**************select all towns checkbox *******************/
 document.querySelector('#selectAllTown').addEventListener('change' , function(){
 
     if(this.checked) {
@@ -8,7 +10,7 @@ document.querySelector('#selectAllTown').addEventListener('change' , function(){
 })
 
 
-
+//****************function getValueTown()***************************/
 function getValueTown () {
 
     
@@ -26,6 +28,7 @@ function getValueTown () {
 
 }
 
+//****************function getValueStreet()***************************/
 function getValueStreet () {
 
     let selectedStreet = document.querySelector('#input-street select').value

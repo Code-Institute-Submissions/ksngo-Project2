@@ -1,7 +1,14 @@
 let resultsTopPriceArray =[]
 let countclicks =0
+let topOrBottomRange
 
+
+//***************************Initiate this function when Button for 'Show/Next 50 units highest resale price' is clicked. *********************/
 function resultsForTopPrice() {
+
+    document.querySelector('#buttonBottomPrice').disabled=true
+
+    topOrBottomRange = 'Top'
 
     if (countclicks==0) {
 
@@ -13,24 +20,35 @@ function resultsForTopPrice() {
     
     // console.log(priceDimension.top(50)[0])
 
-    createTable(countclicks)
+    createTable(countclicks , topOrBottomRange)
+    countclicks++
+
+}
+
+//***************************Initiate this function when Button for 'Show/Next 50 units lowest resale price' is clicked. *********************/
+function resultsForBottomPrice() {
+
+    topOrBottomRange = 'Bottom'
+
+    document.querySelector('#buttonTopPrice').disabled=true
+
+    if (countclicks==0) {
+
+        filterDataByInput()
+        resultsLowPriceArray = priceDimension.bottom(1000)
+        console.log(resultsLowPriceArray)
+    }
+    
+    // console.log(priceDimension.bottom(50)[0])
+    // console.log(priceDimension.bottom(50)[1])
+
+    createTable(countclicks, topOrBottomRange)
     countclicks++
 
 }
 
 
-function resultsForBottomPrice() {
-
-    filterDataByInput()
-
-    console.table(priceDimension.bottom(1000))
-    // console.log(priceDimension.bottom(50)[0])
-    // console.log(priceDimension.bottom(50)[1])
-
-}
-
-
-
+//*****************************function to consolidate all input by user. **************************************************/
 function filterDataByInput ()  {
 
     //******(A)revert back to orignal data size with filterAll*****

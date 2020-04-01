@@ -1,16 +1,20 @@
 let resultsTopPriceArray =[]
+let countclicks =0
 
 function resultsForTopPrice() {
 
-    filterDataByInput ()
+    if (countclicks==0) {
 
-    
+    filterDataByInput ()
     resultsTopPriceArray = priceDimension.top(1000)
     console.log(resultsTopPriceArray)
-   
+
+    }
+    
     // console.log(priceDimension.top(50)[0])
 
-    createTable()
+    createTable(countclicks)
+    countclicks++
 
 }
 

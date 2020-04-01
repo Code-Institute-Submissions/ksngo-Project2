@@ -84,6 +84,7 @@ $(function () {
 
             $('#buttonTopPrice').click(resultsForTopPrice)
             $('#buttonBottomPrice').click(resultsForBottomPrice)
+            $('#reset').click(reset)
 
             
             

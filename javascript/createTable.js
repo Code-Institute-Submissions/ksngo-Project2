@@ -1,13 +1,11 @@
 
 
-function createTable () {
+function createTable (x) {
 
-    createHeader()
-    data50ToTable()
-
-
-
-
+        resetTable()
+        createHeader()
+        data50ToTable(x)
+    
 }
 
 function createHeader () {
@@ -18,15 +16,18 @@ function createHeader () {
 
         let headElement = document.createElement('th')
         headElement.innerHTML = headerStarter[i]
-        document.getElementById('header').appendChild(headElement)
+        document.getElementById('tr-header').appendChild(headElement)
 
     }
 }
 
-function data50ToTable () {
 
 
-    for (i=0;i<50;i++) {
+function data50ToTable (x) {
+
+    
+
+    for (i=(0+x*50);i<(50+x*50);i++) {
 
         let rowElement = document.createElement('tr')
         document.querySelector('table').appendChild(rowElement)
@@ -92,3 +93,24 @@ function data50ToTable () {
 
 
 } 
+
+
+function resetTable() {
+
+    document.querySelector('table').remove()
+    let tableElement =document.createElement('table')
+    let headerElement = document.createElement('tr')
+    headerElement.id ='tr-header'
+    
+    document.querySelector('#div-table').appendChild(tableElement)
+    document.querySelector('table').appendChild(headerElement)
+
+
+}
+
+function reset() {
+
+    resetTable()
+    countclicks=0
+
+}

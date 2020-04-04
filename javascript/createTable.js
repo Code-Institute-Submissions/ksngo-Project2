@@ -35,9 +35,17 @@ function data50ToTable (x,y) {
 
         
         //**************Break Loop if no more data *************/
-        if (typeof resultsTopPriceArray[i] == 'undefined') {
-            break
+        if (y=='Top') {
+            if (typeof resultsTopPriceArray[i] == 'undefined') {
+                break
+            }
         }
+        
+        if (y=='Bottom') {
+            if (typeof resultsLowPriceArray[i] == 'undefined') {
+                break
+            }
+        } 
 
         //**************Create <tr> element for each i iteration ******/
         let rowElement = document.createElement('tr')
@@ -147,7 +155,7 @@ function data50ToTable (x,y) {
         checkbox.addEventListener('change' , plotToMap)
         document.querySelector('table').lastElementChild.appendChild(dataElement)
         document.querySelector('table').lastElementChild.lastElementChild.appendChild(checkbox)
-
+        
     }
 
 } 
@@ -191,11 +199,17 @@ function reset() {
 //********************fucntion to plot marker to map when user click on checkbox *******************************/
 function plotToMap () {
 
-
+    let popupContent =''
     let tableIndex = this.id.replace('checkboxId','')
-    selectedAddress = resultsTopPriceArray[tableIndex].block + " " + resultsTopPriceArray[tableIndex].street_name
 
-    let popupContent = `<section>index: ${tableIndex}</section>
+    if (topOrBottomRange=='Top') {
+        selectedAddress = resultsTopPriceArray[tableIndex].block + " " + resultsTopPriceArray[tableIndex].street_name
+    } else if (topOrBottomRange=='Bottom'){
+        selectedAddress = resultsLowPriceArray[tableIndex].block + " " + resultsLowPriceArray[tableIndex].street_name
+    }
+
+    if (topOrBottomRange=='Top') {
+        popupContent = `<section>index: ${tableIndex}</section>
                         <section>sold on: ${resultsTopPriceArray[tableIndex].month}</section>
                         <section>address: ${selectedAddress}</section>
                         <section>type: ${resultsTopPriceArray[tableIndex].flat_type}</section>
@@ -204,6 +218,17 @@ function plotToMap () {
                         <section>model: ${resultsTopPriceArray[tableIndex].flat_model}</section>
                         <section>lease: ${resultsTopPriceArray[tableIndex].remaining_lease}</section>
                         <section>resale price: ${resultsTopPriceArray[tableIndex].resale_price}</section> `
+    } else if (topOrBottomRange=='Bottom') {
+        popupContent = `<section>index: ${tableIndex}</section>
+                        <section>sold on: ${resultsLowPriceArray[tableIndex].month}</section>
+                        <section>address: ${selectedAddress}</section>
+                        <section>type: ${resultsLowPriceArray[tableIndex].flat_type}</section>
+                        <section>storey: ${resultsLowPriceArray[tableIndex].storey_range}</section>
+                        <section>area: ${resultsLowPriceArray[tableIndex].floor_area_sqm}</section>
+                        <section>model: ${resultsLowPriceArray[tableIndex].flat_model}</section>
+                        <section>lease: ${resultsLowPriceArray[tableIndex].remaining_lease}</section>
+                        <section>resale price: ${resultsLowPriceArray[tableIndex].resale_price}</section> `
+    }
                          
 
     axios.get("https://nominatim.openstreetmap.org/search",{

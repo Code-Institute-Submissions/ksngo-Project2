@@ -1,4 +1,7 @@
 
+let selectedAddress = ""
+let markersGroup=L.layerGroup()
+
 //******************function to clear <table> in HTML, create header for table and add 50 data to table. ****************/
 function createTable (x,y) {
 
@@ -134,27 +137,13 @@ function data50ToTable (x,y) {
         let checkbox = document.createElement('input')
         checkbox.type='checkbox'
         checkbox.id= "checkboxId"+i
-        // checkbox.addEventListener('change' , plotToMap)
+        checkbox.addEventListener('change' , plotToMap)
         document.querySelector('table').lastElementChild.appendChild(dataElement)
         document.querySelector('table').lastElementChild.lastElementChild.appendChild(checkbox)
 
-
-
-
     }
 
-
-
 } 
-
-
-
-
-
-
-
-
-
 
 
 //********************function to remove table and initiate an empty table again**********************/
@@ -168,6 +157,14 @@ function resetTable() {
     
     document.querySelector('#div-table').appendChild(tableElement)
     document.querySelector('table').appendChild(headerElement)
+    
+    //***************clearLayers in markerGroup and removelayer from mymap********************** */
+    if (isEmpty(markersGroup._layers)) {
+        
+    } else {
+        markersGroup.clearLayers()
+        mymap.removeLayer(markersGroup)
+    }
 
 
 }
@@ -180,5 +177,44 @@ function reset() {
     document.querySelector('#buttonBottomPrice').disabled=false
     document.querySelector('#buttonTopPrice').disabled=false
     document.getElementById('resultsSize').innerHTML =""
+    
+
+}
+
+//********************fucntion to plot marker to map when user click on checkbox *******************************/
+function plotToMap () {
+
+
+    let tableIndex = this.id.replace('checkboxId','')
+    selectedAddress = resultsTopPriceArray[tableIndex].block + " " + resultsTopPriceArray[tableIndex].street_name
+
+    let popupContent = `<section>index: ${tableIndex}</section>
+                        <section>sold on: ${resultsTopPriceArray[tableIndex].month}</section>
+                        <section>address: ${selectedAddress}</section>
+                        <section>type: ${resultsTopPriceArray[tableIndex].flat_type}</section>
+                        <section>storey: ${resultsTopPriceArray[tableIndex].storey_range}</section>
+                        <section>area: ${resultsTopPriceArray[tableIndex].floor_area_sqm}</section>
+                        <section>model: ${resultsTopPriceArray[tableIndex].flat_model}</section>
+                        <section>lease: ${resultsTopPriceArray[tableIndex].remaining_lease}</section>
+                        <section>resale price: ${resultsTopPriceArray[tableIndex].resale_price}</section> `
+                         
+
+    axios.get("https://nominatim.openstreetmap.org/search",{
+        params:{
+            format:'json',
+            q: selectedAddress+" singapore" 
+        }
+    }).then(function(response){
+        console.log(response.data)
+        console.log(response.data[0].lat)
+        console.log(response.data[0].lon)
+        
+        let marker=L.marker([response.data[0].lat,response.data[0].lon]).addTo(mymap).bindPopup(popupContent)
+        markersGroup.addLayer(marker)
+        
+        mymap.addLayer(markersGroup)
+        
+    })
+
 
 }

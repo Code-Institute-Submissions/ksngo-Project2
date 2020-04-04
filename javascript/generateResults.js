@@ -16,6 +16,7 @@ function resultsForTopPrice() {
     filterDataByInput ()
     resultsTopPriceArray = priceDimension.top(Number.POSITIVE_INFINITY)
     console.log(resultsTopPriceArray)
+    
     }
     
     let resultsSize = priceDimension.top(Number.POSITIVE_INFINITY).length
@@ -119,24 +120,3 @@ function filterDataByInput ()  {
 
 }
 
-
-
-
-// $('#buttonBottomPrice').click()
-
-// function markBottomResalesPrice () {
-//     getValueTown ()
-//     getValueStreet ()
-
-//     getValueYears ()
-//     getValueRoomType ()
-//     getValueStoreyRange ()
-//     getValueFloorArea ()
-//     getValueFlatModel ()
-//     getValueRemainingLease ()
-//     getValueResalePrice ()
-// }
-
-
-
-// $('#numberOfTransactions').click()

@@ -12,6 +12,15 @@ let priceDimension={}
 
 
 $(function () {
+    
+    // let promises = [axios.get('data/resale-flat-prices-based-on-registration-date-from-jan-2017-onwards.csv'),
+    //                 axios.get('https://nominatim.openstreetmap.org/search', {
+    //                     params:{
+    //                         format:'json',
+    //                         q:
+
+    //                     }
+    //                 })]
 
     axios.get('data/resale-flat-prices-based-on-registration-date-from-jan-2017-onwards.csv').then(function (response) {
 

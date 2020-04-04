@@ -13,17 +13,7 @@ let priceDimension={}
 
 $(function () {
     
-    // let promises = [axios.get('data/resale-flat-prices-based-on-registration-date-from-jan-2017-onwards.csv'),
-    //                 axios.get('https://nominatim.openstreetmap.org/search', {
-    //                     params:{
-    //                         format:'json',
-    //                         q:
-
-    //                     }
-    //                 })]
-
     axios.get('data/resale-flat-prices-based-on-registration-date-from-jan-2017-onwards.csv').then(function (response) {
-
 
         csv({
 
@@ -34,8 +24,8 @@ $(function () {
         }).fromString(response.data).then(function (jsonData) {
 
             // console.table(jsonData)
-
-            let cf = crossfilter(jsonData)  //apply crossfilter to jsonData
+            //******************apply crossfilter to jsonData ***********************/
+            let cf = crossfilter(jsonData)  //
 
             townDimension = cf.dimension(jsonData => jsonData.town) //select town as dimension
             monthDimension=cf.dimension(jsonData => jsonData.month)
@@ -48,9 +38,8 @@ $(function () {
             priceDimension = cf.dimension(jsonData => jsonData.resale_price) // select town as price
 
             
-
-            //CREATE HTML PAGE
-            // Create html content for Street Name via select option type
+            //**********************CREATE HTML PAGE******************************************/
+            //**************Create html content for Street Name via select option type********/
             let streetNameGroup = streetNameDimension.group()
             // console.table(streetNameGroup.all())
             // console.log(streetNameGroup.all()[0])
@@ -90,45 +79,14 @@ $(function () {
             // }
 
 
-
+            //***********************Jquery eventlistener for button for top resales price******************/
             $('#buttonTopPrice').click(resultsForTopPrice)
+            //***********************Jquery eventlistener for button for top resales price******************/
             $('#buttonBottomPrice').click(resultsForBottomPrice)
+            //***********************Jquery eventlistener for button for reset******************/
             $('#reset').click(reset)
 
             
-            
-           
-
-            // $('#buttonTopPrice').click(topPriceFn)
-
-            function topPriceFn() {
-
-                let userInputTown = $('#inputTown').val()
-
-
-                townDimension.filter(function (town) { //filter town dimension 
-                    return town == userInputTown
-                })
-
-                // console.log('bugging')
-                // console.table(townDimension.top(50))
-                // console.table(priceDimension.top(50))
-                console.table(floorAreaSqmDimension.top(50))
-
-
-
-                if (userInputTown = 'ANG MO KIO') {
-
-                    L.marker([1.369115, 103.845436]).addTo(mymap).bindPopup('<p>AMK</p>')
-
-                } else {
-                    alert('Marker except for ANG MO KIO is not ready')
-                }
-
-            }
-
-
-
 
         })// end csvtoJson
 

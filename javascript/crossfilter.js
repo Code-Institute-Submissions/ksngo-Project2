@@ -1,5 +1,0 @@
-
-//generate highest resale price
-
-
-

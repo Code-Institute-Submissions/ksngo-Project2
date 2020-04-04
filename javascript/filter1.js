@@ -36,7 +36,7 @@ function getValueStreet () {
     
 }
 
-
+//****************function to checked all town checkboxes)***************************/
 function selectAllTown () {
 
     let townCheckBoxes = document.getElementsByName('town')
@@ -47,6 +47,7 @@ function selectAllTown () {
 
 }
 
+//****************function to unchecked all town checkboxes)***************************/
 function unselectAllTown () {
 
     let townCheckBoxes = document.getElementsByName('town')

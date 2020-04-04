@@ -7,20 +7,24 @@ let topOrBottomRange
 function resultsForTopPrice() {
 
     
-
+    /*******************disable button for lowest resales price ********************/
     document.querySelector('#buttonBottomPrice').disabled=true
-
+    /*******************note down that top resales price button is clicked**********/
     topOrBottomRange = 'Top'
 
+    /******************retrieve  */
     if (countclicks==0) {
     filterDataByInput ()
     resultsTopPriceArray = priceDimension.top(Number.POSITIVE_INFINITY)
     console.log(resultsTopPriceArray)
-    
     }
     
     let resultsSize = priceDimension.top(Number.POSITIVE_INFINITY).length
-     document.getElementById('resultsSize').innerHTML = `Number of Results Index returned : ${resultsSize-1}`
+    if (resultsSize!==0) {
+        document.getElementById('resultsSize').innerHTML = `Number of Results Index returned : ${resultsSize-1}`
+    } else {
+        document.getElementById('resultsSize').innerHTML = `Number of Results Index returned : Zero result`
+    }
 
     createTable(countclicks , topOrBottomRange)
     countclicks++
@@ -36,21 +40,28 @@ function resultsForBottomPrice() {
     document.querySelector('#buttonTopPrice').disabled=true
 
     if (countclicks==0) {
+        /**************get results*******************/
         filterDataByInput()
+        /**************measure data sizes returned*************/
         resultsLowPriceArray = priceDimension.bottom(Number.POSITIVE_INFINITY)
-        console.log(resultsLowPriceArray)
+        // console.log(resultsLowPriceArray)
     }
     
     let resultsSize = priceDimension.bottom(Number.POSITIVE_INFINITY).length
-     document.getElementById('resultsSize').innerHTML = `Number of Results Index returned : ${resultsSize-1}`
+    if (resultsSize!==0) {
+        document.getElementById('resultsSize').innerHTML = `Number of Results Index returned : ${resultsSize-1}`
+    } else {
+        document.getElementById('resultsSize').innerHTML = `Number of Results Index returned : Zero result`
+    }
 
+    /*******************display results in table on html **********/
     createTable(countclicks, topOrBottomRange)
     countclicks++
 
 }
 
 
-//*****************************function to consolidate all input by user. **************************************************/
+//*****************************function to return 'crossfilter dimension filters' results according to user's filters **************************************************/
 function filterDataByInput ()  {
 
     //******(A)revert back to orignal data size with filterAll*****
@@ -76,7 +87,7 @@ function filterDataByInput ()  {
 
     //***** (C1)filter data by town or streetname**********
     if (selectedTown.length > 0) {
-        console.log('hi iam in one')
+        // console.log('User has selected filtering by town.')
         //Credit to prtksxna's solution in stackoverflow for filtering multiple discrete values in crossfilter.
         //Link is https://stackoverflow.com/questions/11060604/filter-for-multiple-discrete-values-in-crossfilter
 
@@ -86,7 +97,7 @@ function filterDataByInput ()  {
         })
 
     } else {
-        console.log('hi iam in two')
+        // console.log('User has selected single street name.')
         streetNameDimension.filter(d => d == selectedStreet)
     }
     // let date = new Date("2017-01")

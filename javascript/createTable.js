@@ -33,6 +33,12 @@ function data50ToTable (x,y) {
 
     for (i=(0+x*50);i<(50+x*50);i++) {
 
+        
+        //**************Break Loop if no more data *************/
+        if (typeof resultsTopPriceArray[i] == 'undefined') {
+            break
+        }
+
         //**************Create <tr> element for each i iteration ******/
         let rowElement = document.createElement('tr')
         document.querySelector('table').appendChild(rowElement)
@@ -40,10 +46,11 @@ function data50ToTable (x,y) {
         //***************Insert index number in table*****************/
         let dataElement = document.createElement('td')
         dataElement.innerHTML = i
-        document.querySelector('table').lastElementChild.appendChild(dataElement)
+        document.querySelector('table').lastElementChild.appendChild(dataElement)   
 
         //***************Insert month in table***********************/
         dataElement = document.createElement('td')
+
             if (y=='Top') { 
                 dataElement.innerHTML= resultsTopPriceArray[i].month
             } else if (y=='Bottom') {

@@ -1,0 +1,132 @@
+
+
+/* https://codepen.io/melnik909/pen/YjGZqQ
+=====
+LEVEL 1. CORE STYLES
+=====
+*/
+
+.toggle{
+    --uiToggleSize: var(--toggleSize, 1px);
+    --uiToggleIndent: var(--toggleIndent, 3px);
+    --uiToggleBorderWidth: var(--toggleBorderWidth, 2px);
+    --uiToggleColor: var(--toggleColor, #000);
+    --uiToggleDisabledColor: var(--toggleDisabledColor, #868e96);
+    --uiToggleArrowWidth: var(--toggleArrowWidth, 2px);
+    --uiToggleArrowColor: var(--toggleArrowColor, #fff);
+  
+    display: inline-block;
+    position: relative;
+}
+  
+.toggle__input{
+    position: absolute;
+    left: -99999px;
+}
+  
+.toggle__label{
+    display: inline-flex;
+    cursor: pointer;
+    min-height: var(--uiToggleSize);
+    padding-left: calc(var(--uiToggleSize) + var(--uiToggleIndent));
+    margin-right:1px;
+    
+}
+  
+.toggle__label:before, .toggle__label:after{
+    content: "";
+    box-sizing: border-box;  
+    width: 13px;
+    height: 13px;
+    font-size: var(--uiToggleSize);
+    position: absolute;
+    left: 4px;
+    top: 8px;
+    
+}
+  
+.toggle__label:before{
+    border: var(--uiToggleBorderWidth) solid var(--uiToggleColor);
+    z-index: 2;
+}
+  
+/*   
+.toggle__input:not(:disabled):checked ~ .toggle__label:after{
+    box-shadow: 0 0 0 10px var(--uiToggleBgColor), 0 0 0px 3px var(--uiToggleBgColor);
+} */
+   
+.toggle__input:not(:disabled)~ .toggle__label:before{
+    background-color: white;
+    opacity: 1;
+    
+}
+
+.toggle__input:not(:disabled):checked~ .toggle__label:before{
+    background-color: rgb(0,119,255);
+    opacity: 1;
+    border: 2px solid rgb(0,119,255);
+    
+    
+}
+
+
+  /*
+  The arrow size and position depends from sizes of square because I needed an arrow correct positioning from the top left corner of the element toggle
+  */
+  
+.toggle__text:before{
+    content: "";
+    box-sizing: border-box;
+    width: 0;
+    height: 0;
+    font-size: var(--uiToggleSize);
+    border-left-width: 0;
+    border-bottom-width: 0;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-color: var(--uiToggleArrowColor);
+    position: absolute;
+    top: 16px;
+    left: 4px;
+    z-index: 3;
+    
+  
+    transform-origin: left top;
+    transform: rotate(-40deg) skew(10deg);
+}
+  
+  .toggle__input:not(:disabled):checked ~ .toggle__label .toggle__text:before{
+    width: 12px;
+    height: .25em;
+    border-left-width: var(--uiToggleArrowWidth);
+    border-bottom-width: var(--uiToggleArrowWidth);
+    will-change: width, height;
+    transition: width .1s ease-out .2s, height .2s ease-out;
+  }
+  
+  /*
+  =====
+  LEVEL 2. PRESENTATION STYLES
+  =====
+  */
+  
+
+  
+  .toggle__label:before, .toggle__label:after{
+    border-radius: 2px;
+  }
+  
+  /*
+  =====
+  LEVEL 3. SETTINGS
+  =====
+  */
+  
+  .toggle{
+    --toggleColor: #6a8494;
+    --toggleBgColor: rgb(0,119,255);
+    --toggleSize: 18px;
+  }
+  
+  
+  

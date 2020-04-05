@@ -16,6 +16,9 @@
 
     <!--Geocoder Css File-->
     <link rel='stylesheet' href="css/Control.OSMGeocoder.css"/>
+    
+    <!--https://codepen.io/melnik909/pen/YjGZqQ-->
+    <link rel='stylesheet' href='css/checkbox.css'/>
 
     <!--index Css File-->
     <link rel='stylesheet' href='css/index.css' />
@@ -63,12 +66,10 @@
             <input class='input-town' type='checkbox' id='yishun' name='town' value='YISHUN'/><label class='label-town' for='yishun'>Yishun</label>
         </section>
 
-        
 
         <section><h3>OR</h3></section>
         
         <section id='input-street'> <!--generate html content by index.js-->
-
         </section>
         
         
@@ -82,29 +83,32 @@
             <input type='number' id='max-year' name='max-year' min='2017' max='2020'> </br>
         </section>
 
+
+      
+
        <section id='roomType'> <!--generate html content by index.js-->
         <label>Input Room Type: </label> <br>
-        <input type='checkbox' name='room-type' value='1 ROOM' />1 ROOM
-        <input type='checkbox' name='room-type' value='2 ROOM' />2 ROOM 
-        <input type='checkbox' name='room-type' value='3 ROOM' />3 ROOM
-        <input type='checkbox' name='room-type' value='4 ROOM' />4 ROOM
-        <input type='checkbox' name='room-type' value='5 ROOM' />5 ROOM
-        <input type='checkbox' name='room-type' value='EXECUTIVE' />Executive
-        <input type='checkbox' name='room-type' value='MULTI-GENERATION' />Multi-Generation
+        <label class='toggle'> <input class='toggle__input' type='checkbox' id='1rm' name='room-type' value='1 ROOM' /><span class='toggle__label'><span class='toggle__text' for='1rm'>1 ROOM</span></span></label>
+        <label class='toggle'><input class='toggle__input' type='checkbox' id='2rm' name='room-type' value='2 ROOM' /><span class='toggle__label'><span class='toggle__text' for='2rm' >2 ROOM</span> </span></label>
+        <label class='toggle'><input class='toggle__input' type='checkbox' id='3rm' name='room-type' value='3 ROOM' /><span class='toggle__label'><span class='toggle__text' for='3rm'>3 ROOM</span></span></label>
+        <label class='toggle'><input class='toggle__input' type='checkbox' id='4rm' name='room-type' value='4 ROOM' /><span class='toggle__label'><span class='toggle__text' for='4rm'>4 ROOM</span></span></label>
+        <label class='toggle'><input class='toggle__input' type='checkbox' id='5rm' name='room-type' value='5 ROOM' /><span class='toggle__label'><span class='toggle__text' for='5rm'>5 ROOM</span></span></label>
+        <label class='toggle'><input class='toggle__input' type='checkbox' id='executive' name='room-type' value='EXECUTIVE' /><span class='toggle__label'><span class='toggle__text' for='executive'>Executive</span></span></label>
+        <label class='toggle'><input class='toggle__input' type='checkbox' id='multig' name='room-type' value='MULTI-GENERATION' /><span class='toggle__label'><span class='toggle__text' for='multig'>Multi-Generation</span></span></label>
        </section>
 
        <section>
         <label>Input Storey Range: </label> <br>
-        <input type='checkbox' name='storey-range' value='01 TO 03' />01 TO 03
-        <input type='checkbox' name='storey-range' value='04 TO 06' />04 TO 06 
-        <input type='checkbox' name='storey-range' value='07 TO 09' />07 TO 09
-        <input type='checkbox' name='storey-range' value='10 TO 12' />10 TO 12
-        <input type='checkbox' name='storey-range' value='13 TO 15' />13 TO 15
-        <input type='checkbox' name='storey-range' value='16 TO 18' />16 TO 18
-        <input type='checkbox' name='storey-range' value='19 TO 21' />19 TO 21
-        <input type='checkbox' name='storey-range' value='22 TO 30' />22 TO 30
-        <input type='checkbox' name='storey-range' value='31 TO 39' />31 TO 39
-        <input type='checkbox' name='storey-range' value='40 TO 51' />40 TO 51
+        <input class='input-filter2' type='checkbox' id='01 TO 03' name='storey-range' value='01 TO 03' /><label class='label-filter2' for='01 TO 03'>01 TO 03</label>
+        <input class='input-filter2' type='checkbox' id='04 TO 06' name='storey-range' value='04 TO 06' /><label class='label-filter2' for='04 TO 06'>04 TO 06</label> 
+        <input class='input-filter2' type='checkbox' id='07 TO 09' name='storey-range' value='07 TO 09' /><label class='label-filter2' for='07 TO 09'>07 TO 09</label>
+        <input class='input-filter2' type='checkbox' id='10 TO 12' name='storey-range' value='10 TO 12' /><label class='label-filter2' for='10 TO 12'>10 TO 12</label>
+        <input class='input-filter2' type='checkbox' id='13 TO 15' name='storey-range' value='13 TO 15' /><label class='label-filter2' for='13 TO 15'>13 TO 15</label>
+        <input class='input-filter2' type='checkbox' id='16 TO 18' name='storey-range' value='16 TO 18' /><label class='label-filter2' for='16 TO 18'>16 TO 18</label>
+        <input class='input-filter2' type='checkbox' id='19 TO 21' name='storey-range' value='19 TO 21' /><label class='label-filter2' for='19 TO 21'>19 TO 21</label>
+        <input class='input-filter2' type='checkbox' id='22 TO 30' name='storey-range' value='22 TO 30' /><label class='label-filter2' for='22 TO 30'>22 TO 30</label>
+        <input class='input-filter2' type='checkbox' id='31 TO 39' name='storey-range' value='31 TO 39' /><label class='label-filter2' for='31 TO 39'>31 TO 39</label>
+        <input class='input-filter2' type='checkbox' id='40 TO 51' name='storey-range' value='40 TO 51' /><label class='label-filter2' for='40 TO 51'>40 TO 51</label>
        </section>
 
        <section>
@@ -115,26 +119,26 @@
         
        <section>
             <label>Flat Model: </label> <br>
-            <input type='checkbox' name='flat-model' value='2-room' />2-room
-            <input type='checkbox' name='flat-model' value='Adjoined flat' />Adjoined flat
-            <input type='checkbox' name='flat-model' value='Apartment' />Apartment
-            <input type='checkbox' name='flat-model' value='DBSS' />DBSS
-            <input type='checkbox' name='flat-model' value='Improved' />Improved
-            <input type='checkbox' name='flat-model' value='Improved-Maisonette' />Improved-Maisonette
-            <input type='checkbox' name='flat-model' value='Maisonette' />Maisonette
-            <input type='checkbox' name='flat-model' value='Model A' />Model A
-            <input type='checkbox' name='flat-model' value='Model A2' />Model A2
-            <input type='checkbox' name='flat-model' value='Model A-Maisonette' />Model A-Maisonette
-            <input type='checkbox' name='flat-model' value='Multi Generation' />Multi Generation
-            <input type='checkbox' name='flat-model' value='New Generation' />New Generation
-            <input type='checkbox' name='flat-model' value='Premium Apartment' />Premium Apartment
-            <input type='checkbox' name='flat-model' value='Premium Apartment Loft' />Premium Apartment Loft
-            <input type='checkbox' name='flat-model' value='Premium Maisonette' />Premium Maisonette
-            <input type='checkbox' name='flat-model' value='Simplified' />Simplified
-            <input type='checkbox' name='flat-model' value='Standard' />Standard
-            <input type='checkbox' name='flat-model' value='Terrace' />Terrace
-            <input type='checkbox' name='flat-model' value='Type S1' />Type S1
-            <input type='checkbox' name='flat-model' value='Type S2' />Type S2
+            <input class='input-filter2' type='checkbox' id='2-room' name='flat-model' value='2-room' /><label class='label-filter2' for='2-room'>2-room</label>
+            <input class='input-filter2' type='checkbox' id='Adjoined flat' name='flat-model' value='Adjoined flat' /><label class='label-filter2' for='Adjoined flat'>Adjoined flat</label>
+            <input class='input-filter2' type='checkbox' id='Apartment' name='flat-model' value='Apartment' /><label class='label-filter2' for='Apartment'>Apartment</label>
+            <input class='input-filter2' type='checkbox' id='DBSS' name='flat-model' value='DBSS' /><label class='label-filter2' for='DBSS'>DBSS</label>
+            <input class='input-filter2' type='checkbox' id='Improved' name='flat-model' value='Improved' /><label class='label-filter2' for='Improved'>Improved</label>
+            <input class='input-filter2' type='checkbox' id='Improved-Maisonette' name='flat-model' value='Improved-Maisonette' /><label class='label-filter2' for='Improved-Maisonette'>Improved-Maisonette</label>
+            <input class='input-filter2' type='checkbox' id='Maisonette' name='flat-model' value='Maisonette' /><label class='label-filter2' for='Maisonette'>Maisonette</label>
+            <input class='input-filter2' type='checkbox' id='Model A' name='flat-model' value='Model A' /><label class='label-filter2' for='Model A'>Model A</label>
+            <input class='input-filter2' type='checkbox' id='Model A2' name='flat-model' value='Model A2' /><label class='label-filter2' for='Model A2'>Model A2</label>
+            <input class='input-filter2' type='checkbox' id='Model A-Maisonette' name='flat-model' value='Model A-Maisonette' /><label class='label-filter2' for='Model A-Maisonette' >Model A-Maisonette</label>
+            <input class='input-filter2' type='checkbox' id='Multi Generation' name='flat-model' value='Multi Generation' /><label class='label-filter2' for='Multi Generation'>Multi Generation</label>
+            <input class='input-filter2' type='checkbox' id='New Generation' name='flat-model' value='New Generation' /><label class='label-filter2' for='New Generation'>New Generation</label>
+            <input class='input-filter2' type='checkbox' id='Premium Apartment' name='flat-model' value='Premium Apartment' /><label class='label-filter2' for='Premium Apartment'>Premium Apartment</label>
+            <input class='input-filter2' type='checkbox' id='Premium Apartment Loft' name='flat-model' value='Premium Apartment Loft' /><label class='label-filter2' for='Premium Apartment Loft'>Premium Apartment Loft</label>
+            <input class='input-filter2' type='checkbox' id='Premium Maisonette' name='flat-model' value='Premium Maisonette' /><label class='label-filter2' for='Premium Maisonette'>Premium Maisonette</label>
+            <input class='input-filter2' type='checkbox' id='Simplified' name='flat-model' value='Simplified' /><label class='label-filter2' for='Simplified'>Simplified</label>
+            <input class='input-filter2' type='checkbox' id='Standard'  name='flat-model' value='Standard' /><label class='label-filter2' for='Standard'>Standard</label>
+            <input class='input-filter2' type='checkbox' id='Terrace' name='flat-model' value='Terrace' /><label class='label-filter2' for='Terrace'>Terrace</label>
+            <input class='input-filter2' type='checkbox' id='Type S1' name='flat-model' value='Type S1' /><label class='label-filter2' for='Type S1'>Type S1</label>
+            <input class='input-filter2' type='checkbox' id='Type S2' name='flat-model' value='Type S2' /><label class='label-filter2' for='Type S2'>Type S2</label>
        </section>
 
        <!-- <section>

@@ -1,5 +1,5 @@
 
-let mymap = L.map('map').setView([1.35, 103.85], 11)
+let mymap = L.map('map').setView([1.25, 103.85], 11)
 
 $(function () {
 

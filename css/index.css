@@ -1,14 +1,78 @@
-
+body {
+    font-family: 'Mallanna', sans-serif;
+    background:radial-gradient(#fff,rgb(240, 240, 147));
+    margin:0;
+}
 
 h1 {
     color: red;
-    border: 1px black solid;
+    
+    margin:0;
 }
 
 #map {
     height:700px;
    
 }
+
+
+#town {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* <https://codepen.io/lonekorean/pen/RPZZPe/ */
+
+.input-town {
+    position:absolute;
+    left:-9999px;
+}
+
+.label-town {
+    
+    width:105px;
+    position:relative;
+    border:2px solid #fff;
+    margin-top:3px;
+    margin-bottom:3px;
+    margin-right:0.5px;
+    margin-left:0.5px;
+    padding: 0px 15px 0px 50px;
+    border-radius:100px;
+    color:white;
+    background-color: #6a8494;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    transition: background-color .2s, box-shadow .2s;
+
+}
+
+.label-town::before {
+    content:'';
+    position: absolute;
+    top: 29%;
+    left: 25px;
+    width: 15px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-radius:25%;
+    transition: background-color .2s;
+}
+
+
+.input-town:checked + .label-town {
+    background-color: #ab576c;
+}
+
+.label-town:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+}
+  
+.input-town:checked + .label-town::before {
+    background-color: #fff;
+}
+
+
 
 table {
 

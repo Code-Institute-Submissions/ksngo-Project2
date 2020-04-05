@@ -15,18 +15,38 @@ function createHeader () {
     
     for (i=0;i<12;i++) {
 
+        if (i==11) {
+            /******************************************PENDING TROUBLESHOOTING***************************************** */
+            let headElement = document.createElement('th')
+            headElement.innerHTML = ` <div> ${headerStarter[i]} </div>
+                                    <div> (plot all) </div> `
+            document.getElementById('tr-header').appendChild(headElement)
+            
+            let checkbox = document.createElement('input')
+            checkbox.type='checkbox'
+            checkbox.addEventListener('change' , plotAll)  //eventlistener for selecting all 50 checkboxes
+            document.getElementById('tr-header').lastElementChild.lastElementChild.appendChild(checkbox)
+            /******************************************PENDING TROUBLESHOOTING***************************************** */
+        } else {
         let headElement = document.createElement('th')
         headElement.innerHTML = headerStarter[i]
         document.getElementById('tr-header').appendChild(headElement)
+        }
+
+        
 
     }
+
+    
+    
 }
 
+let checkboxIdArray =[]
 
 //******************function to create 50 data table onto HTML **************************/
 function data50ToTable (x,y) {
 
-    
+    checkboxIdArray=[]
 
     for (i=(0+x*50);i<(50+x*50);i++) {
 
@@ -149,6 +169,7 @@ function data50ToTable (x,y) {
         let checkbox = document.createElement('input')
         checkbox.type='checkbox'
         checkbox.id= "checkboxId"+i
+        checkboxIdArray.push(checkbox.id)
         checkbox.addEventListener('change' , plotToMap)  //eventlistener for checkbox to plot markers to map
         document.querySelector('table').lastElementChild.appendChild(dataElement)
         document.querySelector('table').lastElementChild.lastElementChild.appendChild(checkbox)

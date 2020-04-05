@@ -5,9 +5,19 @@ let markersGroup=L.layerGroup()
 //********************function to plot marker to map when user click on checkbox *******************************/
 function plotToMap () {
 
-    let popupContent =''
+    if (this.checked) {
     let tableIndex = this.id.replace('checkboxId','')
+    plot(tableIndex)
+    }
 
+}
+
+
+//********************internal function to plot marker ********************************************************/
+function plot(tableIndex) {
+
+    
+    let popupContent =''
     /*********************prepare address string from selected checkbox's address**************/
     if (topOrBottomRange=='Top') {
         selectedAddress = resultsTopPriceArray[tableIndex].block + " " + resultsTopPriceArray[tableIndex].street_name
@@ -57,5 +67,7 @@ function plotToMap () {
         
     })
 
+    
 
 }
+

@@ -12,7 +12,7 @@ function resultsForTopPrice() {
     /*******************note down that top resales price button is clicked**********/
     topOrBottomRange = 'Top'
 
-    /******************retrieve  */
+    
     if (countclicks==0) {
     filterDataByInput ()
     resultsTopPriceArray = priceDimension.top(Number.POSITIVE_INFINITY)
@@ -20,6 +20,9 @@ function resultsForTopPrice() {
     }
     
     let resultsSize = priceDimension.top(Number.POSITIVE_INFINITY).length
+
+    $('#right-top').css('display','block')
+
     if (resultsSize!==0) {
         document.getElementById('resultsSize').innerHTML = `Number of Results Index returned : ${resultsSize-1}`
     } else {
@@ -48,6 +51,9 @@ function resultsForBottomPrice() {
     }
     
     let resultsSize = priceDimension.bottom(Number.POSITIVE_INFINITY).length
+
+    $('#right-top').css('display','block')
+
     if (resultsSize!==0) {
         document.getElementById('resultsSize').innerHTML = `Number of Results Index returned : ${resultsSize-1}`
     } else {

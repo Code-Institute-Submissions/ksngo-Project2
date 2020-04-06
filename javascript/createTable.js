@@ -210,6 +210,7 @@ function reset() {
     document.querySelector('#buttonBottomPrice').disabled=false
     document.querySelector('#buttonTopPrice').disabled=false
     document.getElementById('resultsSize').innerHTML =""
+    $('#right-top').css('display','none')
     mymap.setView([1.25, 103.85], 11)
     
 

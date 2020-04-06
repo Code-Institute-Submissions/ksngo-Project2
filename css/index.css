@@ -47,6 +47,7 @@ body {
     background-color:radial-gradient(#fff,rgba(0,119,255,0.5));
     height:auto;
     padding:10px;
+    display: none;
 
 
 }

@@ -88,8 +88,8 @@
             <!-------------------------Input year of resales textboxes------------------------------------>
                     <section>
                         <label>Input year of resales(between 2017 to 2020):</label>
-                        <input type='number' id='min-year' name='min-year' min='2017' max='2020'> to
-                        <input type='number' id='max-year' name='max-year' min='2017' max='2020'> </br>
+                        <input class='textbox' type='number' id='min-year' name='min-year' min='2017' max='2020' placeholder='2017'> to
+                        <input class='textbox' type='number' id='max-year' name='max-year' min='2017' max='2020' placeholder='2020'> </br>
                     </section>
             <!-------------------------Input Room Type Checkboxes------------------------------------>
                    <section id='roomType'> <!--generate html content by index.js-->
@@ -119,8 +119,8 @@
             <!-------------------------Input floor area text boxes------------------------------------>
                    <section>
                        <label>Input Floor Area (in meter square)</label>
-                       <input type='number' id='min-floor-area' min='31' max='249'> to
-                        <input type='number' id='max-floor-area' min='31' max='249'> </br>
+                       <input class='textbox' type='number' id='min-floor-area' min='31' max='249' placeholder='31'> to
+                        <input class='textbox' type='number' id='max-floor-area' min='31' max='249' placeholder='249'> </br>
                    </section>
             
             <!-------------------------Input Flat Model Checkboxes------------------------------------>
@@ -216,6 +216,7 @@
     <script src='javascript/plotmarkersAll.js'></script>
     <script src='javascript/createTable.js'></script>
     <script src='javascript/generateResults.js'></script>
+    <script src='javascript/textbox.js'></script>
     <script src='javascript/index.js'></script>
     
 

@@ -83,6 +83,20 @@ h1, h2, h3  {
     flex-wrap: wrap;
 }
 
+
+/**********************textboxes styles*********************/
+
+.textbox {
+    border-color: #6a8494;
+    border-width: 2px;
+    border-style:solid;
+    border-radius: 2px;
+}
+
+.textbox: {
+    background-color:#F7E4E4;
+}
+
 /***********************checkboxes for town***************/
 /* <https://codepen.io/lonekorean/pen/RPZZPe/ */
 

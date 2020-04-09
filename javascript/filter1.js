@@ -58,13 +58,3 @@ function unselectAllTown () {
 
 }
 
-
-
-
-// let filter1Element = document.querySelector('#left-btm')
-// document.querySelector('#button-filter1').addEventListener('toggle', showFilter1 )
-
-// function showFilter1() {
-    
-//     if filter1Element.
-// }

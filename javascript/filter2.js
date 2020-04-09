@@ -1,4 +1,3 @@
-document.querySelector('#testing').addEventListener('click', getValueFloorArea)
 
 //**********function getValueYears() **************
 function getValueYears () {
@@ -141,6 +140,5 @@ function getValueFlatModel () {
 
 //     return selectedMinResalePrice, selectedMaxResalePrice
 // }
-
 
 

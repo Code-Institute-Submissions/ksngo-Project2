@@ -86,6 +86,10 @@ $(function () {
             $('#buttonBottomPrice').click(resultsForBottomPrice)
             //***********************Jquery eventlistener for button for reset******************/
             $('#reset').click(reset)
+            //***********************Javascript eventlistener for button for filter1******************/
+            document.querySelector('#button-filter1').addEventListener('click', showFilter1 )
+            //***********************Javascript eventlistener for button for filter2******************/
+            document.querySelector('#button-filter2').addEventListener('click', showFilter2 )
 
             
 

@@ -21,7 +21,7 @@ function resultsForTopPrice() {
     
     let resultsSize = priceDimension.top(Number.POSITIVE_INFINITY).length
 
-    $('#right-top').css('display','block')
+    $('#resultsSize').css('display','block')
 
     if (resultsSize!==0) {
         document.getElementById('resultsSize').innerHTML = `Number of Results Index returned : ${resultsSize-1}`

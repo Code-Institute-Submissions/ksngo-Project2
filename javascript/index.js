@@ -45,8 +45,9 @@ $(function () {
             // console.log(streetNameGroup.all()[0])
             // console.log(streetNameGroup.all()[0].key)
 
-            let labelStreet = document.createElement('label')
-            labelStreet.innerText = 'Input Street Name: '
+            let labelStreet = document.createElement('button')
+            labelStreet.innerText = 'Input Street Name'
+            labelStreet.id = 'button-filter-street'
             document.querySelector('#input-street').appendChild(labelStreet)
 
             let selectStreet = document.createElement('select')

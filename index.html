@@ -35,11 +35,17 @@
                 <div id='map'>
                 </div> 
             </div>
+            <div id='left-center'>
+                <button id='button-filter1'><h3>Filter 1 (compulsory) </h3></button>
+                <button id='button-filter2'><h3>Filter 2 (optional) </h3></button>
+                <button id='buttonTopPrice'><h3>Show/Next 50 units highest resales price</h3></button>
+                <button id='buttonBottomPrice'><h3>Show/Next 50 units lowest resales price</h3></button>
+                <button id='reset'><h3>Reset</h3></button> 
+                <span id='resultsSize'> </span>
+            </div>
             <div id='left-btm'> 
                 <div>
-                    <h2>Filter 1 (compulsory) </h2>
-                        <label>Input by Town: </label> <br>
-                    
+                    <button id='button-fitler-town'>Input by Town: </button> <br>
                     <section id='town'>
                         <input class='input-town' type='checkbox' id='selectAllTown' /><label class='label-town' for='selectAllTown'>Select All</label>
                         <input class='input-town' type='checkbox' id='amk' name='town' value='ANG MO KIO' /><label class='label-town' for='amk'>Ang Mo Kio</label>
@@ -69,8 +75,6 @@
                         <input class='input-town' type='checkbox' id='wd' name='town' value='WOODLANDS'/><label class='label-town' for='wd'>Woodlands</label>
                         <input class='input-town' type='checkbox' id='yishun' name='town' value='YISHUN'/><label class='label-town' for='yishun'>Yishun</label>
                     </section>
-            
-                    <section><h3>OR</h3></section>
                     
                     <section id='input-street'> <!--generate html content by index.js-->
                     </section>
@@ -78,16 +82,12 @@
                 </div>
             </div>
         </div> 
-        <div id='right-layout'> 
-            <div id='right-top'>
-                <span id='resultsSize'> </span>
-            </div>
-            <div id='right-center'> <!--------------Filter 2 options -----------------------------------------> 
-                <div>
+        <div id='right-layout'> <!--------------Filter 2 options -----------------------------------------> 
+            <div>
                     <h2>Filter 2 (Optional) </h2>
             <!-------------------------Input year of resales textboxes------------------------------------>
                     <section>
-                        <label>Input year of resales(between 2017 to 2020):</label>
+                        <label>Input year of resales(between 2017 to 2020):</label> <br>
                         <input class='textbox' type='number' id='min-year' name='min-year' min='2017' max='2020' placeholder='2017'> to
                         <input class='textbox' type='number' id='max-year' name='max-year' min='2017' max='2020' placeholder='2020'> </br>
                     </section>
@@ -160,18 +160,6 @@
                         <input type='number' id='max-resale-price' min='0' max='5000000'> </br>
                     </section> -->
                 
-                </div>
-
-            </div>
-            <div id='right-btm'> <!----------------Generate results buttons------------------------------------->
-                <div>
-                    <h2>Generate Results</h2> 
-                    
-                    <button id='buttonTopPrice'>Show/Next 50 units highest resales price</button> <br>
-                    <button id='buttonBottomPrice'>Show/Next 50 units lowest resales price</button> <br>
-                    <button id='reset'>Reset</button> 
-        
-                </div>
             </div>
         </div>
     </div>

@@ -4,7 +4,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no "> 
 
     <!--Google Font Css-->
     <link href="https://fonts.googleapis.com/css?family=Mallanna&display=swap" rel="stylesheet"> 
@@ -45,7 +45,8 @@
             </div>
             <div id='left-btm'> 
                 <div>
-                    <button id='button-fitler-town'>Input by Town: </button> <br>
+                    <button id='button-filter-town'>Input by Town: </button>
+                    <button id='button-filter-street'>Input by Street name: </button> <br>
                     <section id='town'>
                         <input class='input-town' type='checkbox' id='selectAllTown' /><label class='label-town' for='selectAllTown'>Select All</label>
                         <input class='input-town' type='checkbox' id='amk' name='town' value='ANG MO KIO' /><label class='label-town' for='amk'>Ang Mo Kio</label>
@@ -90,7 +91,7 @@
                         <label>Input year of resales(between 2017 to 2020):</label> <br>
                         <input class='textbox' type='number' id='min-year' name='min-year' min='2017' max='2020' placeholder='2017'> to
                         <input class='textbox' type='number' id='max-year' name='max-year' min='2017' max='2020' placeholder='2020'> </br>
-                    </section>
+                    </section> <br>
             <!-------------------------Input Room Type Checkboxes------------------------------------>
                    <section id='roomType'> <!--generate html content by index.js-->
                     <label>Input Room Type: </label> <br>
@@ -101,7 +102,7 @@
                     <label class='toggle'><input class='toggle__input' type='checkbox' id='5rm' name='room-type' value='5 ROOM' /><span class='toggle__label'><span class='toggle__text' for='5rm'>5 ROOM</span></span></label>
                     <label class='toggle'><input class='toggle__input' type='checkbox' id='executive' name='room-type' value='EXECUTIVE' /><span class='toggle__label'><span class='toggle__text' for='executive'>Executive</span></span></label>
                     <label class='toggle'><input class='toggle__input' type='checkbox' id='multig' name='room-type' value='MULTI-GENERATION' /><span class='toggle__label'><span class='toggle__text' for='multig'>Multi-Generation</span></span></label>
-                   </section>
+                   </section> <br>
             <!-------------------------Input storey range Checkboxes------------------------------------>
                    <section>
                     <label>Input Storey Range: </label> <br>
@@ -115,13 +116,13 @@
                     <label class='toggle'> <input class='toggle__input' type='checkbox' id='22 TO 30' name='storey-range' value='22 TO 30' /><span class='toggle__label'><span class='toggle__text' for='22 TO 30'>22 TO 30</span></span></label>
                     <label class='toggle'> <input class='toggle__input' type='checkbox' id='31 TO 39' name='storey-range' value='31 TO 39' /><span class='toggle__label'><span class='toggle__text' for='31 TO 39'>31 TO 39</span></span></label>
                     <label class='toggle'> <input class='toggle__input' type='checkbox' id='40 TO 51' name='storey-range' value='40 TO 51' /><span class='toggle__label'><span class='toggle__text' for='40 TO 51'>40 TO 51</span></span></label>
-                   </section>
+                   </section> <br>
             <!-------------------------Input floor area text boxes------------------------------------>
                    <section>
-                       <label>Input Floor Area (in meter square)</label>
+                       <label>Input Floor Area (in meter square)</label> <br>
                        <input class='textbox' type='number' id='min-floor-area' min='31' max='249' placeholder='31'> to
                         <input class='textbox' type='number' id='max-floor-area' min='31' max='249' placeholder='249'> </br>
-                   </section>
+                   </section> <br>
             
             <!-------------------------Input Flat Model Checkboxes------------------------------------>
                    <section>

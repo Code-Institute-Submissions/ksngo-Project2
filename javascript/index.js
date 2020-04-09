@@ -45,10 +45,10 @@ $(function () {
             // console.log(streetNameGroup.all()[0])
             // console.log(streetNameGroup.all()[0].key)
 
-            let labelStreet = document.createElement('button')
-            labelStreet.innerText = 'Input Street Name'
-            labelStreet.id = 'button-filter-street'
-            document.querySelector('#input-street').appendChild(labelStreet)
+            // let labelStreet = document.createElement('button')
+            // labelStreet.innerText = 'Input Street Name'
+            // labelStreet.id = 'button-filter-street'
+            // document.querySelector('#input-street').appendChild(labelStreet)
 
             let selectStreet = document.createElement('select')
             document.querySelector('#input-street').appendChild(selectStreet)
@@ -90,7 +90,10 @@ $(function () {
             document.querySelector('#button-filter1').addEventListener('click', showFilter1 )
             //***********************Javascript eventlistener for button for filter2******************/
             document.querySelector('#button-filter2').addEventListener('click', showFilter2 )
-
+            //***********************Javascript eventlistener for button for street******************/
+            document.querySelector('#button-filter-street').addEventListener('click', showFilterStreet )
+            //***********************Javascript eventlistener for button for town******************/
+            document.querySelector('#button-filter-town').addEventListener('click', showFilterTown )
             
 
         })// end csvtoJson

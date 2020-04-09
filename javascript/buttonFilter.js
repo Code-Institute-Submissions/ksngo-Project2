@@ -40,3 +40,22 @@ function showFilter2() {
 
     
 }
+
+
+//****************function to toggle street button*********************************/
+
+function showFilterStreet() {
+
+    $('#town').css('display','none')
+    $('#input-street').css('display','block')
+} 
+
+
+
+//****************function to toggle town button*********************************/
+
+function showFilterTown() {
+
+    $('#input-street').css('display','none')
+    $('#town').css('display','flex')
+} 

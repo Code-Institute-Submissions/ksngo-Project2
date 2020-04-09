@@ -62,11 +62,27 @@ h1, h2, h3  {
     
 }
 
-
 #town {
     display: flex;
     flex-wrap: wrap;
 }
+
+
+
+#input-street {
+    display: none;
+}
+
+/*********************button filter styles******************/
+/* 
+#button-fitler-town {
+    
+}
+
+#button-fitler-street {
+    
+} */
+
 
 
 /**********************textboxes styles*********************/

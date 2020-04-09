@@ -87,9 +87,9 @@ $(function () {
             //***********************Jquery eventlistener for button for reset******************/
             $('#reset').click(reset)
             //***********************Javascript eventlistener for button for filter1******************/
-            document.querySelector('#button-filter1').addEventListener('click', showFilter1 )
+            document.querySelector('#button-show-filters').addEventListener('click', showFilters )
             //***********************Javascript eventlistener for button for filter2******************/
-            document.querySelector('#button-filter2').addEventListener('click', showFilter2 )
+            document.querySelector('#button-more-filters').addEventListener('click', showMoreFilters )
             //***********************Javascript eventlistener for button for street******************/
             document.querySelector('#button-filter-street').addEventListener('click', showFilterStreet )
             //***********************Javascript eventlistener for button for town******************/

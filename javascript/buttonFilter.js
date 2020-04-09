@@ -1,15 +1,15 @@
 
-//****************function to toggle filter 1 button*********************************/
+//****************function to toggle display filters button*********************************/
 
 
 
-function showFilter1() {
+function showFilters() {
     
-    if ($('#left-btm').css('display') == 'none') {
-        $('#left-btm').css('display','block')
+    if ($('#filters-tier').css('display') == 'none') {
+        $('#filters-tier').css('display','flex')
         // mymap.setView([1.25, 103.85], 11)
     } else {
-        $('#left-btm').css('display','none')
+        $('#filters-tier').css('display','none')
         mymap.setView([1.35, 103.85], 12)
     }
 
@@ -17,26 +17,39 @@ function showFilter1() {
 }
 
 
-//****************function to toggle filter 2 button*********************************/
-
-let filter2Element = document.querySelector('#right-layout')
+//****************function to toggle More filters button*********************************/
 
 
-function showFilter2() {
+
+
+function showMoreFilters() {
     
-    if ($('#right-layout').css('display') == 'none') {
-        $('#right-layout').css('display','block')
+    if ($('#filter-others').css('left') == '0px') {
         
-        mymap.setView([1.25, 103.85], 11)
-
+        $('#filter-others').animate({left: '3999px'},'slow')
+        $('#filter-others').css('flex','0')
+        
     } else {
-        
-    
-        $('#right-layout').css('display','none')
-        mymap.setView([1.35, 103.85], 12)
-    
-        
+    $('#filter-others').animate({left: '0px'},'slow')
+    $('#filter-others').css('flex','1')
     }
+
+    
+    
+
+    // if ($('#filter-others').css('display') == 'none') {
+    //     $('#filter-others').css('display','block')
+        
+    //     mymap.setView([1.25, 103.85], 11)
+
+    // } else {
+        
+    
+    //     $('#filter-others').css('display','none')
+    //     mymap.setView([1.35, 103.85], 12)
+    
+    // }
+
 
     
 }
@@ -48,6 +61,8 @@ function showFilterStreet() {
 
     $('#town').css('display','none')
     $('#input-street').css('display','block')
+    
+    $('#filter-others').css('flex','5')
 } 
 
 
@@ -58,4 +73,5 @@ function showFilterTown() {
 
     $('#input-street').css('display','none')
     $('#town').css('display','flex')
+    $('#filter-others').css('flex','1')
 } 

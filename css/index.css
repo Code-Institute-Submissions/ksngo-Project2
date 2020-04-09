@@ -11,55 +11,50 @@ body {
 #container {
     display: flex;
     width:100%;
-    flex-direction: row;
-    height:800px;
-    
+    flex-direction: column;
+    height: auto;
 }
 
-#left-layout {
-    flex: 3;
-    display:flex;
-    flex-direction:column;
-    
-    
-}
-
-#right-layout {
-    flex: 1;
-    overflow-y: auto;
-    display:none;
-    
-}
-
-#left-top {
+#map-tier {
     flex: 5;
-    background-color:purple;
-    overflow:hidden;
-}
-
-#left-center {
-    flex: 1;
-    
-}
-
-#left-btm {
-    flex:5;
-    background-color:radial-gradient(#fff,rgba(0,119,255,0.5));
-    padding:10px;
-    display:none;
-    
-}
-
-h1, h2, h3  {
-    color: red;
-    margin:0;
+    height: 500px;
 }
 
 #map {
     height:100%;
     width:100%;
+}
+
+#navigation-tier {
+    flex:1;
+}
+
+#filters-tier {
+    flex: 5;
+    display:flex;
+    flex-direction: row ;
     
     
+}
+
+#filter-location {
+    flex:1;
+    
+    
+}
+
+#filter-others {
+    flex:1;
+    background-color:red;
+    position:relative;
+    
+    
+}
+
+
+h1, h2, h3  {
+    color: red;
+    margin:0;
 }
 
 #town {
@@ -74,6 +69,17 @@ h1, h2, h3  {
 }
 
 /*********************button filter styles******************/
+
+
+#button-more-filters {
+    position: absolute;
+    left: 95%;
+    z-index: 2;
+    
+
+}
+
+
 /* 
 #button-fitler-town {
     

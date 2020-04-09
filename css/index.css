@@ -2,6 +2,8 @@ body {
     font-family: 'Mallanna', sans-serif;
     background:radial-gradient(#fff,rgba(0,119,255,.2));
     margin:0;
+    overflow-x:hidden;
+    
     
 }
 
@@ -45,7 +47,7 @@ body {
 
 #filter-others {
     flex:1;
-    background-color:red;
+    background-color:white;
     position:relative;
     
     
@@ -75,7 +77,7 @@ h1, h2, h3  {
     position: absolute;
     left: 95%;
     z-index: 2;
-    
+    overflow:hidden;
 
 }
 

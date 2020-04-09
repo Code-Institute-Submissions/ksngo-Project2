@@ -27,11 +27,24 @@ function showMoreFilters() {
     if ($('#filter-others').css('left') == '0px') {
         
         $('#filter-others').animate({left: '3999px'},'slow')
-        $('#filter-others').css('flex','0')
+        
+       setTimeout(function(){ $('#filter-others').css('flex','0')},199)
+       setTimeout(function(){$('#filter-others').css('display', 'none')},199)
+
+        
         
     } else {
-    $('#filter-others').animate({left: '0px'},'slow')
-    $('#filter-others').css('flex','1')
+        
+        if ($('#input-street').css('display') != 'none') {
+            $('#filter-others').animate({left: '0px'},'slow')
+            setTimeout(function(){$('#filter-others').css('display', 'block')},199)
+            setTimeout(function(){ $('#filter-others').css('flex','5')},199)
+        } else {
+            $('#filter-others').animate({left: '0px'},'slow')
+            setTimeout(function(){$('#filter-others').css('display', 'block')},199)
+            setTimeout(function(){ $('#filter-others').css('flex','1')},199)
+        }
+    
     }
 
     

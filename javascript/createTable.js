@@ -66,12 +66,12 @@ function data50ToTable (x,y) {
 
         //**************Create <tr> element for each i iteration ******/
         let rowElement = document.createElement('tr')
-        document.querySelector('table').appendChild(rowElement)
+        document.querySelector('#table-results').appendChild(rowElement)
 
         //***************Insert index number in table*****************/
         let dataElement = document.createElement('td')
         dataElement.innerHTML = i
-        document.querySelector('table').lastElementChild.appendChild(dataElement)   
+        document.querySelector('#table-results').lastElementChild.appendChild(dataElement)   
 
         //***************Insert month in table***********************/
         dataElement = document.createElement('td')
@@ -81,7 +81,7 @@ function data50ToTable (x,y) {
             } else if (y=='Bottom') {
                 dataElement.innerHTML= resultsLowPriceArray[i].month
             }
-        document.querySelector('table').lastElementChild.appendChild(dataElement)
+        document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
 
         //***************Insert town in table***********************/
         dataElement = document.createElement('td')
@@ -90,7 +90,7 @@ function data50ToTable (x,y) {
             } else if (y=='Bottom') {
                 dataElement.innerHTML= resultsLowPriceArray[i].town
             }
-        document.querySelector('table').lastElementChild.appendChild(dataElement)
+        document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
 
         //***************Insert flat-type in table***********************/
         dataElement = document.createElement('td')
@@ -99,7 +99,7 @@ function data50ToTable (x,y) {
             } else if (y=='Bottom') {
                 dataElement.innerHTML= resultsLowPriceArray[i].flat_type
             }
-        document.querySelector('table').lastElementChild.appendChild(dataElement)
+        document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
 
         //***************Insert block number in table***********************/
         dataElement = document.createElement('td')
@@ -108,7 +108,7 @@ function data50ToTable (x,y) {
             } else if (y=='Bottom') {
                 dataElement.innerHTML= resultsLowPriceArray[i].block
             }
-        document.querySelector('table').lastElementChild.appendChild(dataElement)
+        document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
 
         //***************Insert street name in table***********************/
         dataElement = document.createElement('td')
@@ -117,7 +117,7 @@ function data50ToTable (x,y) {
             } else if (y=='Bottom') {
                 dataElement.innerHTML= resultsLowPriceArray[i].street_name
             }
-        document.querySelector('table').lastElementChild.appendChild(dataElement)
+        document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
 
         //***************Insert storey range in table***********************/
         dataElement = document.createElement('td')
@@ -126,7 +126,7 @@ function data50ToTable (x,y) {
             } else if (y=='Bottom') {
                 dataElement.innerHTML= resultsLowPriceArray[i].storey_range
             }
-        document.querySelector('table').lastElementChild.appendChild(dataElement)
+        document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
 
         //***************Insert floor area in table***********************/
         dataElement = document.createElement('td')
@@ -135,7 +135,7 @@ function data50ToTable (x,y) {
             } else if (y=='Bottom') {
                 dataElement.innerHTML= resultsLowPriceArray[i].floor_area_sqm
             }
-        document.querySelector('table').lastElementChild.appendChild(dataElement)
+        document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
 
         //***************Insert flat model in table***********************/
         dataElement = document.createElement('td')
@@ -144,7 +144,7 @@ function data50ToTable (x,y) {
             } else if (y=='Bottom') {
                 dataElement.innerHTML= resultsLowPriceArray[i].flat_model
             }
-        document.querySelector('table').lastElementChild.appendChild(dataElement)
+        document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
         
         //***************Insert remaining lease in table***********************/
         dataElement = document.createElement('td')
@@ -153,7 +153,7 @@ function data50ToTable (x,y) {
             } else if (y=='Bottom') {
                 dataElement.innerHTML= resultsLowPriceArray[i].remaining_lease
             }
-        document.querySelector('table').lastElementChild.appendChild(dataElement)
+        document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
 
         //***************Insert resale price in table***********************/
         dataElement = document.createElement('td')
@@ -162,7 +162,7 @@ function data50ToTable (x,y) {
             } else if (y=='Bottom') {
                 dataElement.innerHTML= resultsLowPriceArray[i].resale_price
             }
-        document.querySelector('table').lastElementChild.appendChild(dataElement)
+        document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
 
         //***************Insert checkbox in table***********************/
         dataElement = document.createElement('td')
@@ -171,8 +171,8 @@ function data50ToTable (x,y) {
         checkbox.id= "checkboxId"+i
         checkboxIdArray.push(checkbox.id)
         checkbox.addEventListener('change' , plotToMap)  //eventlistener for checkbox to plot markers to map
-        document.querySelector('table').lastElementChild.appendChild(dataElement)
-        document.querySelector('table').lastElementChild.lastElementChild.appendChild(checkbox)
+        document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
+        document.querySelector('#table-results').lastElementChild.lastElementChild.appendChild(checkbox)
         
     }
 
@@ -183,13 +183,14 @@ function data50ToTable (x,y) {
 
 function resetTable() {
 
-    document.querySelector('table').remove()
+    document.querySelector('#table-results').remove()
     let tableElement =document.createElement('table')
+    tableElement.id='table-results'
     let headerElement = document.createElement('tr')
     headerElement.id ='tr-header'
     
     document.querySelector('#div-table').appendChild(tableElement)
-    document.querySelector('table').appendChild(headerElement)
+    document.querySelector('#table-results').appendChild(headerElement)
     
     //***************clearLayers in markerGroup and removelayer from mymap********************** */
     if (isEmpty(markersGroup._layers)) {

@@ -83,50 +83,57 @@
                     
                 </div>
 
-                <div id='filter-others'> <!--------------Filter 2 options -----------------------------------------> 
-                    <!-- <div id='filter-others-slide'> -->
-                        
-                    <!-------------------------Input year of resales textboxes------------------------------------>
-                        <section>
-                            <label>Input year of resales(between 2017 to 2020):</label>
-                            <input class='textbox' type='number' id='min-year' name='min-year' min='2017' max='2020' placeholder='2017'> to
-                            <input class='textbox' type='number' id='max-year' name='max-year' min='2017' max='2020' placeholder='2020'>
-                        </section> <br>
-                    <!-------------------------Input Room Type Checkboxes------------------------------------>
-                        <section id='roomType'> <!--generate html content by index.js-->
-                            <label>Input Room Type: </label>
-                            <label class='toggle'> <input class='toggle__input' type='checkbox' id='1rm' name='room-type' value='1 ROOM' /><span class='toggle__label'><span class='toggle__text' for='1rm'>1 ROOM</span></span></label>
-                            <label class='toggle'><input class='toggle__input' type='checkbox' id='2rm' name='room-type' value='2 ROOM' /><span class='toggle__label'><span class='toggle__text' for='2rm' >2 ROOM</span> </span></label>
-                            <label class='toggle'><input class='toggle__input' type='checkbox' id='3rm' name='room-type' value='3 ROOM' /><span class='toggle__label'><span class='toggle__text' for='3rm'>3 ROOM</span></span></label>
-                            <label class='toggle'><input class='toggle__input' type='checkbox' id='4rm' name='room-type' value='4 ROOM' /><span class='toggle__label'><span class='toggle__text' for='4rm'>4 ROOM</span></span></label>
-                            <label class='toggle'><input class='toggle__input' type='checkbox' id='5rm' name='room-type' value='5 ROOM' /><span class='toggle__label'><span class='toggle__text' for='5rm'>5 ROOM</span></span></label>
-                            <label class='toggle'><input class='toggle__input' type='checkbox' id='executive' name='room-type' value='EXECUTIVE' /><span class='toggle__label'><span class='toggle__text' for='executive'>Executive</span></span></label>
-                            <label class='toggle'><input class='toggle__input' type='checkbox' id='multig' name='room-type' value='MULTI-GENERATION' /><span class='toggle__label'><span class='toggle__text' for='multig'>Multi-Generation</span></span></label>
-                        </section> <br>
-                    <!-------------------------Input storey range Checkboxes------------------------------------>
-                        <section>
-                            <label>Input Storey Range: </label>
-                            <label class='toggle'> <input class='toggle__input' type='checkbox' id='01 TO 03' name='storey-range' value='01 TO 03' /><span class='toggle__label'><span class='toggle__text' for='01 TO 03'>01 TO 03</span></span></label>
-                            <label class='toggle'> <input class='toggle__input' type='checkbox' id='04 TO 06' name='storey-range' value='04 TO 06' /><span class='toggle__label'><span class='toggle__text' for='04 TO 06'>04 TO 06</span></span></label>
-                            <label class='toggle'> <input class='toggle__input' type='checkbox' id='07 TO 09' name='storey-range' value='07 TO 09' /><span class='toggle__label'><span class='toggle__text' for='07 TO 09'>07 TO 09</span></span></label>
-                            <label class='toggle'> <input class='toggle__input' type='checkbox' id='10 TO 12' name='storey-range' value='10 TO 12' /><span class='toggle__label'><span class='toggle__text' for='10 TO 12'>10 TO 12</span></span></label>
-                            <label class='toggle'> <input class='toggle__input' type='checkbox' id='13 TO 15' name='storey-range' value='13 TO 15' /><span class='toggle__label'><span class='toggle__text' for='13 TO 15'>13 TO 15</span></span></label>
-                            <label class='toggle'> <input class='toggle__input' type='checkbox' id='16 TO 18' name='storey-range' value='16 TO 18' /><span class='toggle__label'><span class='toggle__text' for='16 TO 18'>16 TO 18</span></span></label>
-                            <label class='toggle'> <input class='toggle__input' type='checkbox' id='19 TO 21' name='storey-range' value='19 TO 21' /><span class='toggle__label'><span class='toggle__text' for='19 TO 21'>19 TO 21</span></span></label>
-                            <label class='toggle'> <input class='toggle__input' type='checkbox' id='22 TO 30' name='storey-range' value='22 TO 30' /><span class='toggle__label'><span class='toggle__text' for='22 TO 30'>22 TO 30</span></span></label>
-                            <label class='toggle'> <input class='toggle__input' type='checkbox' id='31 TO 39' name='storey-range' value='31 TO 39' /><span class='toggle__label'><span class='toggle__text' for='31 TO 39'>31 TO 39</span></span></label>
-                            <label class='toggle'> <input class='toggle__input' type='checkbox' id='40 TO 51' name='storey-range' value='40 TO 51' /><span class='toggle__label'><span class='toggle__text' for='40 TO 51'>40 TO 51</span></span></label>
-                        </section> <br>
-                    <!-------------------------Input floor area text boxes------------------------------------>
-                        <section>
-                            <label>Input Floor Area (in meter square)</label>
-                            <input class='textbox' type='number' id='min-floor-area' min='31' max='249' placeholder='31'> to
-                                <input class='textbox' type='number' id='max-floor-area' min='31' max='249' placeholder='249'>
-                        </section> <br>
-            
-                    <!-------------------------Input Flat Model Checkboxes------------------------------------>
-                        <section>
-                                <label>Flat Model: </label>
+                <div id='filter-others'> <!--------------Filter others options -----------------------------------------> 
+                    
+                    <table id='filter-others-table'>
+                        <!-------------------------Input year of resales textboxes------------------------------------>
+                        <tr class='filter-others-tr'>
+                            <td class='filters-others-td'><label>Input year of resales(between 2017 to 2020):</label></td>
+                            <td class='filters-others-td'>
+                                <input class='textbox' type='number' id='min-year' name='min-year' min='2017' max='2020' placeholder='2017'> to
+                                <input class='textbox' type='number' id='max-year' name='max-year' min='2017' max='2020' placeholder='2020'>
+                            </td>
+                        </tr>
+                        <!-------------------------Input Room Type Checkboxes------------------------------------>
+                        <tr id='roomType' class='filter-others-tr'>
+                            <td class='filters-others-td'><label>Input Room Type: </label></td>
+                            <td class='filters-others-td'>
+                                <label class='toggle'> <input class='toggle__input' type='checkbox' id='1rm' name='room-type' value='1 ROOM' /><span class='toggle__label'><span class='toggle__text' for='1rm'>1 ROOM</span></span></label>
+                                <label class='toggle'><input class='toggle__input' type='checkbox' id='2rm' name='room-type' value='2 ROOM' /><span class='toggle__label'><span class='toggle__text' for='2rm' >2 ROOM</span> </span></label>
+                                <label class='toggle'><input class='toggle__input' type='checkbox' id='3rm' name='room-type' value='3 ROOM' /><span class='toggle__label'><span class='toggle__text' for='3rm'>3 ROOM</span></span></label>
+                                <label class='toggle'><input class='toggle__input' type='checkbox' id='4rm' name='room-type' value='4 ROOM' /><span class='toggle__label'><span class='toggle__text' for='4rm'>4 ROOM</span></span></label>
+                                <label class='toggle'><input class='toggle__input' type='checkbox' id='5rm' name='room-type' value='5 ROOM' /><span class='toggle__label'><span class='toggle__text' for='5rm'>5 ROOM</span></span></label>
+                                <label class='toggle'><input class='toggle__input' type='checkbox' id='executive' name='room-type' value='EXECUTIVE' /><span class='toggle__label'><span class='toggle__text' for='executive'>Executive</span></span></label>
+                                <label class='toggle'><input class='toggle__input' type='checkbox' id='multig' name='room-type' value='MULTI-GENERATION' /><span class='toggle__label'><span class='toggle__text' for='multig'>Multi-Generation</span></span></label>
+                            </td>
+                        </tr>
+                        <!-------------------------Input storey range Checkboxes------------------------------------>
+                        <tr class='filter-others-tr'>
+                            <td class='filters-others-td'><label>Input Storey Range: </label></td>
+                            <td class='filters-others-td'>
+                                <label class='toggle'> <input class='toggle__input' type='checkbox' id='01 TO 03' name='storey-range' value='01 TO 03' /><span class='toggle__label'><span class='toggle__text' for='01 TO 03'>01 TO 03</span></span></label>
+                                <label class='toggle'> <input class='toggle__input' type='checkbox' id='04 TO 06' name='storey-range' value='04 TO 06' /><span class='toggle__label'><span class='toggle__text' for='04 TO 06'>04 TO 06</span></span></label>
+                                <label class='toggle'> <input class='toggle__input' type='checkbox' id='07 TO 09' name='storey-range' value='07 TO 09' /><span class='toggle__label'><span class='toggle__text' for='07 TO 09'>07 TO 09</span></span></label>
+                                <label class='toggle'> <input class='toggle__input' type='checkbox' id='10 TO 12' name='storey-range' value='10 TO 12' /><span class='toggle__label'><span class='toggle__text' for='10 TO 12'>10 TO 12</span></span></label>
+                                <label class='toggle'> <input class='toggle__input' type='checkbox' id='13 TO 15' name='storey-range' value='13 TO 15' /><span class='toggle__label'><span class='toggle__text' for='13 TO 15'>13 TO 15</span></span></label>
+                                <label class='toggle'> <input class='toggle__input' type='checkbox' id='16 TO 18' name='storey-range' value='16 TO 18' /><span class='toggle__label'><span class='toggle__text' for='16 TO 18'>16 TO 18</span></span></label>
+                                <label class='toggle'> <input class='toggle__input' type='checkbox' id='19 TO 21' name='storey-range' value='19 TO 21' /><span class='toggle__label'><span class='toggle__text' for='19 TO 21'>19 TO 21</span></span></label>
+                                <label class='toggle'> <input class='toggle__input' type='checkbox' id='22 TO 30' name='storey-range' value='22 TO 30' /><span class='toggle__label'><span class='toggle__text' for='22 TO 30'>22 TO 30</span></span></label>
+                                <label class='toggle'> <input class='toggle__input' type='checkbox' id='31 TO 39' name='storey-range' value='31 TO 39' /><span class='toggle__label'><span class='toggle__text' for='31 TO 39'>31 TO 39</span></span></label>
+                                <label class='toggle'> <input class='toggle__input' type='checkbox' id='40 TO 51' name='storey-range' value='40 TO 51' /><span class='toggle__label'><span class='toggle__text' for='40 TO 51'>40 TO 51</span></span></label>
+                            </td>
+                        </tr>
+                        <!-------------------------Input floor area text boxes------------------------------------>
+                        <tr class='filter-others-tr'>
+                            <td class='filters-others-td'><label>Input Floor Area (in meter square)</label></td>
+                            <td class='filters-others-td'>
+                                <input class='textbox' type='number' id='min-floor-area' min='31' max='249' placeholder='31'> to
+                                <input class='textbox' type='number' id='max-floor-area' min='31' max='249' placeholder='249'></td>
+                        </tr>
+                        <!-------------------------Input Flat Model Checkboxes------------------------------------>
+                        <tr class='filter-others-tr'>
+                            <td class='filters-others-td'><label>Flat Model: </label></td>
+                            <td class='filters-others-td'>
                                 <label class='toggle'> <input class='toggle__input' type='checkbox' id='2-room' name='flat-model' value='2-room' /><span class='toggle__label'><span class='toggle__text' for='2-room'>2-room</span></span></label>
                                 <label class='toggle'> <input class='toggle__input' type='checkbox' id='Adjoined flat' name='flat-model' value='Adjoined flat' /><span class='toggle__label'><span class='toggle__text' for='Adjoined flat'>Adjoined flat</span></span></label>
                                 <label class='toggle'> <input class='toggle__input' type='checkbox' id='Apartment' name='flat-model' value='Apartment' /><span class='toggle__label'><span class='toggle__text' for='Apartment'>Apartment</span></span></label>
@@ -147,6 +154,35 @@
                                 <label class='toggle'><input class='toggle__input' type='checkbox' id='Terrace' name='flat-model' value='Terrace' /><span class='toggle__label'><span class='toggle__text' for='Terrace'>Terrace</span></span></label>
                                 <label class='toggle'><input class='toggle__input' type='checkbox' id='Type S1' name='flat-model' value='Type S1' /><span class='toggle__label'><span class='toggle__text' for='Type S1'>Type S1</span></span></label>
                                 <label class='toggle'><input class='toggle__input' type='checkbox' id='Type S2' name='flat-model' value='Type S2' /><span class='toggle__label'><span class='toggle__text' for='Type S2'>Type S2</span></span></label>
+                            </td>
+                        </tr>
+                    </table>
+                        
+                    
+                        <section>
+                            
+                            
+                        </section> <br>
+                    
+                        <section > <!--generate html content by index.js-->
+                            
+                            
+                        </section> <br>
+                    
+                        <section>
+                            
+                            
+                        </section> <br>
+                    
+                        <section>
+                            
+                            
+                        </section> <br>
+            
+                    
+                        <section>
+                                
+                                
                         </section>
             
                         <!-- <section>
@@ -160,15 +196,15 @@
                                 <input type='number' id='min-resale-price' min='0' max='5000000'> to
                                 <input type='number' id='max-resale-price' min='0' max='5000000'> </br>
                             </section> -->
-                    </div>
-                <!-- </div> -->
+                </div>
+                
             </div>
         </div>
     </div>
 
 
     <div id='div-table'>
-        <table>
+        <table id='table-results'>
             <tr id='tr-header'>
                
             </tr>

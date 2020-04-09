@@ -213,7 +213,7 @@ label:hover {
 
 /**************tables styles*****************************/
 
-table {
+#table-results {
 
     width:100%;
     border:1px solid black;

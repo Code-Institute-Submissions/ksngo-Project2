@@ -1,11 +1,89 @@
 body {
     font-family: 'Mallanna', sans-serif;
-    background:radial-gradient(#fff,rgba(0,119,255,.2));
+    /* background:radial-gradient(#fff,rgba(0,119,255,.1)); */
+    background-color: white;
     margin:0;
     overflow-x:hidden;
     
     
 }
+
+
+/*******************Nav Bar**************************/
+
+nav ul {
+
+    list-style-type: none ;
+    padding: 0;
+    margin:0;
+    
+    
+}
+
+nav ul li {
+    display: inline-block;
+    margin:0;
+    vertical-align: middle;
+    /* text-top */
+    
+}
+
+#nav-icon {
+    padding-left:20px;
+    color:red;
+}
+
+#nav-hdb {
+    
+    line-height: 14px;
+    text-align: center;
+    width:100px;
+    font-weight: bold;
+    font-family: 'Alatsi', sans-serif;
+    
+}
+
+#nav-about {
+    padding-left: 60px;
+    padding-right:60px;
+    height: 100px;
+    line-height: 90px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#nav-about:hover {
+    background-color: #6a8494;
+    color:white;
+}
+
+
+#about-this {
+    display: none;
+    height:auto;
+    width:95%;
+    background-color: #6a8494;
+    z-index: 1; 
+    position:fixed;
+    top:100px;
+    color:white;
+    font-family: 'Encode Sans', sans-serif;
+    padding-left: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* text-align : center ; */
+    /* align-content: center; */
+   
+    
+    
+    
+}
+
+#nav-about:hover + #about-this {
+    display:block ;
+
+}
+
+
 
 
 /********************Layout Plan**********************/
@@ -20,7 +98,14 @@ body {
 #map-tier {
     flex: 5;
     height: 500px;
+    display:block;
+    z-index:0;
 }
+
+/* #nav-about:hover + #map-tier {
+    display:none;
+} */
+
 
 #map {
     height:100%;
@@ -35,19 +120,21 @@ body {
     flex: 5;
     display:flex;
     flex-direction: row ;
+    max-height:auto;
     
     
 }
 
 #filter-location {
     flex:1;
+    padding: 5px;
     
     
 }
 
 #filter-others {
     flex:1;
-    background-color:white;
+    
     position:relative;
     
     
@@ -129,7 +216,7 @@ h1, h2, h3  {
     background-color: #6a8494;
     box-shadow: 0 0 20px rgba(0, 0, 0, .2);
     cursor: pointer;
-    transition: background-color .2s, box-shadow .2s;
+    transition: box-shadow .2s;
 
 }
 
@@ -142,12 +229,13 @@ h1, h2, h3  {
     height: 10px;
     border: 2px solid #fff;
     border-radius:25%;
-    transition: background-color .2s;
+    
 }
 
 
 .input-town:checked + .label-town {
-    background-color: #ab576c;
+    background-color: rgb(0,119,255);
+    
 }
 
 .label-town:hover {
@@ -209,6 +297,36 @@ label:hover {
 } */
 
 
+/*************more filters tables styles*****************/
+
+#filter-others-table {
+    width:100%;
+    border:0px solid black;
+    border-right: none;
+    border-collapse:collapse;
+
+}
+
+
+.filter-others-tr:nth-child(even) {
+    background-color: #6a8494; 
+    color:white;
+    
+}
+
+.filter-others-tr:nth-child(odd) {
+    background-color: white;
+    color:black;
+    
+}
+
+.filter-others-td {
+    border:0px solid black;
+    padding:15px;
+}
+
+
+
 
 
 /**************tables styles*****************************/
@@ -219,7 +337,6 @@ label:hover {
     border:1px solid black;
     border-collapse:collapse;
     
-
 }
 
 th {
@@ -247,6 +364,8 @@ tr:nth-child(odd) {
     color:red;
 }
 
+
+/************results size***************************/
 #resultsSize {
     color: red;
     

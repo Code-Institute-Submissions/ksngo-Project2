@@ -6,8 +6,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no "> 
 
+    <!--font awesome--->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!--Google Font Css-->
     <link href="https://fonts.googleapis.com/css?family=Mallanna&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Alatsi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans&display=swap" rel="stylesheet"> 
 
     <!--Leaflet Css File-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
@@ -20,21 +26,71 @@
     <!--https://codepen.io/melnik909/pen/YjGZqQ-->
     <link rel='stylesheet' href='css/checkbox.css'/>
 
+    
+
     <!--index Css File-->
     <link rel='stylesheet' href='css/index.css' />
     <title>ksngo-titlePending</title>
 </head>
 
 <body>
-    <h1>Housing Development Board (HDB) resales</h1>
+    
+    <nav>
+        <ul>
+            <li id='nav-icon'>
+                <i class="fa fa-building-o fa-3x" aria-hidden="true"></i>
+            </li>
+            <li id='nav-hdb'>
+                HOUSING & DEVELOPMENT BOARD RESALES
+            </li>
+            <li id='nav-about'>
+                About this
+            </li>
+            <div id='about-this'>
 
+                
+                <section style='display:flex; flex-direction: row;'>
+                    <div style='flex:1'><b>Goal</b></div>
+                    <div style='flex:9'>
+                        (1)&emsp;User can research on HDB resales price between 2017 to Feb 2020. <br>
+                        (2)&emsp;Filter by town, street-name, year, room, storey, area & model down to your specific needs. <br>
+                        (3)&emsp;Return the results in table form. Show on map the location of each result.
+                    </div>
+                </section> <br>
+                <section style='display:flex; flex-direction: row;'>
+                    <div style='flex:1'> <b>Guide</b> </div>
+                    <div style='flex:9'>
+                        (1)&emsp;Start by filtering by town or street names. If no options are selected, default will be the street name displayed on dropdown i.e. ADMIRALTY DR.<br>
+                        (2)&emsp;Optional filtering by year, room, storey, area & model. If no options are selected, default will include all year, room, storey, area & model.<br/>
+                        (3)&emsp;Hide filters to remove filters from view. <br>
+                        (4)&emsp;Generate results in table by ascending or descending price order. Table limit display to 50 results. Continue click "show/next" buttons for next 50 results.<br/>
+                        (5)&emsp;The last column in the table can be checked to show the location of result on the map. Otherwise, the table's header last column can be checked to show all 50 results at once on map.<br/>
+                        (6)&emsp;The map top-right allows user to search location by inserting address. <br>
+                        (7)&emsp;Press 'Reset' button to clear tables and markers from map. Previous selections will not be resetted.
+                    </div>
+                    
+                </section><br><br>
+                <section style='display:flex; flex-direction: row;'>
+                    <div style='flex:1'><b>Source</b></div>
+                    <div style='flex:9'>Data courtesy from data.gov.sg. </div>
+                </section>
+
+                
+            </div>
+        </ul>
+        
+    </nav>
+
+    
 
     <div id='container'>
-        
+
+            
             <div id='map-tier'>
                 <div id='map'>
                 </div> 
             </div>
+
             <div id='navigation-tier'>
                 <button id='button-show-filters'><h3>Show Filters</h3></button>
                 <button id='buttonTopPrice'><h3>Show/Next 50 units highest resales price</h3></button>
@@ -42,6 +98,7 @@
                 <button id='reset'><h3>Reset</h3></button> 
                 <span id='resultsSize'> </span>
             </div>
+
             <div id='filters-tier'> 
                 <div id='filter-location'>
                     <button id='button-filter-town'>Input by Town: </button>
@@ -88,16 +145,16 @@
                     <table id='filter-others-table'>
                         <!-------------------------Input year of resales textboxes------------------------------------>
                         <tr class='filter-others-tr'>
-                            <td class='filters-others-td'><label>Input year of resales(between 2017 to 2020):</label></td>
-                            <td class='filters-others-td'>
+                            <td class='filter-others-td'><label>Input year of resales(between 2017 to 2020):</label></td>
+                            <td class='filter-others-td'>
                                 <input class='textbox' type='number' id='min-year' name='min-year' min='2017' max='2020' placeholder='2017'> to
                                 <input class='textbox' type='number' id='max-year' name='max-year' min='2017' max='2020' placeholder='2020'>
                             </td>
                         </tr>
                         <!-------------------------Input Room Type Checkboxes------------------------------------>
                         <tr id='roomType' class='filter-others-tr'>
-                            <td class='filters-others-td'><label>Input Room Type: </label></td>
-                            <td class='filters-others-td'>
+                            <td class='filter-others-td'><label>Input Room Type: </label></td>
+                            <td class='filter-others-td'>
                                 <label class='toggle'> <input class='toggle__input' type='checkbox' id='1rm' name='room-type' value='1 ROOM' /><span class='toggle__label'><span class='toggle__text' for='1rm'>1 ROOM</span></span></label>
                                 <label class='toggle'><input class='toggle__input' type='checkbox' id='2rm' name='room-type' value='2 ROOM' /><span class='toggle__label'><span class='toggle__text' for='2rm' >2 ROOM</span> </span></label>
                                 <label class='toggle'><input class='toggle__input' type='checkbox' id='3rm' name='room-type' value='3 ROOM' /><span class='toggle__label'><span class='toggle__text' for='3rm'>3 ROOM</span></span></label>
@@ -109,8 +166,8 @@
                         </tr>
                         <!-------------------------Input storey range Checkboxes------------------------------------>
                         <tr class='filter-others-tr'>
-                            <td class='filters-others-td'><label>Input Storey Range: </label></td>
-                            <td class='filters-others-td'>
+                            <td class='filter-others-td'><label>Input Storey Range: </label></td>
+                            <td class='filter-others-td'>
                                 <label class='toggle'> <input class='toggle__input' type='checkbox' id='01 TO 03' name='storey-range' value='01 TO 03' /><span class='toggle__label'><span class='toggle__text' for='01 TO 03'>01 TO 03</span></span></label>
                                 <label class='toggle'> <input class='toggle__input' type='checkbox' id='04 TO 06' name='storey-range' value='04 TO 06' /><span class='toggle__label'><span class='toggle__text' for='04 TO 06'>04 TO 06</span></span></label>
                                 <label class='toggle'> <input class='toggle__input' type='checkbox' id='07 TO 09' name='storey-range' value='07 TO 09' /><span class='toggle__label'><span class='toggle__text' for='07 TO 09'>07 TO 09</span></span></label>
@@ -125,15 +182,15 @@
                         </tr>
                         <!-------------------------Input floor area text boxes------------------------------------>
                         <tr class='filter-others-tr'>
-                            <td class='filters-others-td'><label>Input Floor Area (in meter square)</label></td>
-                            <td class='filters-others-td'>
+                            <td class='filter-others-td'><label>Input Floor Area (in meter square)</label></td>
+                            <td class='filter-others-td'>
                                 <input class='textbox' type='number' id='min-floor-area' min='31' max='249' placeholder='31'> to
                                 <input class='textbox' type='number' id='max-floor-area' min='31' max='249' placeholder='249'></td>
                         </tr>
                         <!-------------------------Input Flat Model Checkboxes------------------------------------>
                         <tr class='filter-others-tr'>
-                            <td class='filters-others-td'><label>Flat Model: </label></td>
-                            <td class='filters-others-td'>
+                            <td class='filter-others-td'><label>Flat Model: </label></td>
+                            <td class='filter-others-td'>
                                 <label class='toggle'> <input class='toggle__input' type='checkbox' id='2-room' name='flat-model' value='2-room' /><span class='toggle__label'><span class='toggle__text' for='2-room'>2-room</span></span></label>
                                 <label class='toggle'> <input class='toggle__input' type='checkbox' id='Adjoined flat' name='flat-model' value='Adjoined flat' /><span class='toggle__label'><span class='toggle__text' for='Adjoined flat'>Adjoined flat</span></span></label>
                                 <label class='toggle'> <input class='toggle__input' type='checkbox' id='Apartment' name='flat-model' value='Apartment' /><span class='toggle__label'><span class='toggle__text' for='Apartment'>Apartment</span></span></label>
@@ -199,7 +256,7 @@
                 </div>
                 
             </div>
-        </div>
+        
     </div>
 
 

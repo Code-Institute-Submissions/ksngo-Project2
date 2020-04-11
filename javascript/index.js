@@ -80,15 +80,25 @@ $(function () {
             // }
 
 
-            //***********************Jquery eventlistener for button for top resales price******************/
+
+
+            //***********************Jquery eventlistener for button for top resales price on clicking ******************/
             $('#buttonTopPrice').click(resultsForTopPrice)
-            //***********************Jquery eventlistener for button for top resales price******************/
+            //***********************javascript eventlistener for button for top resales price on hover over************ */
+            hoverOverBgColorChange('#buttonTopPrice')
+            //***********************Jquery eventlistener for button for bottom resales price on clicking******************/
             $('#buttonBottomPrice').click(resultsForBottomPrice)
-            //***********************Jquery eventlistener for button for reset******************/
+            //***********************javascript eventlistener for button for bottom resales price on hover over************ */
+            hoverOverBgColorChange('#buttonBottomPrice')
+            //***********************Jquery eventlistener for button for reset on clicking******************/
             $('#reset').click(reset)
-            //***********************Javascript eventlistener for button for filter1******************/
+            //***********************javascript eventlistener for button for reset on hover over************ */
+            hoverOverBgColorChange('#reset')
+            //***********************Javascript eventlistener for button for primary filters******************/
             document.querySelector('#button-show-filters').addEventListener('click', showFilters )
-            //***********************Javascript eventlistener for button for filter2******************/
+            //***********************javascript eventlistener for button for reset on hover over************ */
+            hoverOverBgColorChange('#button-show-filters')
+            //***********************Javascript eventlistener for button for extra filters******************/
             document.querySelector('#button-more-filters').addEventListener('click', showMoreFilters )
             //***********************Javascript eventlistener for button for street******************/
             document.querySelector('#button-filter-street').addEventListener('click', showFilterStreet )

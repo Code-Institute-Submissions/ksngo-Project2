@@ -9,6 +9,8 @@ function resultsForTopPrice() {
     
     /*******************disable button for lowest resales price ********************/
     document.querySelector('#buttonBottomPrice').disabled=true
+    // document.querySelector('#buttonBottomPrice:hover').style.backgroundColor='#6a8494'
+    // document.querySelector('#buttonTopPrice:hover').style.backgroundColor='#ab576c' 
     /*******************note down that top resales price button is clicked**********/
     topOrBottomRange = 'Top'
 
@@ -24,9 +26,9 @@ function resultsForTopPrice() {
     $('#resultsSize').css('display','block')
 
     if (resultsSize!==0) {
-        document.getElementById('resultsSize').innerHTML = `Number of Results Index returned : ${resultsSize-1}`
+        document.getElementById('resultsSize').innerHTML = `<h3>Number of Results: ${resultsSize}</h3>`
     } else {
-        document.getElementById('resultsSize').innerHTML = `Number of Results Index returned : Zero result`
+        document.getElementById('resultsSize').innerHTML = `<h3>Number of Results: 0 </h3>`
     }
 
     createTable(countclicks , topOrBottomRange)
@@ -41,6 +43,8 @@ function resultsForBottomPrice() {
     topOrBottomRange = 'Bottom'
 
     document.querySelector('#buttonTopPrice').disabled=true
+    // document.querySelector('#buttonTopPrice:hover').style.backgroundColor ='#6a8494'
+    // document.querySelector('#buttonBottomPrice:hover').style.backgroundColor ='#ab576c'
 
     if (countclicks==0) {
         /**************get results*******************/
@@ -55,9 +59,9 @@ function resultsForBottomPrice() {
     $('#resultsSize').css('display','block')
 
     if (resultsSize!==0) {
-        document.getElementById('resultsSize').innerHTML = `Number of Results Index returned : ${resultsSize-1}`
+        document.getElementById('resultsSize').innerHTML = `<h3>Number of Results: ${resultsSize}</h3>`
     } else {
-        document.getElementById('resultsSize').innerHTML = `Number of Results Index returned : Zero result`
+        document.getElementById('resultsSize').innerHTML = `<h3>Number of Results: 0 </h3>`
     }
 
     /*******************display results in table on html **********/

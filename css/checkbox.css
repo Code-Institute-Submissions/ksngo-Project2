@@ -62,9 +62,9 @@ LEVEL 1. CORE STYLES
 }
 
 .toggle__input:not(:disabled):checked~ .toggle__label:before{
-    background-color: rgb(0,119,255);
+    background-color: #ab576c;
     opacity: 1;
-    border: 2px solid rgb(0,119,255);
+    border: 2px solid #ab576c;
     
     
 }
@@ -124,7 +124,7 @@ LEVEL 1. CORE STYLES
   
   .toggle{
     --toggleColor: #6a8494;
-    --toggleBgColor: rgb(0,119,255);
+    --toggleBgColor: #ab576c;
     --toggleSize: 18px;
   }
   

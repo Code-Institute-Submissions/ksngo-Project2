@@ -34,7 +34,7 @@ function showMoreFilters() {
         
        setTimeout(function(){ $('#filter-others').css('flex','0')},199)
        setTimeout(function(){$('#filter-others').css('display', 'none')},199)
-       setTimeout(function(){$('#button-more-filters').text('More filters')},199)
+       setTimeout(function(){$('#button-more-filters').html(`<i class="fa fa-chevron-left" aria-hidden="true"></i>&emsp;&emsp;show extra filters`)},199)
 
         
         
@@ -44,12 +44,12 @@ function showMoreFilters() {
             $('#filter-others').animate({left: '0px'},'slow')
             setTimeout(function(){$('#filter-others').css('display', 'block')},199)
             setTimeout(function(){ $('#filter-others').css('flex','5')},199)
-            setTimeout(function(){$('#button-more-filters').text('Hide filters')},199)
+            setTimeout(function(){$('#button-more-filters').html(`hide extra filters&emsp;&emsp;<i class="fa fa-chevron-right" aria-hidden="true"></i>`)},199)
         } else {
             $('#filter-others').animate({left: '0px'},'slow')
             setTimeout(function(){$('#filter-others').css('display', 'block')},199)
             setTimeout(function(){ $('#filter-others').css('flex','1')},199)
-            setTimeout(function(){$('#button-more-filters').text('Hide filters')},199)
+            setTimeout(function(){$('#button-more-filters').html(`hide extra filters&emsp;&emsp;<i class="fa fa-chevron-right" aria-hidden="true"></i>`)},199)
         }
     
     }
@@ -83,6 +83,8 @@ function showFilterStreet() {
     $('#input-street').css('display','block')
     
     $('#filter-others').css('flex','5')
+    $('#button-filter-street').css('backgroundColor','#ab576c')
+    $('#button-filter-town').css('backgroundColor','#6a8494')
 } 
 
 
@@ -94,4 +96,19 @@ function showFilterTown() {
     $('#input-street').css('display','none')
     $('#town').css('display','flex')
     $('#filter-others').css('flex','1')
+    $('#button-filter-town').css('backgroundColor','#ab576c')
+    $('#button-filter-street').css('backgroundColor','#6a8494')
+
 } 
+
+
+//*****************function to add eventlistener for hover over background color change effect for middle primary buttons*********************** */
+
+function hoverOverBgColorChange (elementID) {
+    document.querySelector(elementID).addEventListener('mouseover', function(){
+        this.style.backgroundColor = '#ab576c'
+    })
+    document.querySelector(elementID).addEventListener('mouseout', function(){
+        this.style.backgroundColor = '#6a8494 '
+    })
+}

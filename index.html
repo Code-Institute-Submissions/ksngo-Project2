@@ -94,20 +94,26 @@
             </div>
 
             <div id='navigation-tier'>
-                <button id='button-show-filters'><h3>Display Filters</h3></button>
-                <button id='buttonTopPrice'><h3>Show/Next 50 units highest resales price</h3></button>
-                <button id='buttonBottomPrice'><h3>Show/Next 50 units lowest resales price</h3></button>
-                <button id='reset'><h3>Reset</h3></button> 
-                <span id='resultsSize'> </span>
+                <div id='left-navigation-tier'>
+                    <button id='button-show-filters' class='middle-nav'><h3>Display Filters</h3></button>
+                </div>
+                <div id='right-navigation-tier'>
+                    <div id='resultsSize'> </div>
+                    <button id='buttonTopPrice' class='middle-nav'><h3>Display table in descending price</h3></button>
+                    <button id='buttonBottomPrice' class='middle-nav'><h3>Display table in ascending price</h3></button>
+                    <button id='reset' class='middle-nav'><h3>Reset</h3></button> 
+                    
+                </div>
+                
             </div>
 
-            
+
 
             <div id='filters-tier'> 
                 <div id='filter-location'>
-                    <button id='button-filter-town'>Input by Town: </button>
-                    <button id='button-filter-street'>Input by Street name: </button>
-                    <button id='button-more-filters'>More filters</button> <br>
+                    <button id='button-filter-town' class='middle-sec-nav'>Filter by Town</button>
+                    <button id='button-filter-street' class='middle-sec-nav'>Filter by Street name</button>
+                    <button id='button-more-filters' class='middle-sec-nav'><i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>&emsp;&emsp;show extra filters</button> <br>
                     <section id='town'>
                         <input class='input-town' type='checkbox' id='selectAllTown' /><label class='label-town' for='selectAllTown'>Select All</label>
                         <input class='input-town' type='checkbox' id='amk' name='town' value='ANG MO KIO' /><label class='label-town' for='amk'>Ang Mo Kio</label>
@@ -223,26 +229,32 @@
                 
             </div>
         
+        <a id="button-to-top"></a>
+
+
+        <div id='div-table'>
+            <table id='table-results'>
+                <tr id='tr-header'>
+                
+                </tr>
+            </table>
+        </div>
+
+        <!-- <div id='footer-border'>&emsp;</div> -->
+        <footer>
+            <div>&emsp;</div>
+            <div>
+                <p> <i class="fa fa-copyright" aria-hidden="true"></i> Ngo Kee Siang</p>
+                <p> Last Updated 11 April 2020</p>
+            </div>
+        </footer>
     </div>
 
-    <a id="button-to-top"></a>
-
-
-    <div id='div-table'>
-        <table id='table-results'>
-            <tr id='tr-header'>
-               
-            </tr>
-        </table>
-    </div>
-
-    <footer>
-
-    </footer>
+    
 
 
     <!--Jquery js-->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>'
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!--axios js-->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js'></script>
     <!--crossfilter js-->

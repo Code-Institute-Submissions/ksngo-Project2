@@ -135,7 +135,7 @@ nav ul li {
     display:none;
     flex-direction: row ;
     max-height:auto;
-    background-color: skyblue;
+    background-color: white;
     
     
 }
@@ -571,5 +571,6 @@ footer div {
 a {
     text-decoration: none;
     color: #b7b7b7;
+    cursor: text;
 }
 

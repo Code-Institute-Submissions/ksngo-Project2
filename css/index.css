@@ -171,10 +171,10 @@ nav ul li {
     }
 
     #button-more-filters {
-    
+        
         left: 80% !important;
         width:auto;
-        
+
     
     }
 
@@ -412,10 +412,10 @@ nav ul li {
 /**************tables styles*****************************/
 
 #table-results {
-    width:auto;
+    width:100%;
     border:1px solid black;
     border-collapse:collapse;
-    margin: auto;
+    
     
 }
 
@@ -428,7 +428,7 @@ th {
     color:black;
     writing-mode: vertical-rl;
     margin:0;
-    padding:5px;
+    padding:10px;
 }
 
 td {
@@ -436,7 +436,7 @@ td {
     border-collapse:collapse;
     text-align: center;
     margin:auto;
-    padding:5px;
+    padding:10px;
    
 }
 

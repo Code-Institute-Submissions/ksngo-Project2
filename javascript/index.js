@@ -104,6 +104,16 @@ $(function () {
             document.querySelector('#button-filter-street').addEventListener('click', showFilterStreet )
             //***********************Javascript eventlistener for button for town******************/
             document.querySelector('#button-filter-town').addEventListener('click', showFilterTown )
+
+            //**********************eventlistener to change color of show filter section*******************/
+            document.getElementById('keesiang').addEventListener('click', function(){
+                console.log('hello')
+                if (document.getElementById('filters-tier').style.backgroundColor=='' || document.getElementById('filters-tier').style.backgroundColor=='skyblue') {
+                    document.getElementById('filters-tier').style.backgroundColor='white'
+                } else {
+                    document.getElementById('filters-tier').style.backgroundColor='skyblue'
+                }
+            })
             
 
         })// end csvtoJson

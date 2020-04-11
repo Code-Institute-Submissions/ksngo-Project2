@@ -6,10 +6,14 @@
 function showFilters() {
     
     if ($('#filters-tier').css('display') == 'none') {
+        $('#map-tier').css('height', '60vh')
         $('#filters-tier').css('display','flex')
+        $('#button-show-filters h3').text('Hide filters')
         // mymap.setView([1.25, 103.85], 11)
     } else {
+        $('#map-tier').css('height', '80vh')
         $('#filters-tier').css('display','none')
+        $('#button-show-filters h3').text('Display filters')
         mymap.setView([1.35, 103.85], 12)
     }
 
@@ -30,6 +34,7 @@ function showMoreFilters() {
         
        setTimeout(function(){ $('#filter-others').css('flex','0')},199)
        setTimeout(function(){$('#filter-others').css('display', 'none')},199)
+       setTimeout(function(){$('#button-more-filters').text('More filters')},199)
 
         
         
@@ -39,10 +44,12 @@ function showMoreFilters() {
             $('#filter-others').animate({left: '0px'},'slow')
             setTimeout(function(){$('#filter-others').css('display', 'block')},199)
             setTimeout(function(){ $('#filter-others').css('flex','5')},199)
+            setTimeout(function(){$('#button-more-filters').text('Hide filters')},199)
         } else {
             $('#filter-others').animate({left: '0px'},'slow')
             setTimeout(function(){$('#filter-others').css('display', 'block')},199)
             setTimeout(function(){ $('#filter-others').css('flex','1')},199)
+            setTimeout(function(){$('#button-more-filters').text('Hide filters')},199)
         }
     
     }

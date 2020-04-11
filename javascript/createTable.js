@@ -216,7 +216,7 @@ function reset() {
     $('#right-layout').css('display','block')
 
 
-    mymap.setView([1.25, 103.85], 11)
+    mymap.setView([1.37, 103.82], 12)
     
 
 }

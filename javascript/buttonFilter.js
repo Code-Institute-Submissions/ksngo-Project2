@@ -9,12 +9,12 @@ function showFilters() {
         $('#map-tier').css('height', '60vh')
         $('#filters-tier').css('display','flex')
         $('#button-show-filters h3').text('Hide filters')
-        // mymap.setView([1.25, 103.85], 11)
+        mymap.setView([1.35, 103.85], 11)
     } else {
         $('#map-tier').css('height', '80vh')
         $('#filters-tier').css('display','none')
         $('#button-show-filters h3').text('Display filters')
-        mymap.setView([1.35, 103.85], 12)
+        mymap.setView([1.37, 103.82], 12)
     }
 
     

@@ -3,9 +3,8 @@ body {
     /* background:radial-gradient(#fff,rgba(0,119,255,.1)); */
     background-color: white;
     margin:0;
-    overflow-x:hidden;
-    width:100vw;
-    
+    /* overflow-x:hidden; */
+
     
 }
 
@@ -99,6 +98,7 @@ nav ul li {
 #map-tier {
     flex: 5;
     height: 80vh;
+    width:100%;
     display:block;
     z-index:0;
 }
@@ -371,7 +371,8 @@ nav ul li {
     border:1px solid black;
     border-collapse:collapse;
     /* margin:auto; */
-    margin-bottom:100px;
+    
+    overflow:scroll;
     
 }
 

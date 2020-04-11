@@ -9,8 +9,7 @@ function resultsForTopPrice() {
     
     /*******************disable button for lowest resales price ********************/
     document.querySelector('#buttonBottomPrice').disabled=true
-    // document.querySelector('#buttonBottomPrice:hover').style.backgroundColor='#6a8494'
-    // document.querySelector('#buttonTopPrice:hover').style.backgroundColor='#ab576c' 
+    document.querySelector('#buttonBottomPrice').style.cursor='default'
     /*******************note down that top resales price button is clicked**********/
     topOrBottomRange = 'Top'
 
@@ -35,6 +34,7 @@ function resultsForTopPrice() {
     countclicks++
 
     
+    
 }
 
 //***************************Initiate this function when Button for 'Show/Next 50 units lowest resale price' is clicked. *********************/
@@ -43,8 +43,8 @@ function resultsForBottomPrice() {
     topOrBottomRange = 'Bottom'
 
     document.querySelector('#buttonTopPrice').disabled=true
-    // document.querySelector('#buttonTopPrice:hover').style.backgroundColor ='#6a8494'
-    // document.querySelector('#buttonBottomPrice:hover').style.backgroundColor ='#ab576c'
+    document.querySelector('#buttonTopPrice').style.cursor='default'
+    
 
     if (countclicks==0) {
         /**************get results*******************/

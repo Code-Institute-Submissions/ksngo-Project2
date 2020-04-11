@@ -3,7 +3,7 @@ body {
     /* background:radial-gradient(#fff,rgba(0,119,255,.1)); */
     background-color: white;
     margin:0;
-    /* overflow-x:hidden; */
+    overflow-x:hidden;
 
     
 }
@@ -130,12 +130,57 @@ nav ul li {
 
 
 #filters-tier {
-    flex:0;
+    flex:5;
     display:none;
     flex-direction: row ;
     max-height:auto;
     
     
+}
+
+@media only screen and (max-width: 800px) {
+
+    #filters-tier {
+        display: block !important;
+        flex-direction: unset;
+
+    }
+
+    #navigation-tier {
+        display:block;
+        flex-direction:unset;
+        margin:0px !important;
+    }
+
+    #left-navigation-tier{
+        display:none;
+    }
+
+    #right-navigation-tier{
+        display: block;
+    }
+
+    .middle-nav {
+        background-color: #6a8494 ;
+        color: white;
+        margin: 0px !important;
+        border: 2px solid white;
+        cursor: pointer;
+        width:100%;
+        
+    }
+
+    #button-more-filters {
+    
+        left: 80% !important;
+        width:auto;
+        
+    
+    }
+
+
+
+
 }
 
 
@@ -172,7 +217,7 @@ nav ul li {
     
 }
 
-/*********************middle primary buttons styles******************/
+/*********************styles : display filters, display table by ascending or descending price, reset  ******************/
 
 
 .middle-nav {
@@ -224,7 +269,7 @@ nav ul li {
     
 }
 
-/*********************middle secondary buttons styles******************/
+/*********************styles: fitler by town, filter by street name, show extra filters ******************/
 
 
 #button-more-filters {
@@ -332,7 +377,7 @@ nav ul li {
 }
 
 
-/*************more filters tables styles*****************/
+/*************extra filters tables styles*****************/
 
 #filter-others-table {
     width:100%;
@@ -367,40 +412,98 @@ nav ul li {
 /**************tables styles*****************************/
 
 #table-results {
-    width:100%;
+    width:auto;
     border:1px solid black;
     border-collapse:collapse;
-    /* margin:auto; */
-    
-    overflow:scroll;
+    margin: auto;
     
 }
 
 th {
     border:1px solid black;
     border-collapse:collapse;
-    text-align: left;
+    text-align: center;
     padding:15px;
     background-color : #fff;
     color:black;
+    writing-mode: vertical-rl;
+    margin:0;
+    padding:5px;
 }
 
 td {
     border:1px solid black;
     border-collapse:collapse;
-    padding:15px;
+    text-align: center;
+    margin:auto;
+    padding:5px;
+   
+}
+
+th p {
+    margin:0;
+    padding:0;
+}
+
+td p {
+    margin:0;
+    padding:0;
+
 }
 
 tr:nth-child(even) {
     background-color: skyblue;
-    color:red;
+    color:black;
 }
 
 tr:nth-child(odd) {
     background-color: white;
-    color:red;
+    color:black;
 }
 
+
+@media only screen and (max-width: 1000px) {
+
+    #table-results {
+        /* word-break:break-all; */
+        word-wrap:break-word;
+        margin:0;
+        width:100%;
+        
+        /* text-orientation: upright; */
+        
+        
+    }
+
+    th {
+        padding:0;
+        margin:0;
+        
+    }
+
+    td {
+        padding:0;
+        margin:0;
+        
+    }
+    td p {
+        writing-mode: vertical-lr;
+        padding: 0px;
+        margin:0;
+    }
+
+    th p {
+        writing-mode: vertical-lr;
+        margin:0;
+        padding:0;
+    }
+
+    th div {
+        writing-mode: vertical-lr;
+        padding: 0px;
+        margin:0;
+    }
+}
 
 
 

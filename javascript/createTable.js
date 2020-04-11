@@ -19,7 +19,7 @@ function createHeader () {
             /******************************************PENDING TROUBLESHOOTING***************************************** */
             let headElement = document.createElement('th')
             headElement.innerHTML = ` <div> ${headerStarter[i]} </div>
-                                    <div> (plot all) </div> `
+                                    <div>&nbsp; (plot all) </div> `
             document.getElementById('tr-header').appendChild(headElement)
             
             let checkbox = document.createElement('input')
@@ -29,7 +29,7 @@ function createHeader () {
             /******************************************PENDING TROUBLESHOOTING***************************************** */
         } else {
         let headElement = document.createElement('th')
-        headElement.innerHTML = headerStarter[i]
+        headElement.innerHTML =`<p>${headerStarter[i]}</p>`
         document.getElementById('tr-header').appendChild(headElement)
         }
 
@@ -70,97 +70,97 @@ function data50ToTable (x,y) {
 
         //***************Insert index number in table*****************/
         let dataElement = document.createElement('td')
-        dataElement.innerHTML = i
+        dataElement.innerHTML = `<p> ${i}</p>`
         document.querySelector('#table-results').lastElementChild.appendChild(dataElement)   
 
         //***************Insert month in table***********************/
         dataElement = document.createElement('td')
 
             if (y=='Top') { 
-                dataElement.innerHTML= resultsTopPriceArray[i].month
+                dataElement.innerHTML=`<p> ${resultsTopPriceArray[i].month} </p>`
             } else if (y=='Bottom') {
-                dataElement.innerHTML= resultsLowPriceArray[i].month
+                dataElement.innerHTML=`<p> ${resultsTopPriceArray[i].month} </p>`
             }
         document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
 
         //***************Insert town in table***********************/
         dataElement = document.createElement('td')
             if (y=='Top') {
-                dataElement.innerHTML= resultsTopPriceArray[i].town
+                dataElement.innerHTML= `<p> ${resultsTopPriceArray[i].town}</p>`
             } else if (y=='Bottom') {
-                dataElement.innerHTML= resultsLowPriceArray[i].town
+                dataElement.innerHTML= `<p> ${resultsTopPriceArray[i].town}</p>`
             }
         document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
 
         //***************Insert flat-type in table***********************/
         dataElement = document.createElement('td')
             if (y=='Top') {
-                dataElement.innerHTML= resultsTopPriceArray[i].flat_type
+                dataElement.innerHTML=`<p> ${resultsTopPriceArray[i].flat_type} </p>`
             } else if (y=='Bottom') {
-                dataElement.innerHTML= resultsLowPriceArray[i].flat_type
+                dataElement.innerHTML= `<p> ${resultsTopPriceArray[i].flat_type} </p>`
             }
         document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
 
         //***************Insert block number in table***********************/
         dataElement = document.createElement('td')
             if (y=='Top') {
-                dataElement.innerHTML= resultsTopPriceArray[i].block
+                dataElement.innerHTML= `<p>${resultsTopPriceArray[i].block}</p>`
             } else if (y=='Bottom') {
-                dataElement.innerHTML= resultsLowPriceArray[i].block
+                dataElement.innerHTML= `<p>${resultsTopPriceArray[i].block}</p>`
             }
         document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
 
         //***************Insert street name in table***********************/
         dataElement = document.createElement('td')
             if (y=='Top') {
-                dataElement.innerHTML= resultsTopPriceArray[i].street_name
+                dataElement.innerHTML= `<p> ${resultsTopPriceArray[i].street_name}</p>`
             } else if (y=='Bottom') {
-                dataElement.innerHTML= resultsLowPriceArray[i].street_name
+                dataElement.innerHTML= `<p> ${resultsTopPriceArray[i].street_name}</p>`
             }
         document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
 
         //***************Insert storey range in table***********************/
         dataElement = document.createElement('td')
             if (y=='Top') {
-                dataElement.innerHTML= resultsTopPriceArray[i].storey_range
+                dataElement.innerHTML= `<p>${resultsTopPriceArray[i].storey_range}</p>`
             } else if (y=='Bottom') {
-                dataElement.innerHTML= resultsLowPriceArray[i].storey_range
+                dataElement.innerHTML= `<p>${resultsTopPriceArray[i].storey_range}</p>`
             }
         document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
 
         //***************Insert floor area in table***********************/
         dataElement = document.createElement('td')
             if (y=='Top') {
-                dataElement.innerHTML= resultsTopPriceArray[i].floor_area_sqm
+                dataElement.innerHTML= `<p>${resultsTopPriceArray[i].floor_area_sqm}</p>`
             } else if (y=='Bottom') {
-                dataElement.innerHTML= resultsLowPriceArray[i].floor_area_sqm
+                dataElement.innerHTML= `<p>${resultsTopPriceArray[i].floor_area_sqm}</p>`
             }
         document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
 
         //***************Insert flat model in table***********************/
         dataElement = document.createElement('td')
             if (y=='Top') {
-                dataElement.innerHTML= resultsTopPriceArray[i].flat_model
+                dataElement.innerHTML= `<p> ${resultsTopPriceArray[i].flat_model}</p>`
             } else if (y=='Bottom') {
-                dataElement.innerHTML= resultsLowPriceArray[i].flat_model
+                dataElement.innerHTML= `<p> ${resultsTopPriceArray[i].flat_model}</p>`
             }
         document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
         
         //***************Insert remaining lease in table***********************/
         dataElement = document.createElement('td')
             if (y=='Top') {
-                dataElement.innerHTML= resultsTopPriceArray[i].remaining_lease
+                dataElement.innerHTML= `<p> ${resultsTopPriceArray[i].remaining_lease}</p>`
             } else if (y=='Bottom') {
-                dataElement.innerHTML= resultsLowPriceArray[i].remaining_lease
+                dataElement.innerHTML= `<p> ${resultsTopPriceArray[i].remaining_lease}</p>`
             }
         document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
 
         //***************Insert resale price in table***********************/
         dataElement = document.createElement('td')
             if (y=='Top') {
-                dataElement.innerHTML= resultsTopPriceArray[i].resale_price
+                dataElement.innerHTML= `<p> ${resultsTopPriceArray[i].resale_price}</p>`
             } else if (y=='Bottom') {
-                dataElement.innerHTML= resultsLowPriceArray[i].resale_price
+                dataElement.innerHTML= `<p> ${resultsTopPriceArray[i].resale_price}</p>`
             }
         document.querySelector('#table-results').lastElementChild.appendChild(dataElement)
 

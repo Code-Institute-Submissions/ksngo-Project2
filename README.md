@@ -86,7 +86,7 @@ This website is for anyone who is interested to find out more about the past res
 
 
 ### Features Left to Implement
-- **Disallow user from adding more filters once he/she starts generating results and prompts him/her to click 'reset' if he/she wants to start a new set of filters.**
+- **Disallow user from toggling filters as this is irrelevant once he/she starts generating results and prompts him/her to click 'reset' if he/she wants to start a new set of filters and a new set of results.**
 - When user clicked on the checkbox in table to show a single marker on the map, move webpage to centralise on this marker. May need to research on leaflet documentation to implement.
 - Do not allow the map to scroll past other area beyond Singapore. Need to research on leaflet documentation to implement.
 - The csv file is available as early to 1990. As the crossfilter dimension filtering will crash for large file sizes, I will only limit my csv file to 6.5Mb which spans between 2017 to 2020. Can explore how to remedy by backend methods and if there are more unforeseen circumstances occuring for handling larger csv files.

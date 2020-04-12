@@ -29,10 +29,7 @@ This website is for anyone who is interested to find out more about the past res
 
 ## Features
 
-`In this section, you should go over the different parts of your project, and describe each in a sentence or so.`
- 
 ### Existing Features
-`- Feature 1 - allows users X to achieve Y, by having them fill out Z`
 
 #### Header Bar
 - About this <li> tag - On hover over, shows hidden <div> tag on information for users to understand the goal of this website, guide to use this website and the data source.
@@ -78,9 +75,6 @@ This website is for anyone who is interested to find out more about the past res
 
 ## Technologies Used
 
-`In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.`
-
-
 - [JQuery](https://code.jquery.com/jquery-3.4.1.min.js)
     - The project uses **JQuery** to simplify DOM manipulation.
 - [Axios](https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js)
@@ -113,11 +107,6 @@ This website is for anyone who is interested to find out more about the past res
     
 ## Testing
 
-`In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.`
-
-`Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.`
-
-`For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:`
 1. Manual Testing: 
     1. The Display Filter button when clicked shows content.
     2. The Hide Filter button when clicked hides content.
@@ -144,7 +133,7 @@ My website is hosted with github.
 ## Credits
 
 Credits to Code Institute for this readme-template.
-Credits to the technologies or code references mentioned above.
+Credits to the creators for the technologies or code references mentioned above.
 
 ### Content/Media
 

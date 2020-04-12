@@ -130,8 +130,7 @@ This website is for anyone who is interested to find out more about the past res
     1. If the results call for the similar block and street name, the marker will lay on top each other depending which is called last. This also spells for future feature to address this by checking for similar block and street name results amongst the 50 results, and group the info and make the info availble within a scrollable pop-out box of the marker.
     2. The nominatim API may return result to along a street name when the block number maybe closer to another street name. For the purpose of this example, let use block 650 and street name Ang Mo Kio St61. In Singapore context, the authorities will name block 650 with street name AMK st61 instead of its nearest street name AMK ave 5. In such case, the nominatim API will actually display marker to the street name only as they perceive the block 650 should pair with Ang Mo Kio Ave 5 instead. This is an observation I have. 
 
-    ![Image]
-    (images\myfile.jpg)
+    ![Image](images\myfile.jpg)
     
 
 

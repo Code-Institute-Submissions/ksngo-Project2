@@ -62,7 +62,7 @@ This website is for anyone who is interested to find out more about the past res
         - allow user to insert years.
     - room (input tag) checkbox 
         - allow user to select room types.
-    - storey (input> tag) checkbox 
+    - storey (input tag) checkbox 
         - allow user to select storey range.
     - area (input tag) number 
         - allow user to insert area.
@@ -89,7 +89,7 @@ This website is for anyone who is interested to find out more about the past res
 - **Disallow user from adding more filters once he/she starts generating results and prompts him/her to click 'reset' if he/she wants to start a new set of filters.**
 - When user clicked on the checkbox in table to show a single marker on the map, move webpage to centralise on this marker. May need to research on leaflet documentation to implement.
 - Do not allow the map to scroll past other area beyond Singapore. Need to research on leaflet documentation to implement.
-- The csv file is available as early to 1990. As the crossfilter dimension filtering will crash for large file sizes, I will only limit my csv file to 6.5mb which spans between 2017 to 2020. Can explore how to remedy by backend methods and if there are more unforeseen circumstances occuring for handling larger csv files.
+- The csv file is available as early to 1990. As the crossfilter dimension filtering will crash for large file sizes, I will only limit my csv file to 6.5Mb which spans between 2017 to 2020. Can explore how to remedy by backend methods and if there are more unforeseen circumstances occuring for handling larger csv files.
 - **It will be good to add pop-out information over the many choices of flat models because personally I don't understand some of them myself.**
 
 ## Technologies Used

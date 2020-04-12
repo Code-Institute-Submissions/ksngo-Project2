@@ -3,21 +3,22 @@ let countclicks =0
 let topOrBottomRange
 
 
-//***************************Initiate this function when Button for 'Show/Next 50 units highest resale price' is clicked. *********************/
+//***************************Initiate this function when Button for 'Results in descending price' is clicked. *********************/
 function resultsForTopPrice() {
 
     
-    /*******************disable button for lowest resales price ********************/
+    /*******************disable button for ascending price ********************/
     document.querySelector('#buttonBottomPrice').disabled=true
     document.querySelector('#buttonBottomPrice').style.cursor='default'
-    /*******************note down that top resales price button is clicked**********/
+    /*******************note down that descending price button is clicked**********/
     topOrBottomRange = 'Top'
 
     
     if (countclicks==0) {
     filterDataByInput ()
     resultsTopPriceArray = priceDimension.top(Number.POSITIVE_INFINITY)
-    console.log(resultsTopPriceArray)
+    console.table(resultsTopPriceArray)
+    document.getElementById('buttonTopPrice').innerHTML =`<h3> Next 50 results </h3>`
     }
     
     let resultsSize = priceDimension.top(Number.POSITIVE_INFINITY).length
@@ -37,7 +38,7 @@ function resultsForTopPrice() {
     
 }
 
-//***************************Initiate this function when Button for 'Show/Next 50 units lowest resale price' is clicked. *********************/
+//***************************Initiate this function when Button for 'Results in ascending price' is clicked. *********************/
 function resultsForBottomPrice() {
 
     topOrBottomRange = 'Bottom'
@@ -51,7 +52,8 @@ function resultsForBottomPrice() {
         filterDataByInput()
         /**************measure data sizes returned*************/
         resultsLowPriceArray = priceDimension.bottom(Number.POSITIVE_INFINITY)
-        // console.log(resultsLowPriceArray)
+        console.table(resultsLowPriceArray)
+        document.getElementById('buttonBottomPrice').innerHTML =`<h3> Next 50 results </h3>`
     }
     
     let resultsSize = priceDimension.bottom(Number.POSITIVE_INFINITY).length

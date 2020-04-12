@@ -4,6 +4,8 @@ In Singapore, the government aims to provide affordable housing for her resident
 
 I created this website to let user find out about past resales HDB flats transactions. The user will usually be interested to find out resales flats depending on location, highest price, lowest price, size of the flat, flat storey level and remaining lease (a new flat typically has a 99-year lease before returned to the state). This website can filter them to user interests and generate past resales transactions that meet his/her criteria. Moreover, the user is able to show the location of the results on the map. This gives user a bird-eye view of the price with respect to its location with its vicinity to  public transports systems, schools and amenities (e.g. sports, health, malls, churches etc.).
 Therefore, user can roughly estimate or expect the hdb resales prices for locations and flat type that they are interested in quickly. This help in their budgeting concerns, choice of location and negotation perspectives.
+
+[Link to my website!](https://ksngo.github.io/Project2/)
  
 ## UX
 
@@ -68,11 +70,11 @@ This website is for anyone who is interested to find out more about the past res
 
 
 ### Features Left to Implement
-- Disallow user from adding more filters once he/she starts generating results and prompts him/her to click 'reset' if he/she wants to start a new set of filters.
+- **Disallow user from adding more filters once he/she starts generating results and prompts him/her to click 'reset' if he/she wants to start a new set of filters.**
 - When user clicked on the checkbox in table to show a single marker on the map, move webpage to centralise on this marker. May need to research on leaflet documentation to implement.
 - Do not allow the map to scroll past other area beyond Singapore. Need to research on leaflet documentation to implement.
 - The csv file is available as early to 1990. As the crossfilter dimension filtering will crash for large file sizes, I will only limit my csv file to 6.5mb which spans between 2017 to 2020. Can explore how to remedy by backend methods and if there are more unforeseen circumstances occuring for handling larger csv files.
--It will be good to add pop-out information over the many choices of flat models because personally I don't understand some of them myself.
+-**It will be good to add pop-out information over the many choices of flat models because personally I don't understand some of them myself.**
 
 ## Technologies Used
 
@@ -125,43 +127,28 @@ This website is for anyone who is interested to find out more about the past res
     6. I have gone through each types of filter options (e.g. town, street, year, room, storey, floor area, flat model) and generate results by clicking 'Results in descending price' ,'Next 50 results', 'Results in ascending price' and 'Reset' buttons. The results returned to table are as what I have chosen and arranged in price order corresponding to the 'Results' button pressed.  I have checked the checkboxes in the table to plot markers to the map and the markers appear fine. The pop-out information is able to carry the respective table's row result and show upon within the pop-out box. And, the markers shows on top of the correct block and street name. 
 
 2. Different browsers and screen sizes:
+    1. The map is unable to render itself on microsoft Edge and firefox. It is able to show map on google Chrome.
+    2.  The website is able to transform its content with no major issue to width of 300px and above. I have discussed the main changes for mobile responsiveness in the above section on Mobile Responsive.
 
 3. Bugs/problems:
     1. If the results call for the similar block and street name, the marker will lay on top each other depending which is called last. This also spells for future feature to address this by checking for similar block and street name results amongst the 50 results, and group the info and make the info availble within a scrollable pop-out box of the marker.
-    2. The nominatim API may return a general latitude and longtitude for street name for ambiguous cases. For this example, I shall use blk 601 and street name Ang Mo Kio Ave 5. As shown in image, blk 601 has also adjacent Yio Chu Kang Road near it. 
+    2. The nominatim API may return a general latitude and longtitude for street name for ambiguous cases. For this example, I shall use blk 601 and street name Ang Mo Kio Ave 5. As shown in image, blk 601 has also adjacent Yio Chu Kang Road near it. **It's something pending for me to look into.**
 
     ![Image](myfile.jpg)
     
-    
-
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
-
+ 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
-
+My website is hosted with github.
 
 ## Credits
 
-### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+Credits to Code Institute for this readme-template.
+Credits to the technologies or code references mentioned above.
 
-### Media
-- The photos used in this site were obtained from ...
+### Content/Media
 
-### Acknowledgements
+The geocoder.png file is obtained from the geocoder leaflet plugin link. The resales data source is from data.gov.sg. The remaining content is original unless the technologies used mentioned above. 
 
-- I received inspiration for this project from X
+
 

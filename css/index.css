@@ -16,7 +16,8 @@ nav ul {
     list-style-type: none ;
     padding: 0;
     margin:0;
-    
+    display: inline-block;
+    white-space: nowrap;
     
 }
 
@@ -24,6 +25,7 @@ nav ul li {
     display: inline-block;
     margin:0;
     vertical-align: middle;
+    white-space: normal !important;
     /* text-top */
     
 }
@@ -49,6 +51,17 @@ nav ul li {
     height: 100px;
     line-height: 90px;
     font-family: 'Open Sans', sans-serif;
+    
+}
+
+@media only screen and (max-width: 400px) {
+    
+    #nav-about {
+        padding-left: 30px;
+        padding-right: 30px;
+
+    }
+    
 }
 
 #nav-about:hover {
@@ -72,11 +85,19 @@ nav ul li {
     padding-bottom: 20px;
     /* text-align : center ; */
     /* align-content: center; */
-   
-    
-    
+    white-space: normal !important;
     
 }
+
+@media only screen and (max-width: 400px) {
+    
+    #about-this {
+        font-size: 10px;
+    }
+    
+}
+
+
 
 #nav-about:hover + #about-this {
     display:block ;

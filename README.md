@@ -33,19 +33,42 @@ In this section, you should go over the different parts of your project, and des
 - Feature 1 - allows users X to achieve Y, by having them fill out Z
 
 #### Header Bar
-- About this - allows users to understand the goal of this website, guide to use this website and the data source.
+- About this <li> tag - On hover over, shows hidden <div> tag on information for users to understand the goal of this website, guide to use this website and the data source.
 
 #### Main Buttons
--Display Filters - allow user to show out the filters
--Display table in descending price - allow user to display results in table in descending price.
--Display table in ascending price - allow user to display results in table in ascending price
+-Display Filters <button> tag - allow user to show out the filters below it. Button name changed to 'Hide filters'. When clicked again, the filters will become hidden from view.
+-Results in descending price <button> tag - allow user to display results in table in descending price. After pressing once, the results will display in table below it. The neighbour button 'Results in ascending price' will also be disabled. The button's name will change to  'Next 50 results' for user to click again to show the next 50 results on table. Once results are exhausted, the button hover-over cursor effect will change from pointer to default and the hover-effect to red will stop too.
+-Results in ascending price <button> tag - allow user to display results in table in ascending price. Similar user interactive effects with 'Results in descending price' button.
+-Rest <button> tag - allow user to remove existing shown table, remove markers on the map and zoom map to default zoom and default latitude/longtitude.
+-Number of Results <div> tag - allow user to know how many results are yielded. This tag is normally hidden till 'Results in ascending/descending price' button is clicked.
 
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+#### Filters Buttons
+-Filter by Town <button> tag -display to user town checkboxes.
+    -multiple towns <input> tags checkbox -allow user to checked on any towns for selection. Select all checkbox will checked all towns at one go.
+-Filter by Street name <button> tag -display to user street names dropdowns.
+    -multiple street names <options><select> tags - allow user to choose one street name of choice.
+-Show extra filters <button> tag - slide in from right to show the remaining filter options. Button name changes to 'hide extra filters'. When clicked again, the extra filters display will slide right to hidden from view.
+    -year <input> tag number - allow user to insert years.
+    -room <input> tag checkbox - allow user to select room types.
+    -storey <input> tag checkbox -allow user to select storey range.
+    -area <input> tag number -allow user to insert area.
+    -flat model <input> tag checkbox - allow user to select model.
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+#### Return to top
+-upward chevron <a> tag - allow user to return to top of page.
+
+#### Results table
+-table <table> tag - allow user to read the results returned from their choices of filtering.
+-last column of table <input> tag checkbox - allow user to check and generate marker for respective result onto map. For convenience, a checkbox on the header can be checked to generate the 50 markers to map. The marker contain popout information that show each respective table row's data.
+
+#### Mobile Responsive
+- The main buttons will rearranged to vertical column for media device less than 800px.
+- The display of extra filters will also move to below "filter by town/street" estate space for media device less than 800px.
+- The table will change orientation of its text to vertical-lr for media device less than 1000px.
+
 
 ### Features Left to Implement
-- Another feature idea
+- 
 
 ## Technologies Used
 

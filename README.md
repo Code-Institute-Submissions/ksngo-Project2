@@ -27,10 +27,10 @@ This website is for anyone who is interested to find out more about the past res
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+`In this section, you should go over the different parts of your project, and describe each in a sentence or so.`
  
 ### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
+`- Feature 1 - allows users X to achieve Y, by having them fill out Z`
 
 #### Header Bar
 - About this <li> tag - On hover over, shows hidden <div> tag on information for users to understand the goal of this website, guide to use this website and the data source.
@@ -68,29 +68,72 @@ In this section, you should go over the different parts of your project, and des
 
 
 ### Features Left to Implement
-- 
+- Disallow user from adding more filters once he/she starts generating results and prompts him/her to click 'reset' if he/she wants to start a new set of filters.
+- When user clicked on the checkbox in table to show a single marker on the map, move webpage to centralise on this marker. May need to research on leaflet documentation to implement.
+- Do not allow the map to scroll past other area beyond Singapore. Need to research on leaflet documentation to implement.
+- The csv file is available as early to 1990. As the crossfilter dimension filtering will crash for large file sizes, I will only limit my csv file to 6.5mb which spans between 2017 to 2020. Can explore how to remedy by backend methods and if there are more unforeseen circumstances occuring for handling larger csv files.
+-It will be good to add pop-out information over the many choices of flat models because personally I don't understand some of them myself.
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+`In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.`
 
-- [JQuery](https://jquery.com)
+
+- [JQuery](https://code.jquery.com/jquery-3.4.1.min.js)
     - The project uses **JQuery** to simplify DOM manipulation.
+- [Axios](https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js)
+    - The project uses **Axios** to handling promise-based request and response.
+- [Crossfilter](https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js)
+    - The project uses **crossfilter** to do multidimensional filtering and aggregation of tabular data.
+- [csvtojson](https://cdn.jsdelivr.net/npm/csvtojson@2.0.10/browser/csvtojson.min.js)
+    - The project uses **csvtojson** to convert csv to json.
+- [Leaflet](https://leafletjs.com/)
+    - The project uses **Leaflet** for interactive maps.
+- [Leaflet Control OSM Gencoder](https://github.com/k4r573n/leaflet-control-osm-geocoder)
+    - The project uses **leaflet control osm geocoder** to provide a search box on map to input address and return whereabout on map.
+- [Nominatim API](https://nominatim.org/release-docs/latest/api/Search/)
+    - The project uses **Nominatim API** to look up location longtitude and latitude from a textual description.
+- [data.gov.sg](https://data.gov.sg/dataset/resale-flat-prices)
+    - The project uses **data.gov.sg** for csv files.
+- [Fontawesome 4.7](https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css)
+    - The project uses **FontAwesome 4.7** for some fonts used in webpage.
+- [Google Fonts](https://fonts.google.com/)
+    - The project uses **Google fonts** for styling font family in webpage.
+- [Pure CSS Checkbox by Stas Melnikov](https://codepen.io/melnik909/pen/YjGZqQ)
+    - The project refers to Stas Melnikov's work as a guide, methods and styles to create extra filters section's checkboxes.
+- [Back to Top button with CSS & Jquery](https://www.templatemonster.com/blog/back-to-top-button-css-jquery/)
+    - The project refers to article by Matthew Cain as a guide to return to top button.
+- [Check if JS object is empty](https://coderwall.com/p/_g3x9q/how-to-check-if-javascript-object-is-empty)
+    - The project copies the function method to check if javascript object is empty from kyleross article.
+- [Checkbox Trickery](https://codepen.io/lonekorean/pen/RPZZPe/)
+    - The project refers to Will Boyd's work as a guide, methods and styles to create my town's checkboxes.
 
-
+    
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+`In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.`
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+`Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.`
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+`For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:`
+1. Manual Testing: 
+    1. The Display Filter button when clicked shows content.
+    2. The Hide Filter button when clicked hides content.
+    3.  The Filter by Town button and Filter by Street name button are able to show the options respectively and I can use the form functions.
+    4. The show extra filters button and hide extra filters button allow the extra content to slide in and out.
+    5. The extra filter content selections are able to be checked or input with values.
+    6. I have gone through each types of filter options (e.g. town, street, year, room, storey, floor area, flat model) and generate results by clicking 'Results in descending price' ,'Next 50 results', 'Results in ascending price' and 'Reset' buttons. The results returned to table are as what I have chosen and arranged in price order corresponding to the 'Results' button pressed.  I have checked the checkboxes in the table to plot markers to the map and the markers appear fine. The pop-out information is able to carry the respective table's row result and show upon within the pop-out box. And, the markers shows on top of the correct block and street name. 
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
+2. Different browsers and screen sizes:
+
+3. Bugs/problems:
+    1. If the results call for the similar block and street name, the marker will lay on top each other depending which is called last. This also spells for future feature to address this by checking for similar block and street name results amongst the 50 results, and group the info and make the info availble within a scrollable pop-out box of the marker.
+    2. The nominatim API may return result to along a street name if the corresponding block number does not appear exactly appear 
+
+    ![Image1](images/scenerio-map.jpg)
+    ![Image2](images/scenerio-map-from-google.jpg)
+
+
 
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 

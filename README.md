@@ -23,7 +23,7 @@ This website is for anyone who is interested to find out more about the past res
 - As a property agent looking to sell a resale flat, I want to show to customer the resales prices around its venue, so that it can either show them that the price is comparable with any past resales transactions or explain to them if price is above/lower markets expectations. 
 *User can filter by town or street name and display all transaction results.
 
-- As a interested resale HDB seller, I am interested how much value my flat could yield in terms of location, flat-type, room-type and the significance of location and storey range can affect the price, so that I can have knowledge of the rough value of my flat.
+- As an interested resale HDB seller, I am interested how much value my flat could yield in terms of location, flat-type, room-type and the significance of location and storey range can affect the price, so that I can have knowledge of the rough value of my flat.
 *User can filter by street, flat-type, room type , location of my flat, particular storey range (e.g. 1-3) and generate past resales transaction results to know the price evaluated of flats around his/her area. To compare significance of storey range to price, user can reset and generate results with different storey range(e.g.13-15).
 
 

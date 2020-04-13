@@ -10,6 +10,7 @@ function resultsForTopPrice() {
     /*******************disable button for ascending price ********************/
     document.querySelector('#buttonBottomPrice').disabled=true
     document.querySelector('#buttonBottomPrice').style.cursor='default'
+    
     /*******************note down that descending price button is clicked**********/
     topOrBottomRange = 'Top'
 

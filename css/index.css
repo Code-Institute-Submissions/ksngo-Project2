@@ -74,7 +74,7 @@ nav ul li {
     display: none;
     height:auto;
     width:95%;
-    background-color: #6a8494;
+    background-color: rgb(106, 132, 148);
     z-index: 1; 
     position:absolute;
     top:100px;
@@ -131,10 +131,11 @@ nav ul li {
 }
 
 #navigation-tier {
-    flex:1;
+    /* flex:1; */
     /* margin: 10px; */
     display:flex;
     flex-direction: row;
+    
     
 
 }
@@ -147,6 +148,8 @@ nav ul li {
     flex:5;
     display: flex;
     justify-content:flex-end;
+    color:
+    
     
 }
 
@@ -164,19 +167,20 @@ nav ul li {
 @media only screen and (max-width: 800px) {
 
     #filters-tier {
-        display: block !important;
+        display: none;
         flex-direction: unset;
+        flex-wrap: wrap;
 
     }
 
     #navigation-tier {
         display:block;
         flex-direction:unset;
-        margin:0px !important;
+        margin:0px;
     }
 
     #left-navigation-tier{
-        display:none;
+        display:block;
     }
 
     #right-navigation-tier{
@@ -299,6 +303,17 @@ nav ul li {
     font-weight: inherit; */
     
 }
+
+
+#buttonTopPrice {
+    display:none;
+}
+
+#buttonBottomPrice {
+    display:none;
+}
+
+
 
 /*********************styles: fitler by town, filter by street name, show extra filters ******************/
 
@@ -578,6 +593,13 @@ footer {
     
 }
 
+@media only screen and (max-width: 400px) {
+
+    footer {
+        display:block;
+    }
+}
+
 footer div {
     
     flex:1;
@@ -587,6 +609,7 @@ footer div {
     line-height: 0px;
     text-align: end;
     font-size:13px;
+    
 }
 
 a {

@@ -8,6 +8,9 @@ function showFilters() {
     if ($('#filters-tier').css('display') == 'none') {
         $('#map-tier').css('height', '60vh')
         $('#filters-tier').css('display','flex')
+        $('#buttonTopPrice').css('display','block')
+        $('#buttonBottomPrice').css('display','block')
+        $('#reset').css('display','block')
         $('#button-show-filters h3').text('Hide filters')
         mymap.setView([1.35, 103.85], 11)
     } else {

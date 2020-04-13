@@ -224,7 +224,19 @@ function reset() {
     document.querySelector('#buttonBottomPrice').style.cursor='pointer'
     document.querySelector('#buttonTopPrice').style.cursor='pointer'
     document.getElementById('buttonTopPrice').innerHTML =`<h3> Results in descending price </h3>`
+    document.getElementById('buttonTopPrice').style.display='none'
     document.getElementById('buttonBottomPrice').innerHTML =`<h3> Results in ascending price </h3>`
+    document.getElementById('buttonBottomPrice').style.display='none'
+    // document.getElementById('reset').style.display='none'
+    document.querySelector('#button-show-filters').innerHTML = `<h3> Select Filters </h3>`
+
+    $('#map-tier').css('height', '80vh')
+    document.querySelector('#filters-tier').style.display='none'
+    document.querySelector('#town').style.display='none'
+    document.querySelector('#input-street').style.display='flex'
+
+
+
     document.getElementById('resultsSize').innerHTML =""
     $('#resultsSize').css('display','none')
     $('#left-btm').css('display','block')

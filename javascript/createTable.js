@@ -223,12 +223,16 @@ function reset() {
     document.querySelector('#buttonTopPrice').disabled=false
     document.querySelector('#buttonBottomPrice').style.cursor='pointer'
     document.querySelector('#buttonTopPrice').style.cursor='pointer'
-    document.getElementById('buttonTopPrice').innerHTML =`<h3> Results in descending price </h3>`
+    document.getElementById('buttonTopPrice').innerHTML =`<h3> descending 
+                                                            <i class="fa fa-usd" aria-hidden="true"></i>&emsp;
+                                                            <i class="fa fa-table fa-lg" aria-hidden="true" ></i></h3>`
     document.getElementById('buttonTopPrice').style.display='none'
-    document.getElementById('buttonBottomPrice').innerHTML =`<h3> Results in ascending price </h3>`
+    document.getElementById('buttonBottomPrice').innerHTML =`<h3> ascending
+                                                            <i class="fa fa-usd" aria-hidden="true"></i>&emsp;
+                                                            <i class="fa fa-table" aria-hidden="true"></i></h3>`
     document.getElementById('buttonBottomPrice').style.display='none'
     // document.getElementById('reset').style.display='none'
-    document.querySelector('#button-show-filters').innerHTML = `<h3> Select Filters </h3>`
+    document.querySelector('#button-show-filters').innerHTML = `<h3> Begin filtering </h3>`
 
     $('#map-tier').css('height', '80vh')
     document.querySelector('#filters-tier').style.display='none'

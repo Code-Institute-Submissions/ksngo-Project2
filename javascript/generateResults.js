@@ -19,7 +19,7 @@ function resultsForTopPrice() {
     filterDataByInput ()
     resultsTopPriceArray = priceDimension.top(Number.POSITIVE_INFINITY)
     console.table(resultsTopPriceArray)
-    document.getElementById('buttonTopPrice').innerHTML =`<h3> Next 50 results </h3>`
+    document.getElementById('buttonTopPrice').innerHTML =`<h3> <i class="fa fa-forward" aria-hidden="true"></i> </h3>`
     }
     
     let resultsSize = priceDimension.top(Number.POSITIVE_INFINITY).length
@@ -54,7 +54,7 @@ function resultsForBottomPrice() {
         /**************measure data sizes returned*************/
         resultsLowPriceArray = priceDimension.bottom(Number.POSITIVE_INFINITY)
         console.table(resultsLowPriceArray)
-        document.getElementById('buttonBottomPrice').innerHTML =`<h3> Next 50 results </h3>`
+        document.getElementById('buttonBottomPrice').innerHTML =`<h3> <i class="fa fa-forward" aria-hidden="true"></i> </h3>`
     }
     
     let resultsSize = priceDimension.bottom(Number.POSITIVE_INFINITY).length

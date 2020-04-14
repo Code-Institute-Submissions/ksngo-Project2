@@ -148,7 +148,7 @@ This website is for anyone who is interested to find out more about the past res
 
 3. Bugs/problems:
     1. If the results call for the similar block and street name, the marker will lay on top each other depending which is called last. This also spells for future feature/improvements. A possible method to address this is by checking for similar block and street name results amongst the 50 results, and group the info and make the info availble within a scrollable pop-out box of the marker.
-    2. The nominatim API may return a general latitude and longtitude for street name for ambiguous cases. For this example, I shall use blk 601 and street name Ang Mo Kio Ave 5. As shown in image, blk 601 has also adjacent Yio Chu Kang Road near it. **Pending for future look into issue.**
+    2. The nominatim API may return a general latitude and longtitude for street name for ambiguous cases. For this example, I shall use blk 601 and street name Ang Mo Kio Ave 5. As shown in image, the marker for blk 601 shows on the road itself only. It may be because blk 601 is also adjacent to Yio Chu Kang Road and this poses issue for the nominatim API. **Pending for future look into issue.**
 
     <img src="images\myfile.jpg">
     

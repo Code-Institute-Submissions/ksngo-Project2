@@ -81,11 +81,9 @@ This website is for anyone who is interested to find out more about the past res
     - provide an alert box to user if result seach is unable to generate marker to map. From following images, a sample alert box is shown. If the user search manually using the geolocator function at top-right of map, instead of data '288G BT BATOK ST 25', the correct address should actually be '288G BUKIT BATOK ST 25' which then can be located. It is also why the nominatum is unable to return the lat/long coordinates to plot marker on map.
 
     <img src="images\alert.jpg">
-    <img src="images\geolocator.jpg">
+    <img src="images\geolocator.png">
     <img src="images\bk_batok_st_25.jpg">
-    ![Image]images\alert.jpg)
-    ![Image]images\geolocator.jpg)
-    ![Image]images\bk_batok_st_25.jpg)
+   
 
 #### Mobile Responsive
 - The main buttons will rearranged to vertical column for media device less than 800px.
@@ -153,7 +151,7 @@ This website is for anyone who is interested to find out more about the past res
     2. The nominatim API may return a general latitude and longtitude for street name for ambiguous cases. For this example, I shall use blk 601 and street name Ang Mo Kio Ave 5. As shown in image, blk 601 has also adjacent Yio Chu Kang Road near it. **Pending for future look into issue.**
 
     <img src="images\myfile.jpg">
-    ![Image]images\myfile.jpg)
+    
 
     
  

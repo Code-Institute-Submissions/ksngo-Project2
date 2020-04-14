@@ -80,7 +80,7 @@ This website is for anyone who is interested to find out more about the past res
     - allow user to check and generate marker for respective result onto map. For convenience, a checkbox on the header can be checked to generate the 50 markers to map. The marker contain popout information that show each respective table row's data.
     - provide an alert box to user if result seach is unable to generate marker to map. From following image, a sample alert box is shown. In the next image, it shows the user search manually using the geolocator function at top-right of map, instead of data '288G BT BATOK ST 25', the correct address should actually be '288G BUKIT BATOK ST 25'. In the last image, through manual searching, since changing BT to BUKIT, the address can be found.
 
-    <img src="images\alert.jpg">
+    <img src="images\alert_box.jpg">
     <img src="images\geolocator.jpg">
     <img src="images\bk_batok_st_25.jpg">
    

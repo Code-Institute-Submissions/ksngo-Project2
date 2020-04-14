@@ -81,7 +81,7 @@ This website is for anyone who is interested to find out more about the past res
     - provide an alert box to user if result seach is unable to generate marker to map. From following images, a sample alert box is shown. If the user search manually using the geolocator function at top-right of map, instead of data '288G BT BATOK ST 25', the correct address should actually be '288G BUKIT BATOK ST 25' which then can be located. It is also why the nominatum is unable to return the lat/long coordinates to plot marker on map.
 
     <img src="images\alert.jpg">
-    <img src="images\geolocator.png">
+    <img src="images\geolocator.jpg">
     <img src="images\bk_batok_st_25.jpg">
    
 

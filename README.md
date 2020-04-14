@@ -78,6 +78,11 @@ This website is for anyone who is interested to find out more about the past res
     - allow user to read the results returned from their choices of filtering.
 - last column of table (input tag) checkbox 
     - allow user to check and generate marker for respective result onto map. For convenience, a checkbox on the header can be checked to generate the 50 markers to map. The marker contain popout information that show each respective table row's data.
+    - provide an alert box to user if result seach is unable to generate marker to map. From following images, a sample alert box is shown. If the user search manually using the geolocator function at top-right of map, instead of data '288G BT BATOK ST 25', the correct address should actually be '288G BUKIT BATOK ST 25' which then can be located. It is also why the nominatum is unable to return the lat/long coordinates to plot marker on map.
+
+    ![Image]images\alert.jpg)
+    ![Image]images\geolocator.jpg)
+    ![Image]images\bk_batok_st_25.jpg)
 
 #### Mobile Responsive
 - The main buttons will rearranged to vertical column for media device less than 800px.
@@ -144,7 +149,8 @@ This website is for anyone who is interested to find out more about the past res
     1. If the results call for the similar block and street name, the marker will lay on top each other depending which is called last. This also spells for future feature/improvements. A possible method to address this is by checking for similar block and street name results amongst the 50 results, and group the info and make the info availble within a scrollable pop-out box of the marker.
     2. The nominatim API may return a general latitude and longtitude for street name for ambiguous cases. For this example, I shall use blk 601 and street name Ang Mo Kio Ave 5. As shown in image, blk 601 has also adjacent Yio Chu Kang Road near it. **Pending for future look into issue.**
 
-    ![Image](myfile.jpg)
+    ![Image]images\myfile.jpg)
+
     
  
 ## Deployment

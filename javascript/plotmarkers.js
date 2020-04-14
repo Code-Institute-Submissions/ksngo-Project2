@@ -56,14 +56,22 @@ function plot(tableIndex) {
             q: selectedAddress+" singapore" 
         }
     }).then(function(response){
+        
         console.log(response.data)
-        console.log(response.data[0].lat)
-        console.log(response.data[0].lon)
         
-        let marker=L.marker([response.data[0].lat,response.data[0].lon]).addTo(mymap).bindPopup(popupContent)
-        markersGroup.addLayer(marker)
+        if (response.data.length !== 0) {
+
+            console.log(response.data[0].lat)
+            console.log(response.data[0].lon)
+            let marker=L.marker([response.data[0].lat,response.data[0].lon]).addTo(mymap).bindPopup(popupContent)
+            markersGroup.addLayer(marker)
         
-        mymap.addLayer(markersGroup)
+            mymap.addLayer(markersGroup)
+            
+        } else {
+            alert('Index '+tableIndex+', '+selectedAddress+', is unable to return search result.\nA possible cuse is due to street name description not conducive for search.\nYou may want edit '+selectedAddress+' and manual input search at top-right corner in map.' )
+        }
+        
         
     })
 

@@ -167,7 +167,7 @@ nav ul li {
 @media only screen and (max-width: 800px) {
 
     #filters-tier {
-        display: none;
+        display: block !important;
         flex-direction: unset;
         flex-wrap: wrap;
 
@@ -180,11 +180,11 @@ nav ul li {
     }
 
     #left-navigation-tier{
-        display:block;
+        display:none;
     }
 
     #right-navigation-tier{
-        display: block;
+        display: block !important;
     }
 
     .middle-nav {
@@ -204,6 +204,15 @@ nav ul li {
 
     
     }
+
+    #buttonTopPrice {
+        display:block !important;
+    }
+    
+    #buttonBottomPrice {
+        display:block !important;
+    }
+    
 
 
 

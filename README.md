@@ -9,7 +9,7 @@ Therefore, user can roughly estimate or expect the hdb resales prices for locati
  
 ## UX
 
-This website is for anyone who is interested to find out more about the past resales price transactions in Singapore. They could be a person with interests to buy hdb resales flat, a person who is property agent, a person who is interested to sell his/her own hdb resales flat after the minimum occupancy period or a person interested to know where the highest or lowest resales flat are in Singapore.
+This website is for anyone who is interested to find out more about the past resales price transactions in Singapore. They could be someone with interests to buy hdb resales flat, someone who is property agent, someone who is interested to sell his/her own hdb resales flat after the minimum occupancy period or a person interested to know where the highest or lowest resales flat are in Singapore.
 
 - As an interested resales HDB buyer, I want to find out past resales HDB price in a town, so that I can have an expectations of price range in the town.
 *User can filter by town and check out the resale price transactions in descending price order.
@@ -36,16 +36,16 @@ This website is for anyone who is interested to find out more about the past res
     - On hover over, shows hidden <div> tag on information for users to understand the goal of this website, guide to use this website and the data source.
 
 #### Main Buttons
-- Display Filters (button tag) 
-    - allow user to show out the filters below it. Button name changed to 'Hide filters'. When clicked again, the filters will become hidden from view.
-- Results in descending price (button tag) 
-    - allow user to display results in table in descending price. After pressing once, the results will display in table below it. The neighbour button 'Results in ascending price' will also be disabled. The button's name will change to  'Next 50 results' for user to click again to show the next 50 results on table. Once results are exhausted, the button hover-over cursor effect will change from pointer to default and the hover-effect to red will stop too.
-- Results in ascending price (button tag) 
+- Begin Filtering (button tag) 
+    - allow user to show out the filters below it. Thereafter, Button name changed to 'Hide filters' or 'Display filters' on clicking. This is to facilitate hiding away the filters from the screen if the user chooses to do so.
+- descending price results in table (button tag) 
+    - allow user to display results in table in descending price. After pressing once, the results will display in table below it. The neighbour button 'ascending price results in table' will be disabled. The button's name will change to  'Next' button for user to click again to show the next 50 results on table. Once results are exhausted, the button hover-over cursor effect will change from pointer to default and the hover-effect to red will stop too.
+- ascending price results in table (button tag) 
     - allow user to display results in table in ascending price. Similar user interactive effects with 'Results in descending price' button.
 - Reset (button) tag 
-    - allow user to remove existing shown table, remove markers on the map and zoom map to default zoom and default latitude/longtitude.
+    - allow user to remove existing shown table, remove markers on the map and zoom map to default zoom and default latitude/longtitude. 
 - Number of Results (div tag) 
-    - allow user to know how many results are yielded. This tag is normally hidden till 'Results in ascending/descending price' button is clicked.
+    - allow user to know how many results are yielded. This tag is normally hidden till 'ascending/descending price table' button is clicked.
 
 #### Filters Buttons
 - Filter by Town (button) tag 

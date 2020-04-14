@@ -69,7 +69,7 @@ function plot(tableIndex) {
             mymap.addLayer(markersGroup)
             
         } else {
-            alert('Index '+tableIndex+', '+selectedAddress+', is unable to return search result.\nA possible cuse is due to street name description not conducive for search.\nYou may want edit '+selectedAddress+' and manual input search at top-right corner in map.' )
+            alert('Index '+tableIndex+', '+selectedAddress+', is unable to return search result.\nA possible cause is due to street name description not conducive for search.\nYou may want edit '+selectedAddress+' and manual input search at top-right corner in map.' )
         }
         
         

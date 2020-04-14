@@ -81,6 +81,7 @@ This website is for anyone who is interested to find out more about the past res
 
 #### Mobile Responsive
 - The main buttons will rearranged to vertical column for media device less than 800px.
+- The filters display will always show instead of being able to toggle to hide and display.
 - The display of extra filters will also move to below "filter by town/street" estate space for media device less than 800px.
 - The table will change orientation of its text to vertical-lr for media device less than 1000px.
 
@@ -89,8 +90,8 @@ This website is for anyone who is interested to find out more about the past res
 - **Disallow user from toggling filters as this is irrelevant once he/she starts generating results and prompts him/her to click 'reset' if he/she wants to start a new set of filters and a new set of results.**
 - When user clicked on the checkbox in table to show a single marker on the map, move webpage to centralise on this marker. May need to research on leaflet documentation to implement.
 - Do not allow the map to scroll past other area beyond Singapore. Need to research on leaflet documentation to implement.
-- The csv file is available as early to 1990. As the crossfilter dimension filtering will crash for large file sizes, I will only limit my csv file to 6.5Mb which spans between 2017 to 2020. Can explore how to remedy by backend methods and if there are more unforeseen circumstances occuring for handling larger csv files.
-- **It will be good to add pop-out information over the many choices of flat models because personally I don't understand some of them myself.**
+- The csv file is available as early to 1990. As the crossfilter dimension filtering will crash for large file sizes, I am limiting my csv file to 6.5Mb which spans between 2017 to 2020. Can explore how to remedy by backend methods and if there are more unforeseen circumstances occuring for handling larger csv files.
+- **It will be good to add pop-out information over the many choices of flat models because it is good for user to know.**
 
 ## Technologies Used
 
@@ -127,20 +128,21 @@ This website is for anyone who is interested to find out more about the past res
 ## Testing
 
 1. Manual Testing: 
-    1. The Display Filter button when clicked shows content.
-    2. The Hide Filter button when clicked hides content.
-    3.  The Filter by Town button and Filter by Street name button are able to show the options respectively and I can use the form functions.
-    4. The show extra filters button and hide extra filters button allow the extra content to slide in and out.
-    5. The extra filter content selections are able to be checked or input with values.
+    1. The Begin filtering button when clicked shows the filters content.
+    2. The Hide filters or  Display filters buttons when clicked hides/display filters content.
+    3.  The Filter by Town button and Filter by Street name button are able to show the town/street options respectively and I can use their respective form functions.
+    4. The show extra filters button and hide extra filters button allow the extra filters content to slide in and out.
+    5. The extra filters content selections are able to be checked or input with values.
     6. I have gone through each types of filter options (e.g. town, street, year, room, storey, floor area, flat model) and generate results by clicking 'Results in descending price' ,'Next 50 results', 'Results in ascending price' and 'Reset' buttons. The results returned to table are as what I have chosen and arranged in price order corresponding to the 'Results' button pressed.  I have checked the checkboxes in the table to plot markers to the map and the markers appear fine. The pop-out information is able to carry the respective table's row result and show upon within the pop-out box. And, the markers shows on top of the correct block and street name. 
+    
 
 2. Different browsers and screen sizes:
     1. The map is unable to render itself on microsoft Edge and firefox. It is able to show map on google Chrome.
-    2.  The website is able to transform its content with no major issue to width of 300px and above. I have discussed the main changes for mobile responsiveness in the above section on Mobile Responsive.
+    2.  The website is viewed with no issue to width of 300px and up to 1920px. The main changes for mobile responsiveness is discussed in the above section on Mobile Responsive.
 
 3. Bugs/problems:
-    1. If the results call for the similar block and street name, the marker will lay on top each other depending which is called last. This also spells for future feature to address this by checking for similar block and street name results amongst the 50 results, and group the info and make the info availble within a scrollable pop-out box of the marker.
-    2. The nominatim API may return a general latitude and longtitude for street name for ambiguous cases. For this example, I shall use blk 601 and street name Ang Mo Kio Ave 5. As shown in image, blk 601 has also adjacent Yio Chu Kang Road near it. **It's something pending for me to look into.**
+    1. If the results call for the similar block and street name, the marker will lay on top each other depending which is called last. This also spells for future feature/improvements. A possible method to address this is by checking for similar block and street name results amongst the 50 results, and group the info and make the info availble within a scrollable pop-out box of the marker.
+    2. The nominatim API may return a general latitude and longtitude for street name for ambiguous cases. For this example, I shall use blk 601 and street name Ang Mo Kio Ave 5. As shown in image, blk 601 has also adjacent Yio Chu Kang Road near it. **Pending for future look into issue.**
 
     ![Image](myfile.jpg)
     

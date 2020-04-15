@@ -3,7 +3,7 @@
 In Singapore, the government aims to provide affordable housing for her residents and the tasks are handled by the Housing & Development Board(HDB) who is Singapore's public housing authority. Singapore's public housing has completed more than 1 million flats since 1960 and is housing over 80% of the population. Resales flat are HDB flats currently owned by someone else. They have already been lived in for at least the Minimum Occupation Period, which is typically five years. 
 
 I created this website to let user find out about past resales HDB flats transactions. The user will usually be interested to find out resales flats depending on location, highest price, lowest price, size of the flat, flat storey level and remaining lease (a new flat typically has a 99-year lease before returned to the state). This website can filter them to user interests and generate past resales transactions that meet his/her criteria. Moreover, the user is able to show the location of the results on the map. This gives user a bird-eye view of the price with respect to its location with its vicinity to  public transports systems, schools and amenities (e.g. sports, health, malls, churches etc.).
-Therefore, user can roughly estimate or expect the hdb resales prices for locations and flat type that they are interested in quickly. This help in their budgeting concerns, choice of location and negotation perspectives.
+Therefore, user can roughly estimate or expect the hdb resales prices for locations and flat type that they are interested in quickly. This help in their budgeting concerns, choice of location and negotiation perspectives.
 
 [Link to my website!](https://ksngo.github.io/Project2/)
  
@@ -11,7 +11,7 @@ Therefore, user can roughly estimate or expect the hdb resales prices for locati
 
 This website is for anyone who is interested to find out more about the past resales price transactions in Singapore. They could be someone with interests to buy hdb resales flat, someone who is property agent, someone who is interested to sell his/her own hdb resales flat after the minimum occupancy period or a person interested to know where the highest or lowest resales flat are in Singapore.
 
-- As an interested resales HDB buyer, I want to find out past resales HDB price in a town, so that I can have an expectations of price range in the town.
+- As an interested resales HDB buyer, I want to find out past resales HDB price in a town, so that I can have an expectation of price range in the town.
 *User can filter by town and check out the resale price transactions in descending price order.
 
 - As an interested resales HDB buyer, I  am interested in only above 10 storeys level, 4-rooms(1-living room + 3 bed-rooms) model in Singapore, so that I can start zooming on prospective locations/venues to begin my resales HDB searches in the market.

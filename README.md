@@ -147,8 +147,10 @@ This website is for anyone who is interested to find out more about the past res
     Other differences with edge is in the of the table. Samples of the website are shown across the three browsers shown in following images. Kindly note that the height were set to 100vh and hence the map was thus able to be displayed.
     #### Sample website on MS EDGE with CSS #map height set to 100vh
     <img src="images\edge.jpg">
+
     #### Sample website display on firefox with CSS #map height set to 100vh
     <img src="images\fox.jpg">
+    
     #### Sample website display on chrome with CSS #map height set to 100vh
     <img src="images\chrome.jpg">
     

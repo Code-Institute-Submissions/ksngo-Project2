@@ -145,8 +145,11 @@ This website is for anyone who is interested to find out more about the past res
 2. Different browsers and screen sizes:
     1. The map is unable to render itself on microsoft Edge and firefox. It is able to show map on google Chrome. I found that it's due to setting in my index.css #map to 100%. If I change the value to a fixed height(e.g px or 100vh), the map is then able to display on micorsoft edge and firefox. I have sticked with 100% for now because I have did most manual testing with chrome browser and the effect of the height of map I had wanted was a percentage height of map's container instead of fixed height.
     Other differences with edge is in the of the table. Samples of the website are shown across the three browsers shown in following images. Kindly note that the height were set to 100vh and hence the map was thus able to be displayed.
+    *Sample website on MS EDGE with CSS #map height set to 100vh*
     <img src="images\edge.jpg">
+    *Sample website display on firefox with CSS #map height set to 100vh*
     <img src="images\fox.jpg">
+    *Sample website fisplay on chrome with CSS #map height set to 100vh*
     <img src="images\chrome.jpg">
 
     2.  The website is viewed with no issue to width of 300px and up to 1920px. The main changes for mobile responsiveness is discussed in the above section on Mobile Responsive.
